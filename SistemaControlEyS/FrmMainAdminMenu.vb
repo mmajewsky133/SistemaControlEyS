@@ -13,5 +13,6 @@
 
     Private Sub ControlDeAsistenciaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ControlDeAsistenciaToolStripMenuItem.Click
         FrmEmpLogin_.Show()
+        Me.Close()
     End Sub
 End Class

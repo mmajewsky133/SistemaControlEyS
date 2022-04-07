@@ -6,6 +6,9 @@
     Private Sub BtnIngresarAdmin_Click(sender As Object, e As EventArgs) Handles BtnIngresarAdmin.Click
         EvaluarUser()
     End Sub
+    Private Sub BtnSalirAdmin_Click(sender As Object, e As EventArgs) Handles BtnSalirAdmin.Click
+        End
+    End Sub
 
     Private Sub TxtPwAdmin_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPwAdmin.KeyPress
         If Asc(e.KeyChar()) = 13 Then
@@ -28,5 +31,4 @@
                    MsgBoxStyle.Critical, "Error")
         End If
     End Sub
-
 End Class
