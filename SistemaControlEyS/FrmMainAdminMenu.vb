@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub EmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem.Click
-        FrmVistaPrevia.Show()
+        FrmRptEmpleado.Show()
     End Sub
 
     Private Sub ManejoDeCargoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManejoDeCargosToolStripMenuItem.Click
