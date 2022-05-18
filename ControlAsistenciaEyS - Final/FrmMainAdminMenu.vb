@@ -1,7 +1,7 @@
 ﻿Public Class FrmMainAdminMenu
     Private Sub FrmMainAdminMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'ControlAsistenciaDataSet.Empleados' table. You can move, or remove it, as needed.
-        Me.EmpleadosTableAdapter.Fill(Me.ControlAsistenciaDataSet.Empleados)
+        'Me.EmpleadosTableAdapter.Fill(Me.ControlAsistenciaDataSet.Empleados)
 
     End Sub
 

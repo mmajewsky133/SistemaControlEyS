@@ -21,8 +21,17 @@
     End Sub
 
     Private Sub EvaluarUser()
-        'Dim user As String = TxtUsuarioAdmin.Text
-        'Dim pw As String = TxtPwAdmin.Text
+        'Dim login As BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter(TxtUsuarioAdmin.Text, TxtPwAdmin.Text)
+
+        Dim user As String = TxtUsuarioAdmin.Text
+        Dim pw As String = TxtPwAdmin.Text
+
+
+        'Dim empleado As String = login.ObtenerDatosEmpleado(Me.TxtUsuarioAdmin, Me.TxtPwAdmin)
+
+        If (user.Equals("admin") And pw.Equals("123")) Then
+            FrmMainAdminMenu.Show()
+        End If
 
         'Dim dtadmin As New Login
 
@@ -37,7 +46,6 @@
         'Me.Hide()
         'End If
 
-        FrmMainAdminMenu.Show()
         TxtUsuarioAdmin.Clear()
         TxtPwAdmin.Clear()
         Me.Hide()

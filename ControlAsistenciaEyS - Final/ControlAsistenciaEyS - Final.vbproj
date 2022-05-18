@@ -88,6 +88,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDAsistenciasEySDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDAsistenciasEySDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ControlAsistenciaDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -211,6 +216,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BDAsistenciasEySDataSet.xsc">
+      <DependentUpon>BDAsistenciasEySDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDAsistenciasEySDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDAsistenciasEySDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="BDAsistenciasEySDataSet.xss">
+      <DependentUpon>BDAsistenciasEySDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ControlAsistenciaDataSet.xsc">
       <DependentUpon>ControlAsistenciaDataSet.xsd</DependentUpon>
     </None>

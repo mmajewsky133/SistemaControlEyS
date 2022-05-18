@@ -34,75 +34,82 @@ Partial Class FrmAdminLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label1.Location = New System.Drawing.Point(55, 28)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label1.Location = New System.Drawing.Point(73, 34)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(233, 21)
+        Me.Label1.Size = New System.Drawing.Size(354, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inicio de Sesion - Administrador"
         '
         'TxtUsuarioAdmin
         '
-        Me.TxtUsuarioAdmin.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtUsuarioAdmin.Location = New System.Drawing.Point(112, 81)
+        Me.TxtUsuarioAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.TxtUsuarioAdmin.Location = New System.Drawing.Point(163, 100)
+        Me.TxtUsuarioAdmin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtUsuarioAdmin.Name = "TxtUsuarioAdmin"
-        Me.TxtUsuarioAdmin.Size = New System.Drawing.Size(198, 30)
+        Me.TxtUsuarioAdmin.Size = New System.Drawing.Size(249, 34)
         Me.TxtUsuarioAdmin.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label2.Location = New System.Drawing.Point(40, 84)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label2.Location = New System.Drawing.Point(53, 103)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 21)
+        Me.Label2.Size = New System.Drawing.Size(102, 29)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Usuario:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label3.Location = New System.Drawing.Point(15, 127)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label3.Location = New System.Drawing.Point(20, 156)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 21)
+        Me.Label3.Size = New System.Drawing.Size(142, 29)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Contraseña:"
         '
         'TxtPwAdmin
         '
-        Me.TxtPwAdmin.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtPwAdmin.Location = New System.Drawing.Point(112, 124)
+        Me.TxtPwAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.TxtPwAdmin.Location = New System.Drawing.Point(163, 153)
+        Me.TxtPwAdmin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtPwAdmin.Name = "TxtPwAdmin"
         Me.TxtPwAdmin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPwAdmin.Size = New System.Drawing.Size(198, 30)
+        Me.TxtPwAdmin.Size = New System.Drawing.Size(249, 34)
         Me.TxtPwAdmin.TabIndex = 5
         '
         'BtnLogin
         '
-        Me.BtnLogin.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnLogin.Location = New System.Drawing.Point(195, 173)
+        Me.BtnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnLogin.Location = New System.Drawing.Point(260, 213)
+        Me.BtnLogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnLogin.Name = "BtnLogin"
-        Me.BtnLogin.Size = New System.Drawing.Size(93, 30)
+        Me.BtnLogin.Size = New System.Drawing.Size(124, 37)
         Me.BtnLogin.TabIndex = 6
         Me.BtnLogin.Text = "Ingresar"
         Me.BtnLogin.UseVisualStyleBackColor = True
         '
         'BtnSalir
         '
-        Me.BtnSalir.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnSalir.Location = New System.Drawing.Point(59, 173)
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnSalir.Location = New System.Drawing.Point(79, 213)
+        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(93, 30)
+        Me.BtnSalir.Size = New System.Drawing.Size(124, 37)
         Me.BtnSalir.TabIndex = 7
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.UseVisualStyleBackColor = True
         '
         'FrmAdminLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(354, 241)
+        Me.ClientSize = New System.Drawing.Size(472, 297)
         Me.Controls.Add(Me.BtnSalir)
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.TxtPwAdmin)
@@ -111,6 +118,7 @@ Partial Class FrmAdminLogin
         Me.Controls.Add(Me.TxtUsuarioAdmin)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "FrmAdminLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
