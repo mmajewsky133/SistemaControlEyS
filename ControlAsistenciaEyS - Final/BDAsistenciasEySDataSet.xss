@@ -10,7 +10,7 @@
     <Shape ID="DesignTable:cargo" ZOrder="3" X="838" Y="153" Height="204" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
     <Shape ID="DesignTable:cargoEmp" ZOrder="2" X="815" Y="461" Height="158" Width="238" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
     <Shape ID="DesignTable:departamento" ZOrder="9" X="420" Y="392" Height="204" Width="269" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:empleado" ZOrder="1" X="834" Y="716" Height="457" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="28" OldDataTableHeight="0" SplitterPosition="306" />
+    <Shape ID="DesignTable:empleado" ZOrder="1" X="834" Y="716" Height="434" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="28" OldDataTableHeight="0" SplitterPosition="283" />
     <Shape ID="DesignTable:registroAsistencia" ZOrder="5" X="1223" Y="544" Height="319" Width="295" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
   </Shapes>
   <Connectors>
@@ -69,12 +69,16 @@
     <Connector ID="DesignRelation:FK_idEmp" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>1134</X>
-          <Y>789</Y>
+          <X>1080</X>
+          <Y>716</Y>
+        </Point>
+        <Point>
+          <X>1080</X>
+          <Y>699</Y>
         </Point>
         <Point>
           <X>1223</X>
-          <Y>789</Y>
+          <Y>699</Y>
         </Point>
       </RoutePoints>
     </Connector>

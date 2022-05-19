@@ -4,7 +4,7 @@
 Public Class FrmAddEmpleado
 
     Dim empleado As New BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter
-
+    Dim idEmpleado As Integer
     Sub llenarGrid()
         DgvEmpleado.DataSource = empleado.GetData
         DgvEmpleado.Refresh()
@@ -15,6 +15,8 @@ Public Class FrmAddEmpleado
     End Sub
 
     Private Sub FrmAddEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.empleado' table. You can move, or remove it, as needed.
+        Me.EmpleadoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.empleado)
         'TODO: This line of code loads data into the 'ControlAsistenciaDataSet.Empleados' table. You can move, or remove it, as needed.
         'Me.EmpleadosTableAdapter.Fill(Me.ControlAsistenciaDataSet.Empleados)
         llenarGrid()
@@ -38,16 +40,85 @@ Public Class FrmAddEmpleado
             empleado.InsertarTemporal(nombres, apellidos, cedula, direccion, telefono, correo, correoInst, username, pwpin, estado)
             llenarGrid()
         Catch ex As Exception
-
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
         End Try
 
     End Sub
 
     Private Sub BtnEliminarEmp_Click(sender As Object, e As EventArgs) Handles BtnEliminarEmp.Click
         Try
+            Dim resp As VariantType
+            resp = MsgBox("¿Desea eliminar este empleado?", vbQuestion + vbYesNo)
+            If (resp = vbYes) Then
+                empleado.EliminarEmpleado(idEmpleado)
+                llenarGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
+    End Sub
+
+    Private Sub BtnEditarEmp_Click(sender As Object, e As EventArgs) Handles BtnEditarEmp.Click
+        If (String.IsNullOrEmpty(TxtNombre.Text)) Then
+            MsgBox("No puede quedar vacío el nombre", MsgBoxStyle.Critical, "ERROR")
+            TxtNombre.Focus()
+            Exit Sub
+        End If
+        If (String.IsNullOrEmpty(TxtApellido.Text)) Then
+            MsgBox("Los apellidos requieren ser ingresados", MsgBoxStyle.Critical, "ERROR")
+            TxtApellido.Focus()
+            Exit Sub
+        End If
+        If (String.IsNullOrEmpty(TxtCedula.Text)) Then
+            MsgBox("La cedula requiere ser ingresada", MsgBoxStyle.Critical, "ERROR")
+            TxtCedula.Focus()
+            Exit Sub
+        End If
+        If (String.IsNullOrEmpty(TxtCorreo.Text)) Then
+            MsgBox("Correo vacio", MsgBoxStyle.Critical, "ERROR")
+            TxtCorreo.Focus()
+            Exit Sub
+        End If
+        If (String.IsNullOrEmpty(TxtTel.Text)) Then
+            MsgBox("Telefono vacio", MsgBoxStyle.Critical, "ERROR")
+            TxtTel.Focus()
+            Exit Sub
+        End If
+        If (String.IsNullOrEmpty(TxtCorreoInst.Text)) Then
+            MsgBox("Institucional vacio", MsgBoxStyle.Critical, "ERROR")
+            TxtCorreoInst.Focus()
+            Exit Sub
+        End If
+        If (String.IsNullOrEmpty(TxtDireccion.Text)) Then
+            MsgBox("Direccion", MsgBoxStyle.Critical, "ERROR")
+            TxtDireccion.Focus()
+            Exit Sub
+        End If
+
+        Dim nombre As String = TxtNombre.Text.Trim
+        Dim apellido As String = TxtApellido.Text.Trim
+        Dim cedula As String = TxtCedula.Text.Trim
+        Dim correo As String = TxtCorreo.Text.Trim
+        Dim telefono As String = TxtTel.Text.Trim
+        Dim correoInstitucional As String = TxtCorreoInst.Text.Trim
+        Dim direccion As String = TxtDireccion.Text.Trim
+
+        empleado.EditarEmpleado(nombre, apellido, cedula, direccion, telefono, correo, correoInstitucional, idEmpleado)
+        llenarGrid()
+
+    End Sub
+
+    Private Sub DgvEmpleado_DoubleClick(sender As Object, e As EventArgs) Handles DgvEmpleado.DoubleClick
+        Try
+            Dim fila As Integer = DgvEmpleado.CurrentRow.Index
+            idEmpleado = DgvEmpleado.Item(0, fila).Value
+
+            TxtCedula.Text = DgvEmpleado.Item(1, fila).Value
+            TxtNombre.Text = DgvEmpleado.Item(2, fila).Value
+            TxtApellido.Text = DgvEmpleado.Item(3, fila).Value
 
         Catch ex As Exception
-
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
         End Try
     End Sub
 End Class
