@@ -31,6 +31,9 @@
 
         If (user.Equals("admin") And pw.Equals("123")) Then
             FrmMainAdminMenu.Show()
+        Else
+            MsgBox("Usuario o contraseña incorrecta. Verifique sus credenciales", MsgBoxStyle.Critical, "Error")
+            Me.TxtUsuarioAdmin.Focus()
         End If
 
         'Dim dtadmin As New Login

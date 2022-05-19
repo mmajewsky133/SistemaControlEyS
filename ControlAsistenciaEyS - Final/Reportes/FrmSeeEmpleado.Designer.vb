@@ -37,10 +37,10 @@ Partial Class FrmSeeEmpleado
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtEmpSelct = New System.Windows.Forms.TextBox()
-        Me.BtnAddDep = New System.Windows.Forms.Button()
         Me.BtnAddCargos = New System.Windows.Forms.Button()
         Me.BtnAddRol = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.BtnSeeReport = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -155,20 +155,10 @@ Partial Class FrmSeeEmpleado
         Me.TxtEmpSelct.Size = New System.Drawing.Size(174, 30)
         Me.TxtEmpSelct.TabIndex = 9
         '
-        'BtnAddDep
-        '
-        Me.BtnAddDep.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnAddDep.Location = New System.Drawing.Point(196, 106)
-        Me.BtnAddDep.Name = "BtnAddDep"
-        Me.BtnAddDep.Size = New System.Drawing.Size(189, 31)
-        Me.BtnAddDep.TabIndex = 10
-        Me.BtnAddDep.Text = "Asignar Departamento"
-        Me.BtnAddDep.UseVisualStyleBackColor = True
-        '
         'BtnAddCargos
         '
         Me.BtnAddCargos.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnAddCargos.Location = New System.Drawing.Point(571, 106)
+        Me.BtnAddCargos.Location = New System.Drawing.Point(211, 106)
         Me.BtnAddCargos.Name = "BtnAddCargos"
         Me.BtnAddCargos.Size = New System.Drawing.Size(174, 31)
         Me.BtnAddCargos.TabIndex = 11
@@ -195,15 +185,25 @@ Partial Class FrmSeeEmpleado
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Reporte y Manejo de Empleados"
         '
+        'BtnSeeReport
+        '
+        Me.BtnSeeReport.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnSeeReport.Location = New System.Drawing.Point(571, 598)
+        Me.BtnSeeReport.Name = "BtnSeeReport"
+        Me.BtnSeeReport.Size = New System.Drawing.Size(174, 31)
+        Me.BtnSeeReport.TabIndex = 14
+        Me.BtnSeeReport.Text = "Ver Reporte Completo"
+        Me.BtnSeeReport.UseVisualStyleBackColor = True
+        '
         'FrmSeeEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(757, 602)
+        Me.ClientSize = New System.Drawing.Size(757, 641)
+        Me.Controls.Add(Me.BtnSeeReport)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnAddRol)
         Me.Controls.Add(Me.BtnAddCargos)
-        Me.Controls.Add(Me.BtnAddDep)
         Me.Controls.Add(Me.TxtEmpSelct)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TxtBuscar)
@@ -233,8 +233,8 @@ Partial Class FrmSeeEmpleado
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtEmpSelct As TextBox
-    Friend WithEvents BtnAddDep As Button
     Friend WithEvents BtnAddCargos As Button
     Friend WithEvents BtnAddRol As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents BtnSeeReport As Button
 End Class

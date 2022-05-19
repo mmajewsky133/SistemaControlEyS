@@ -27,19 +27,19 @@ Partial Class FrmSeeDepartamento
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtDepSelct = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ControlAsistenciaDataSet = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSet()
-        Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DepartamentoTableAdapter = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSetTableAdapters.DepartamentoTableAdapter()
         Me.IddepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombredepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExttelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ControlAsistenciaDataSet = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSet()
+        Me.DepartamentoTableAdapter = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSetTableAdapters.DepartamentoTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.BtnAddDep = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -85,20 +85,6 @@ Partial Class FrmSeeDepartamento
         Me.DataGridView1.Size = New System.Drawing.Size(513, 393)
         Me.DataGridView1.TabIndex = 17
         '
-        'ControlAsistenciaDataSet
-        '
-        Me.ControlAsistenciaDataSet.DataSetName = "ControlAsistenciaDataSet"
-        Me.ControlAsistenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DepartamentoBindingSource
-        '
-        Me.DepartamentoBindingSource.DataMember = "Departamento"
-        Me.DepartamentoBindingSource.DataSource = Me.ControlAsistenciaDataSet
-        '
-        'DepartamentoTableAdapter
-        '
-        Me.DepartamentoTableAdapter.ClearBeforeFill = True
-        '
         'IddepDataGridViewTextBoxColumn
         '
         Me.IddepDataGridViewTextBoxColumn.DataPropertyName = "id_dep"
@@ -134,6 +120,20 @@ Partial Class FrmSeeDepartamento
         Me.CorreoDataGridViewTextBoxColumn.ReadOnly = True
         Me.CorreoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.CorreoDataGridViewTextBoxColumn.Width = 200
+        '
+        'DepartamentoBindingSource
+        '
+        Me.DepartamentoBindingSource.DataMember = "Departamento"
+        Me.DepartamentoBindingSource.DataSource = Me.ControlAsistenciaDataSet
+        '
+        'ControlAsistenciaDataSet
+        '
+        Me.ControlAsistenciaDataSet.DataSetName = "ControlAsistenciaDataSet"
+        Me.ControlAsistenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DepartamentoTableAdapter
+        '
+        Me.DepartamentoTableAdapter.ClearBeforeFill = True
         '
         'Label1
         '
@@ -178,8 +178,8 @@ Partial Class FrmSeeDepartamento
         Me.Name = "FrmSeeDepartamento"
         Me.Text = "Control de Asistencias - Reporte de Departamentos"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
