@@ -63,6 +63,15 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -173,6 +182,12 @@
     <Compile Include="Reportes\FrmSeeEmpRol.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\RptDisplay.Designer.vb">
+      <DependentUpon>RptDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptDisplay.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SistemaEyS\FrmMarcadoEyS.Designer.vb">
       <DependentUpon>FrmMarcadoEyS.vb</DependentUpon>
     </Compile>
@@ -211,6 +226,9 @@
     <EmbeddedResource Include="Reportes\FrmSeeEmpleado.resx">
       <DependentUpon>FrmSeeEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptDisplay.resx">
+      <DependentUpon>RptDisplay.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SistemaEyS\FrmMarcadoEyS.resx">
       <DependentUpon>FrmMarcadoEyS.vb</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +266,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
