@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmMainAdminMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmMainAdminMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -39,12 +39,10 @@ Partial Class FrmMainAdminMenu
         Me.ReporteDeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeCargosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeDepartamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReporteDeRolesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionDeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionDeCargosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionDeDepartamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestionDeRolesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManejoDeOpcionesAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -158,7 +156,7 @@ Partial Class FrmMainAdminMenu
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeEmpleadosToolStripMenuItem, Me.ReporteDeCargosToolStripMenuItem, Me.ReporteDeDepartamentosToolStripMenuItem, Me.ReporteDeRolesToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeEmpleadosToolStripMenuItem, Me.ReporteDeCargosToolStripMenuItem, Me.ReporteDeDepartamentosToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -181,15 +179,9 @@ Partial Class FrmMainAdminMenu
         Me.ReporteDeDepartamentosToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
         Me.ReporteDeDepartamentosToolStripMenuItem.Text = "Reporte de Departamentos"
         '
-        'ReporteDeRolesToolStripMenuItem
-        '
-        Me.ReporteDeRolesToolStripMenuItem.Name = "ReporteDeRolesToolStripMenuItem"
-        Me.ReporteDeRolesToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
-        Me.ReporteDeRolesToolStripMenuItem.Text = "Reporte de Roles"
-        '
         'GestionToolStripMenuItem
         '
-        Me.GestionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDeEmpleadosToolStripMenuItem, Me.GestionDeCargosToolStripMenuItem, Me.GestionDeDepartamentosToolStripMenuItem, Me.GestionDeRolesToolStripMenuItem})
+        Me.GestionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDeEmpleadosToolStripMenuItem, Me.GestionDeCargosToolStripMenuItem, Me.GestionDeDepartamentosToolStripMenuItem})
         Me.GestionToolStripMenuItem.Name = "GestionToolStripMenuItem"
         Me.GestionToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.GestionToolStripMenuItem.Text = "Gestion"
@@ -211,12 +203,6 @@ Partial Class FrmMainAdminMenu
         Me.GestionDeDepartamentosToolStripMenuItem.Name = "GestionDeDepartamentosToolStripMenuItem"
         Me.GestionDeDepartamentosToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
         Me.GestionDeDepartamentosToolStripMenuItem.Text = "Gestion de Departamentos"
-        '
-        'GestionDeRolesToolStripMenuItem
-        '
-        Me.GestionDeRolesToolStripMenuItem.Name = "GestionDeRolesToolStripMenuItem"
-        Me.GestionDeRolesToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
-        Me.GestionDeRolesToolStripMenuItem.Text = "Gestion de Roles"
         '
         'OpcionesToolStripMenuItem
         '
@@ -329,6 +315,4 @@ Partial Class FrmMainAdminMenu
     Friend WithEvents CorreoinstDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManejoDeOpcionesAdminToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReporteDeRolesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GestionDeRolesToolStripMenuItem As ToolStripMenuItem
 End Class
