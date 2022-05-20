@@ -7,18 +7,18 @@
 <DiagramLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ex:showrelationlabel="False" ViewPortX="0" ViewPortY="74" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:admin" ZOrder="11" X="96" Y="288" Height="250" Width="211" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
-    <Shape ID="DesignTable:cargo" ZOrder="3" X="838" Y="153" Height="204" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:cargoEmp" ZOrder="2" X="815" Y="461" Height="158" Width="238" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
-    <Shape ID="DesignTable:departamento" ZOrder="9" X="420" Y="392" Height="204" Width="269" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
-    <Shape ID="DesignTable:empleado" ZOrder="1" X="834" Y="716" Height="434" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="28" OldDataTableHeight="0" SplitterPosition="283" />
-    <Shape ID="DesignTable:registroAsistencia" ZOrder="5" X="1223" Y="544" Height="319" Width="295" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
+    <Shape ID="DesignTable:cargo" ZOrder="1" X="838" Y="153" Height="273" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:cargoEmp" ZOrder="4" X="815" Y="461" Height="158" Width="238" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:departamento" ZOrder="2" X="420" Y="392" Height="296" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:empleado" ZOrder="3" X="834" Y="716" Height="434" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="28" OldDataTableHeight="0" SplitterPosition="283" />
+    <Shape ID="DesignTable:registroAsistencia" ZOrder="6" X="1223" Y="544" Height="319" Width="295" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_cargoEmp_cargo" ZOrder="10" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>935</X>
-          <Y>357</Y>
+          <Y>426</Y>
         </Point>
         <Point>
           <X>935</X>
@@ -26,7 +26,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_admin_departamento" ZOrder="8" LineWidth="11">
+    <Connector ID="DesignRelation:FK_admin_departamento" ZOrder="9" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>420</X>
@@ -38,7 +38,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_cargo_departamento" ZOrder="7" LineWidth="11">
+    <Connector ID="DesignRelation:FK_cargo_departamento" ZOrder="8" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>561</X>
@@ -54,7 +54,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_cargoEmp_empleado" ZOrder="6" LineWidth="11">
+    <Connector ID="DesignRelation:FK_cargoEmp_empleado" ZOrder="7" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>943</X>
@@ -66,7 +66,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_idEmp" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_idEmp" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1080</X>

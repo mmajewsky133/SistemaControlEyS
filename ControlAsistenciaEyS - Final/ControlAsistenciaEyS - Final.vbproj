@@ -116,6 +116,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDAsistenciasEySDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BDAsistenciasEySDataSet.vb">
+      <DependentUpon>BDAsistenciasEySDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ControlAsistenciaDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -188,12 +191,6 @@
       <DependentUpon>FrmSeeEmpleado.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\FrmSeeEmpleado.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\FrmSeeEmpRol.Designer.vb">
-      <DependentUpon>FrmSeeEmpRol.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\FrmSeeEmpRol.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\RptDisplay.Designer.vb">

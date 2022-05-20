@@ -111,11 +111,15 @@ Public Class FrmAddEmpleado
     Private Sub DgvEmpleado_DoubleClick(sender As Object, e As EventArgs) Handles DgvEmpleado.DoubleClick
         Try
             Dim fila As Integer = DgvEmpleado.CurrentRow.Index
-            idEmpleado = DgvEmpleado.Item(0, fila).Value
 
-            TxtCedula.Text = DgvEmpleado.Item(1, fila).Value
-            TxtNombre.Text = DgvEmpleado.Item(2, fila).Value
-            TxtApellido.Text = DgvEmpleado.Item(3, fila).Value
+            idEmpleado = DgvEmpleado.Item(0, fila).Value
+            TxtNombre.Text = DgvEmpleado.Item(1, fila).Value
+            TxtApellido.Text = DgvEmpleado.Item(2, fila).Value
+            TxtCedula.Text = DgvEmpleado.Item(3, fila).Value
+            TxtDireccion.Text = DgvEmpleado.Item(4, fila).Value
+            TxtTel.Text = DgvEmpleado.Item(5, fila).Value
+            TxtCorreo.Text = DgvEmpleado.Item(6, fila).Value
+            TxtCorreoInst.Text = DgvEmpleado.Item(7, fila).Value
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")

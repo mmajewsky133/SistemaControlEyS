@@ -44,6 +44,20 @@ Partial Class FrmAddEmpleado
         Me.TxtDireccion = New System.Windows.Forms.TextBox()
         Me.TxtCorreoInst = New System.Windows.Forms.TextBox()
         Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
+        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CorreoInstDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PwpinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ControlAsistenciaDataSet = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSet()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -55,32 +69,16 @@ Partial Class FrmAddEmpleado
         Me.ControlAsistenciaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadosTableAdapter = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSetTableAdapters.EmpleadosTableAdapter()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
-        Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
-        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FotoEmpDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.FechaNacDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoInstDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PwpinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.PBEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ControlAsistenciaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -292,7 +290,7 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.AllowUserToDeleteRows = False
         Me.DgvEmpleado.AutoGenerateColumns = False
         Me.DgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvEmpleado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.FotoEmpDataGridViewImageColumn, Me.FechaNacDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PwpinDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
+        Me.DgvEmpleado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PwpinDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
         Me.DgvEmpleado.DataSource = Me.EmpleadoBindingSource
         Me.DgvEmpleado.Location = New System.Drawing.Point(20, 45)
         Me.DgvEmpleado.Margin = New System.Windows.Forms.Padding(4)
@@ -301,6 +299,120 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.RowHeadersWidth = 51
         Me.DgvEmpleado.Size = New System.Drawing.Size(768, 216)
         Me.DgvEmpleado.TabIndex = 35
+        '
+        'IdEmpDataGridViewTextBoxColumn
+        '
+        Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
+        Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "idEmp"
+        Me.IdEmpDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
+        Me.IdEmpDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdEmpDataGridViewTextBoxColumn.Width = 125
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombresDataGridViewTextBoxColumn.Width = 125
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
+        '
+        'CedulaDataGridViewTextBoxColumn
+        '
+        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
+        Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CedulaDataGridViewTextBoxColumn.Width = 125
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DireccionDataGridViewTextBoxColumn.Width = 125
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelefonoDataGridViewTextBoxColumn.Width = 125
+        '
+        'CorreoDataGridViewTextBoxColumn
+        '
+        Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "correo"
+        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "correo"
+        Me.CorreoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
+        Me.CorreoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CorreoDataGridViewTextBoxColumn.Width = 125
+        '
+        'CorreoInstDataGridViewTextBoxColumn
+        '
+        Me.CorreoInstDataGridViewTextBoxColumn.DataPropertyName = "correoInst"
+        Me.CorreoInstDataGridViewTextBoxColumn.HeaderText = "correoInst"
+        Me.CorreoInstDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CorreoInstDataGridViewTextBoxColumn.Name = "CorreoInstDataGridViewTextBoxColumn"
+        Me.CorreoInstDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CorreoInstDataGridViewTextBoxColumn.Width = 125
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "username"
+        Me.UsernameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UsernameDataGridViewTextBoxColumn.Width = 125
+        '
+        'PwpinDataGridViewTextBoxColumn
+        '
+        Me.PwpinDataGridViewTextBoxColumn.DataPropertyName = "pwpin"
+        Me.PwpinDataGridViewTextBoxColumn.HeaderText = "pwpin"
+        Me.PwpinDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PwpinDataGridViewTextBoxColumn.Name = "PwpinDataGridViewTextBoxColumn"
+        Me.PwpinDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PwpinDataGridViewTextBoxColumn.Width = 125
+        '
+        'EstadoDataGridViewTextBoxColumn
+        '
+        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EstadoDataGridViewTextBoxColumn.Width = 125
+        '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDAsistenciasEySDataSetBindingSource
+        '
+        'BDAsistenciasEySDataSetBindingSource
+        '
+        Me.BDAsistenciasEySDataSetBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        Me.BDAsistenciasEySDataSetBindingSource.Position = 0
+        '
+        'BDAsistenciasEySDataSet
+        '
+        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
+        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'EmpleadosBindingSource
         '
@@ -395,141 +507,9 @@ Partial Class FrmAddEmpleado
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
-        'BDAsistenciasEySDataSet
-        '
-        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
-        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'BDAsistenciasEySDataSetBindingSource
-        '
-        Me.BDAsistenciasEySDataSetBindingSource.DataSource = Me.BDAsistenciasEySDataSet
-        Me.BDAsistenciasEySDataSetBindingSource.Position = 0
-        '
-        'EmpleadoBindingSource
-        '
-        Me.EmpleadoBindingSource.DataMember = "empleado"
-        Me.EmpleadoBindingSource.DataSource = Me.BDAsistenciasEySDataSetBindingSource
-        '
         'EmpleadoTableAdapter
         '
         Me.EmpleadoTableAdapter.ClearBeforeFill = True
-        '
-        'IdEmpDataGridViewTextBoxColumn
-        '
-        Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
-        Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "idEmp"
-        Me.IdEmpDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
-        Me.IdEmpDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdEmpDataGridViewTextBoxColumn.Width = 125
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "nombres"
-        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombresDataGridViewTextBoxColumn.Width = 125
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
-        '
-        'CedulaDataGridViewTextBoxColumn
-        '
-        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
-        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "cedula"
-        Me.CedulaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
-        Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CedulaDataGridViewTextBoxColumn.Width = 125
-        '
-        'FotoEmpDataGridViewImageColumn
-        '
-        Me.FotoEmpDataGridViewImageColumn.DataPropertyName = "fotoEmp"
-        Me.FotoEmpDataGridViewImageColumn.HeaderText = "fotoEmp"
-        Me.FotoEmpDataGridViewImageColumn.MinimumWidth = 6
-        Me.FotoEmpDataGridViewImageColumn.Name = "FotoEmpDataGridViewImageColumn"
-        Me.FotoEmpDataGridViewImageColumn.ReadOnly = True
-        Me.FotoEmpDataGridViewImageColumn.Width = 125
-        '
-        'FechaNacDataGridViewTextBoxColumn
-        '
-        Me.FechaNacDataGridViewTextBoxColumn.DataPropertyName = "fechaNac"
-        Me.FechaNacDataGridViewTextBoxColumn.HeaderText = "fechaNac"
-        Me.FechaNacDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.FechaNacDataGridViewTextBoxColumn.Name = "FechaNacDataGridViewTextBoxColumn"
-        Me.FechaNacDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechaNacDataGridViewTextBoxColumn.Width = 125
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DireccionDataGridViewTextBoxColumn.Width = 125
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TelefonoDataGridViewTextBoxColumn.Width = 125
-        '
-        'CorreoDataGridViewTextBoxColumn
-        '
-        Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "correo"
-        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "correo"
-        Me.CorreoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
-        Me.CorreoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CorreoDataGridViewTextBoxColumn.Width = 125
-        '
-        'CorreoInstDataGridViewTextBoxColumn
-        '
-        Me.CorreoInstDataGridViewTextBoxColumn.DataPropertyName = "correoInst"
-        Me.CorreoInstDataGridViewTextBoxColumn.HeaderText = "correoInst"
-        Me.CorreoInstDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CorreoInstDataGridViewTextBoxColumn.Name = "CorreoInstDataGridViewTextBoxColumn"
-        Me.CorreoInstDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CorreoInstDataGridViewTextBoxColumn.Width = 125
-        '
-        'UsernameDataGridViewTextBoxColumn
-        '
-        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "username"
-        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "username"
-        Me.UsernameDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
-        Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.UsernameDataGridViewTextBoxColumn.Width = 125
-        '
-        'PwpinDataGridViewTextBoxColumn
-        '
-        Me.PwpinDataGridViewTextBoxColumn.DataPropertyName = "pwpin"
-        Me.PwpinDataGridViewTextBoxColumn.HeaderText = "pwpin"
-        Me.PwpinDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.PwpinDataGridViewTextBoxColumn.Name = "PwpinDataGridViewTextBoxColumn"
-        Me.PwpinDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PwpinDataGridViewTextBoxColumn.Width = 125
-        '
-        'EstadoDataGridViewTextBoxColumn
-        '
-        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "estado"
-        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "estado"
-        Me.EstadoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
-        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EstadoDataGridViewTextBoxColumn.Width = 125
         '
         'FrmAddEmpleado
         '
@@ -568,13 +548,13 @@ Partial Class FrmAddEmpleado
         Me.Text = "FrmAddEmpleado"
         CType(Me.PBEmp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ControlAsistenciaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

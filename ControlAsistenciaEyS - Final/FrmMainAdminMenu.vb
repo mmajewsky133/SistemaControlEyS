@@ -33,4 +33,20 @@
     Private Sub SistemaEySToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SistemaEySToolStripMenuItem.Click
         FrmMarcadoEyS.Show()
     End Sub
+
+    Private Sub GestionDeDepartamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeDepartamentosToolStripMenuItem.Click
+        If (Not FrmAddDepartamento.Visible) Then
+            FrmAddDepartamento.Show()
+        Else
+            FrmAddDepartamento.Mostrar()
+        End If
+    End Sub
+
+    Private Sub GestionDeCargosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeCargosToolStripMenuItem.Click
+        If (Not FrmAddDepartamento.Visible) Then
+            FrmAddCargo.Show()
+        Else
+            FrmAddCargo.Mostrar()
+        End If
+    End Sub
 End Class
