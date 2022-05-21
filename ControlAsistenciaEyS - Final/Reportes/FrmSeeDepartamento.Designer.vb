@@ -26,7 +26,7 @@ Partial Class FrmSeeDepartamento
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtDepSelct = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DgvDepartamentos = New System.Windows.Forms.DataGridView()
         Me.IddepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombredepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExttelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,7 +37,8 @@ Partial Class FrmSeeDepartamento
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.BtnAddDep = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BtnSeeReport = New System.Windows.Forms.Button()
+        CType(Me.DgvDepartamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,19 +72,19 @@ Partial Class FrmSeeDepartamento
         Me.TxtDepSelct.Size = New System.Drawing.Size(201, 30)
         Me.TxtDepSelct.TabIndex = 16
         '
-        'DataGridView1
+        'DgvDepartamentos
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IddepDataGridViewTextBoxColumn, Me.NombredepDataGridViewTextBoxColumn, Me.ExttelDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.DepartamentoBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 182)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(513, 393)
-        Me.DataGridView1.TabIndex = 17
+        Me.DgvDepartamentos.AllowUserToAddRows = False
+        Me.DgvDepartamentos.AllowUserToDeleteRows = False
+        Me.DgvDepartamentos.AutoGenerateColumns = False
+        Me.DgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvDepartamentos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IddepDataGridViewTextBoxColumn, Me.NombredepDataGridViewTextBoxColumn, Me.ExttelDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn})
+        Me.DgvDepartamentos.DataSource = Me.DepartamentoBindingSource
+        Me.DgvDepartamentos.Location = New System.Drawing.Point(12, 182)
+        Me.DgvDepartamentos.Name = "DgvDepartamentos"
+        Me.DgvDepartamentos.ReadOnly = True
+        Me.DgvDepartamentos.Size = New System.Drawing.Size(513, 393)
+        Me.DgvDepartamentos.TabIndex = 17
         '
         'IddepDataGridViewTextBoxColumn
         '
@@ -160,24 +161,35 @@ Partial Class FrmSeeDepartamento
         Me.BtnAddDep.Name = "BtnAddDep"
         Me.BtnAddDep.Size = New System.Drawing.Size(306, 31)
         Me.BtnAddDep.TabIndex = 20
-        Me.BtnAddDep.Text = "Asignar a Empleado"
+        Me.BtnAddDep.Text = "Asignar a un Cargo"
         Me.BtnAddDep.UseVisualStyleBackColor = True
+        '
+        'BtnSeeReport
+        '
+        Me.BtnSeeReport.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnSeeReport.Location = New System.Drawing.Point(351, 581)
+        Me.BtnSeeReport.Name = "BtnSeeReport"
+        Me.BtnSeeReport.Size = New System.Drawing.Size(174, 31)
+        Me.BtnSeeReport.TabIndex = 21
+        Me.BtnSeeReport.Text = "Ver Reporte Completo"
+        Me.BtnSeeReport.UseVisualStyleBackColor = True
         '
         'FrmSeeDepartamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(555, 587)
+        Me.ClientSize = New System.Drawing.Size(539, 618)
+        Me.Controls.Add(Me.BtnSeeReport)
         Me.Controls.Add(Me.BtnAddDep)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DgvDepartamentos)
         Me.Controls.Add(Me.TxtDepSelct)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
         Me.Name = "FrmSeeDepartamento"
         Me.Text = "Control de Asistencias - Reporte de Departamentos"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvDepartamentos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -188,7 +200,7 @@ Partial Class FrmSeeDepartamento
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtDepSelct As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgvDepartamentos As DataGridView
     Friend WithEvents ControlAsistenciaDataSet As ControlAsistenciaDataSet
     Friend WithEvents DepartamentoBindingSource As BindingSource
     Friend WithEvents DepartamentoTableAdapter As ControlAsistenciaDataSetTableAdapters.DepartamentoTableAdapter
@@ -199,4 +211,5 @@ Partial Class FrmSeeDepartamento
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents BtnAddDep As Button
+    Friend WithEvents BtnSeeReport As Button
 End Class

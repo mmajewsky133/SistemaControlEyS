@@ -23,13 +23,16 @@ Partial Class FrmSeeEmpleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DgvEmpleados = New System.Windows.Forms.DataGridView()
+        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoinstDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CorreoInstDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ControlAsistenciaDataSet = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSet()
         Me.EmpleadosTableAdapter = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSetTableAdapters.EmpleadosTableAdapter()
@@ -38,35 +41,61 @@ Partial Class FrmSeeEmpleado
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtEmpSelct = New System.Windows.Forms.TextBox()
         Me.BtnAddCargos = New System.Windows.Forms.Button()
-        Me.BtnAddRol = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnSeeReport = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RefEmpleados5BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CargosEmpleadosTableAdapter = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSetTableAdapters.CargosEmpleadosTableAdapter()
+        Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RefEmpleados5BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DgvEmpleados
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdempDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoinstDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.EmpleadosBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 197)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(733, 393)
-        Me.DataGridView1.TabIndex = 0
+        Me.DgvEmpleados.AllowUserToAddRows = False
+        Me.DgvEmpleados.AllowUserToDeleteRows = False
+        Me.DgvEmpleados.AutoGenerateColumns = False
+        Me.DgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn})
+        Me.DgvEmpleados.DataSource = Me.EmpleadoBindingSource
+        Me.DgvEmpleados.Location = New System.Drawing.Point(6, 19)
+        Me.DgvEmpleados.Name = "DgvEmpleados"
+        Me.DgvEmpleados.ReadOnly = True
+        Me.DgvEmpleados.Size = New System.Drawing.Size(763, 393)
+        Me.DgvEmpleados.TabIndex = 0
         '
-        'IdempDataGridViewTextBoxColumn
+        'IdEmpDataGridViewTextBoxColumn
         '
-        Me.IdempDataGridViewTextBoxColumn.DataPropertyName = "id_emp"
-        Me.IdempDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IdempDataGridViewTextBoxColumn.Name = "IdempDataGridViewTextBoxColumn"
-        Me.IdempDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdempDataGridViewTextBoxColumn.Width = 40
+        Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
+        Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
+        Me.IdEmpDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdEmpDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.IdEmpDataGridViewTextBoxColumn.Width = 40
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombresDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ApellidosDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'CedulaDataGridViewTextBoxColumn
         '
@@ -74,20 +103,7 @@ Partial Class FrmSeeEmpleado
         Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cedula"
         Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
         Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellido"
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CedulaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'TelefonoDataGridViewTextBoxColumn
         '
@@ -95,14 +111,35 @@ Partial Class FrmSeeEmpleado
         Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
         Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
         Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelefonoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
-        'CorreoinstDataGridViewTextBoxColumn
+        'UsernameDataGridViewTextBoxColumn
         '
-        Me.CorreoinstDataGridViewTextBoxColumn.DataPropertyName = "correo_inst"
-        Me.CorreoinstDataGridViewTextBoxColumn.HeaderText = "Correo"
-        Me.CorreoinstDataGridViewTextBoxColumn.Name = "CorreoinstDataGridViewTextBoxColumn"
-        Me.CorreoinstDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CorreoinstDataGridViewTextBoxColumn.Width = 250
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario"
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UsernameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.UsernameDataGridViewTextBoxColumn.Width = 140
+        '
+        'CorreoInstDataGridViewTextBoxColumn
+        '
+        Me.CorreoInstDataGridViewTextBoxColumn.DataPropertyName = "correoInst"
+        Me.CorreoInstDataGridViewTextBoxColumn.HeaderText = "Correo Institucional"
+        Me.CorreoInstDataGridViewTextBoxColumn.Name = "CorreoInstDataGridViewTextBoxColumn"
+        Me.CorreoInstDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CorreoInstDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.CorreoInstDataGridViewTextBoxColumn.Width = 140
+        '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'BDAsistenciasEySDataSet
+        '
+        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
+        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'EmpleadosBindingSource
         '
@@ -133,7 +170,7 @@ Partial Class FrmSeeEmpleado
         Me.TxtBuscar.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtBuscar.Location = New System.Drawing.Point(79, 161)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(666, 30)
+        Me.TxtBuscar.Size = New System.Drawing.Size(562, 30)
         Me.TxtBuscar.TabIndex = 7
         '
         'Label2
@@ -165,16 +202,6 @@ Partial Class FrmSeeEmpleado
         Me.BtnAddCargos.Text = "Asignar Cargos"
         Me.BtnAddCargos.UseVisualStyleBackColor = True
         '
-        'BtnAddRol
-        '
-        Me.BtnAddRol.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnAddRol.Location = New System.Drawing.Point(391, 106)
-        Me.BtnAddRol.Name = "BtnAddRol"
-        Me.BtnAddRol.Size = New System.Drawing.Size(174, 31)
-        Me.BtnAddRol.TabIndex = 12
-        Me.BtnAddRol.Text = "Asignar Rol"
-        Me.BtnAddRol.UseVisualStyleBackColor = True
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -188,53 +215,91 @@ Partial Class FrmSeeEmpleado
         'BtnSeeReport
         '
         Me.BtnSeeReport.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnSeeReport.Location = New System.Drawing.Point(571, 598)
+        Me.BtnSeeReport.Location = New System.Drawing.Point(595, 418)
         Me.BtnSeeReport.Name = "BtnSeeReport"
         Me.BtnSeeReport.Size = New System.Drawing.Size(174, 31)
         Me.BtnSeeReport.TabIndex = 14
         Me.BtnSeeReport.Text = "Ver Reporte Completo"
         Me.BtnSeeReport.UseVisualStyleBackColor = True
         '
+        'RefEmpleados5BindingSource
+        '
+        Me.RefEmpleados5BindingSource.DataMember = "RefEmpleados5"
+        Me.RefEmpleados5BindingSource.DataSource = Me.EmpleadosBindingSource
+        '
+        'CargosEmpleadosTableAdapter
+        '
+        Me.CargosEmpleadosTableAdapter.ClearBeforeFill = True
+        '
+        'BDAsistenciasEySDataSetBindingSource
+        '
+        Me.BDAsistenciasEySDataSetBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        Me.BDAsistenciasEySDataSetBindingSource.Position = 0
+        '
+        'EmpleadoTableAdapter
+        '
+        Me.EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.DgvEmpleados)
+        Me.GroupBox1.Controls.Add(Me.BtnSeeReport)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 197)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(775, 457)
+        Me.GroupBox1.TabIndex = 15
+        Me.GroupBox1.TabStop = False
+        '
         'FrmSeeEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(757, 641)
-        Me.Controls.Add(Me.BtnSeeReport)
+        Me.ClientSize = New System.Drawing.Size(806, 668)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.BtnAddRol)
         Me.Controls.Add(Me.BtnAddCargos)
         Me.Controls.Add(Me.TxtEmpSelct)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "FrmSeeEmpleado"
         Me.Text = "Control de Asistencias - Reporte de Empleados"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RefEmpleados5BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgvEmpleados As DataGridView
     Friend WithEvents ControlAsistenciaDataSet As ControlAsistenciaDataSet
     Friend WithEvents EmpleadosBindingSource As BindingSource
     Friend WithEvents EmpleadosTableAdapter As ControlAsistenciaDataSetTableAdapters.EmpleadosTableAdapter
-    Friend WithEvents IdempDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CorreoinstDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtEmpSelct As TextBox
     Friend WithEvents BtnAddCargos As Button
-    Friend WithEvents BtnAddRol As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnSeeReport As Button
+    Friend WithEvents RefEmpleados5BindingSource As BindingSource
+    Friend WithEvents CargosEmpleadosTableAdapter As ControlAsistenciaDataSetTableAdapters.CargosEmpleadosTableAdapter
+    Friend WithEvents BDAsistenciasEySDataSetBindingSource As BindingSource
+    Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
+    Friend WithEvents EmpleadoBindingSource As BindingSource
+    Friend WithEvents EmpleadoTableAdapter As BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents IdEmpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CorreoInstDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

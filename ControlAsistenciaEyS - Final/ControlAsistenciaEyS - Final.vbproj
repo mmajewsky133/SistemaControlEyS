@@ -237,6 +237,7 @@
     <EmbeddedResource Include="Reportes\FrmSeeEmpleado.resx">
       <DependentUpon>FrmSeeEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptCargos.rdlc" />
     <EmbeddedResource Include="Reportes\RptDepartamento.rdlc" />
     <EmbeddedResource Include="Reportes\RptDisplay.resx">
       <DependentUpon>RptDisplay.vb</DependentUpon>
