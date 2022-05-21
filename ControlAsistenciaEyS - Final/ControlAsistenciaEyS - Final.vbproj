@@ -119,14 +119,6 @@
     <Compile Include="BDAsistenciasEySDataSet.vb">
       <DependentUpon>BDAsistenciasEySDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ControlAsistenciaDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ControlAsistenciaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ControlAsistenciaDataSet.vb">
-      <DependentUpon>ControlAsistenciaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Datos\GlobalRequests.vb" />
     <Compile Include="FrmMainAdminMenu.Designer.vb">
       <DependentUpon>FrmMainAdminMenu.vb</DependentUpon>
@@ -258,17 +250,6 @@
     </None>
     <None Include="BDAsistenciasEySDataSet.xss">
       <DependentUpon>BDAsistenciasEySDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ControlAsistenciaDataSet.xsc">
-      <DependentUpon>ControlAsistenciaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ControlAsistenciaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ControlAsistenciaDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ControlAsistenciaDataSet.xss">
-      <DependentUpon>ControlAsistenciaDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
