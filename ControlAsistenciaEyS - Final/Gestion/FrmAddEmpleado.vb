@@ -140,8 +140,17 @@ Public Class FrmAddEmpleado
     End Sub
 
     Private Sub BtnNewEmp_Click(sender As Object, e As EventArgs) Handles BtnNewEmp.Click
-        Me.Hide()
-        Me.Show()
+
+        TxtNombre.Text = ""
+        TxtApellido.Text = ""
+        TxtCedula.Text = ""
+        TxtCorreo.Text = ""
+        TxtTel.Text = ""
+        TxtCorreoInst.Text = ""
+        TxtDireccion.Text = ""
+        PBEmp.Image = Nothing
+        DTPNac.ResetText()
+
         Me.Mostrar()
     End Sub
 End Class
