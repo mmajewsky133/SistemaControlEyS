@@ -104,7 +104,7 @@ Public Class FrmAddEmpleado
         Dim correoInstitucional As String = TxtCorreoInst.Text.Trim
         Dim direccion As String = TxtDireccion.Text.Trim
 
-        'empleado.EditarEmpleado(nombre, apellido, cedula, direccion, telefono, correo, correoInstitucional, idEmpleado)'
+        empleado.EditarEmpleado(nombre, apellido, cedula, direccion, telefono, correo, correoInstitucional, 2, idEmpleado)
         llenarGrid()
 
     End Sub
