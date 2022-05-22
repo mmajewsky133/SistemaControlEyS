@@ -77,7 +77,7 @@
         Dim extension As String = TxtExtension.Text.Trim
         Dim correo As String = TxtCorreo.Text.Trim
 
-        departamento.EditarDepartamento(nombreDep, extension, correo, idDepartamento)
+        departamento.EditarDepartamento(nombreDep, extension, correo, 2, idDepartamento)
         llenarGrid()
 
     End Sub

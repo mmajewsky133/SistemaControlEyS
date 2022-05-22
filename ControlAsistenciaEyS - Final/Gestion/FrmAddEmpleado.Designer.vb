@@ -542,7 +542,7 @@ Partial Class FrmAddEmpleado
         Me.Controls.Add(Me.PBEmp)
         Me.Controls.Add(Me.Label3)
         Me.Name = "FrmAddEmpleado"
-        Me.Text = "FrmAddEmpleado"
+        Me.Text = "Gestor de empleados"
         CType(Me.PBEmp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

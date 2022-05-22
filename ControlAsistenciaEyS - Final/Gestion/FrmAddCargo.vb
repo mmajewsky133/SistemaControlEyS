@@ -43,7 +43,7 @@
         Dim descripcion As String = TxtDescripcion.Text.Trim
         Dim idDepartamento As Integer = CInt(TxtIdDep.Text.Trim)
 
-        cargo.ActualizarCargo(nombreCargo, descripcion, idDepartamento, idCargo)
+        cargo.ActualizarCargo(nombreCargo, descripcion, idDepartamento, 2, idCargo)
 
         llenarGrid()
     End Sub
