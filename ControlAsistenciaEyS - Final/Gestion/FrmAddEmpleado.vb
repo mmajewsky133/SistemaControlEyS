@@ -30,7 +30,7 @@ Public Class FrmAddEmpleado
             Dim cedula As String = TxtCedula.Text
             Dim fotoEmp As New MemoryStream
             PBEmp.Image.Save(fotoEmp, format:=PBEmp.Image.RawFormat)
-            Dim fechaNac As String
+            Dim fechaNac As DateTime = DTPNac.Value
             Dim direccion As String = TxtDireccion.Text
             Dim telefono As String = TxtTel.Text
             Dim correo As String = TxtCorreo.Text
@@ -38,7 +38,7 @@ Public Class FrmAddEmpleado
             Dim username As String = nombres & Math.Ceiling(Rnd() * 20)
             Dim pwpin As String = "123"
             Dim estado As Integer = 1
-            empleado.InsertarTemporal(nombres, apellidos, cedula, fotoEmp.ToArray(), direccion, telefono, correo, correoInst, username, pwpin, estado)
+            empleado.InsertarEmpleado(nombres, apellidos, cedula, fotoEmp.ToArray(), fechaNac, direccion, telefono, correo, correoInst, username, pwpin, estado)
             llenarGrid()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
@@ -121,10 +121,11 @@ Public Class FrmAddEmpleado
             imagen = DgvEmpleado.Item(4, fila).Value
             Dim memoria As New MemoryStream(imagen)
             PBEmp.Image = Image.FromStream(memoria)
-            TxtDireccion.Text = DgvEmpleado.Item(5, fila).Value
-            TxtTel.Text = DgvEmpleado.Item(6, fila).Value
-            TxtCorreo.Text = DgvEmpleado.Item(7, fila).Value
-            TxtCorreoInst.Text = DgvEmpleado.Item(8, fila).Value
+            DTPNac.Value = DgvEmpleado.Item(5, fila).Value
+            TxtDireccion.Text = DgvEmpleado.Item(6, fila).Value
+            TxtTel.Text = DgvEmpleado.Item(7, fila).Value
+            TxtCorreo.Text = DgvEmpleado.Item(8, fila).Value
+            TxtCorreoInst.Text = DgvEmpleado.Item(9, fila).Value
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")

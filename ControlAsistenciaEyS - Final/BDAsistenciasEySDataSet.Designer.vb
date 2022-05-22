@@ -1811,6 +1811,8 @@ Partial Public Class BDAsistenciasEySDataSet
         
         Private columnfotoEmp As Global.System.Data.DataColumn
         
+        Private columnfechaNac As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -1943,6 +1945,14 @@ Partial Public Class BDAsistenciasEySDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property fechaNacColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfechaNac
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1979,9 +1989,9 @@ Partial Public Class BDAsistenciasEySDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddempleadoRow(ByVal nombres As String, ByVal apellidos As String, ByVal cedula As String, ByVal direccion As String, ByVal telefono As String, ByVal correo As String, ByVal correoInst As String, ByVal username As String, ByVal pwpin As String, ByVal estado As Integer, ByVal fotoEmp() As Byte) As empleadoRow
+        Public Overloads Function AddempleadoRow(ByVal nombres As String, ByVal apellidos As String, ByVal cedula As String, ByVal direccion As String, ByVal telefono As String, ByVal correo As String, ByVal correoInst As String, ByVal username As String, ByVal pwpin As String, ByVal estado As Integer, ByVal fotoEmp() As Byte, ByVal fechaNac As Date) As empleadoRow
             Dim rowempleadoRow As empleadoRow = CType(Me.NewRow,empleadoRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, nombres, apellidos, cedula, direccion, telefono, correo, correoInst, username, pwpin, estado, fotoEmp}
+            Dim columnValuesArray() As Object = New Object() {Nothing, nombres, apellidos, cedula, direccion, telefono, correo, correoInst, username, pwpin, estado, fotoEmp, fechaNac}
             rowempleadoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowempleadoRow)
             Return rowempleadoRow
@@ -2022,6 +2032,7 @@ Partial Public Class BDAsistenciasEySDataSet
             Me.columnpwpin = MyBase.Columns("pwpin")
             Me.columnestado = MyBase.Columns("estado")
             Me.columnfotoEmp = MyBase.Columns("fotoEmp")
+            Me.columnfechaNac = MyBase.Columns("fechaNac")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2051,6 +2062,8 @@ Partial Public Class BDAsistenciasEySDataSet
             MyBase.Columns.Add(Me.columnestado)
             Me.columnfotoEmp = New Global.System.Data.DataColumn("fotoEmp", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnfotoEmp)
+            Me.columnfechaNac = New Global.System.Data.DataColumn("fechaNac", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfechaNac)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnidEmp}, true))
             Me.columnidEmp.AutoIncrement = true
             Me.columnidEmp.AutoIncrementSeed = -1
@@ -3121,6 +3134,33 @@ Partial Public Class BDAsistenciasEySDataSet
                 Me(Me.tableempleado.fotoEmpColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property fechaNac() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableempleado.fechaNacColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'fechaNac' in table 'empleado' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableempleado.fechaNacColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsfechaNacNull() As Boolean
+            Return Me.IsNull(Me.tableempleado.fechaNacColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetfechaNacNull()
+            Me(Me.tableempleado.fechaNacColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -5471,20 +5511,24 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             tableMapping.ColumnMappings.Add("pwpin", "pwpin")
             tableMapping.ColumnMappings.Add("estado", "estado")
             tableMapping.ColumnMappings.Add("fotoEmp", "fotoEmp")
+            tableMapping.ColumnMappings.Add("fechaNac", "fechaNac")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [empleado] WHERE (([idEmp] = @Original_idEmp) AND ([nombres] = @Origi"& _ 
                 "nal_nombres) AND ([apellidos] = @Original_apellidos) AND ([cedula] = @Original_c"& _ 
-                "edula) AND ([direccion] = @Original_direccion) AND ([telefono] = @Original_telef"& _ 
-                "ono) AND ([correo] = @Original_correo) AND ([correoInst] = @Original_correoInst)"& _ 
-                " AND ([username] = @Original_username) AND ([pwpin] = @Original_pwpin) AND ([est"& _ 
-                "ado] = @Original_estado))"
+                "edula) AND ((@IsNull_fechaNac = 1 AND [fechaNac] IS NULL) OR ([fechaNac] = @Orig"& _ 
+                "inal_fechaNac)) AND ([direccion] = @Original_direccion) AND ([telefono] = @Origi"& _ 
+                "nal_telefono) AND ([correo] = @Original_correo) AND ([correoInst] = @Original_co"& _ 
+                "rreoInst) AND ([username] = @Original_username) AND ([pwpin] = @Original_pwpin) "& _ 
+                "AND ([estado] = @Original_estado))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmp", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmp", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nombres", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombres", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_apellidos", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "apellidos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_cedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cedula", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_fechaNac", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaNac", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaNac", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaNac", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_direccion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_telefono", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_correo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "correo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -5494,17 +5538,18 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [empleado] ([nombres], [apellidos], [cedula], [fotoEmp], [direccion],"& _ 
-                " [telefono], [correo], [correoInst], [username], [pwpin], [estado]) VALUES (@nom"& _ 
-                "bres, @apellidos, @cedula, @fotoEmp, @direccion, @telefono, @correo, @correoInst"& _ 
-                ", @username, @pwpin, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmp, nombres, apellidos, cedula, fotoEm"& _ 
-                "p, direccion, telefono, correo, correoInst, username, pwpin, estado FROM emplead"& _ 
-                "o WHERE (idEmp = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [empleado] ([nombres], [apellidos], [cedula], [fotoEmp], [fechaNac], "& _ 
+                "[direccion], [telefono], [correo], [correoInst], [username], [pwpin], [estado]) "& _ 
+                "VALUES (@nombres, @apellidos, @cedula, @fotoEmp, @fechaNac, @direccion, @telefon"& _ 
+                "o, @correo, @correoInst, @username, @pwpin, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmp, nombres, ap"& _ 
+                "ellidos, cedula, fotoEmp, fechaNac, direccion, telefono, correo, correoInst, use"& _ 
+                "rname, pwpin, estado FROM empleado WHERE (idEmp = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombres", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombres", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@apellidos", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "apellidos", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fotoEmp", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fotoEmp", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaNac", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaNac", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@direccion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@telefono", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "correo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5515,21 +5560,23 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [empleado] SET [nombres] = @nombres, [apellidos] = @apellidos, [cedula] = "& _ 
-                "@cedula, [fotoEmp] = @fotoEmp, [direccion] = @direccion, [telefono] = @telefono,"& _ 
-                " [correo] = @correo, [correoInst] = @correoInst, [username] = @username, [pwpin]"& _ 
-                " = @pwpin, [estado] = @estado WHERE (([idEmp] = @Original_idEmp) AND ([nombres] "& _ 
-                "= @Original_nombres) AND ([apellidos] = @Original_apellidos) AND ([cedula] = @Or"& _ 
-                "iginal_cedula) AND ([direccion] = @Original_direccion) AND ([telefono] = @Origin"& _ 
-                "al_telefono) AND ([correo] = @Original_correo) AND ([correoInst] = @Original_cor"& _ 
-                "reoInst) AND ([username] = @Original_username) AND ([pwpin] = @Original_pwpin) A"& _ 
-                "ND ([estado] = @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmp, nombres, apellidos, cedula, fo"& _ 
-                "toEmp, direccion, telefono, correo, correoInst, username, pwpin, estado FROM emp"& _ 
-                "leado WHERE (idEmp = @idEmp)"
+                "@cedula, [fotoEmp] = @fotoEmp, [fechaNac] = @fechaNac, [direccion] = @direccion,"& _ 
+                " [telefono] = @telefono, [correo] = @correo, [correoInst] = @correoInst, [userna"& _ 
+                "me] = @username, [pwpin] = @pwpin, [estado] = @estado WHERE (([idEmp] = @Origina"& _ 
+                "l_idEmp) AND ([nombres] = @Original_nombres) AND ([apellidos] = @Original_apelli"& _ 
+                "dos) AND ([cedula] = @Original_cedula) AND ((@IsNull_fechaNac = 1 AND [fechaNac]"& _ 
+                " IS NULL) OR ([fechaNac] = @Original_fechaNac)) AND ([direccion] = @Original_dir"& _ 
+                "eccion) AND ([telefono] = @Original_telefono) AND ([correo] = @Original_correo) "& _ 
+                "AND ([correoInst] = @Original_correoInst) AND ([username] = @Original_username) "& _ 
+                "AND ([pwpin] = @Original_pwpin) AND ([estado] = @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEm"& _ 
+                "p, nombres, apellidos, cedula, fotoEmp, fechaNac, direccion, telefono, correo, c"& _ 
+                "orreoInst, username, pwpin, estado FROM empleado WHERE (idEmp = @idEmp)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombres", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombres", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@apellidos", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "apellidos", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fotoEmp", Global.System.Data.SqlDbType.Image, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fotoEmp", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaNac", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaNac", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@direccion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@telefono", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "correo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5541,6 +5588,8 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nombres", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombres", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_apellidos", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "apellidos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_cedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cedula", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_fechaNac", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaNac", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaNac", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaNac", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_direccion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_telefono", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_correo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "correo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -5564,8 +5613,8 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT idEmp, nombres, apellidos, cedula, fotoEmp, direccion, telefono, correo, c"& _ 
-                "orreoInst, username, pwpin, estado FROM empleado"
+            Me._commandCollection(0).CommandText = "SELECT idEmp, nombres, apellidos, cedula, fotoEmp, fechaNac, direccion, telefono,"& _ 
+                " correo, correoInst, username, pwpin, estado FROM empleado"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
@@ -5784,7 +5833,7 @@ Namespace BDAsistenciasEySDataSetTableAdapters
                 command.Parameters(2).Value = CType(cedula,String)
             End If
             If (fotoEmp Is Nothing) Then
-                command.Parameters(3).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("fotoEmp")
             Else
                 command.Parameters(3).Value = CType(fotoEmp,Byte())
             End If
