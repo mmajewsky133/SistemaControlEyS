@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-
+Imports System.IO
 
 Public Class FrmAddEmpleado
 
@@ -28,7 +28,8 @@ Public Class FrmAddEmpleado
             Dim nombres As String = TxtNombre.Text
             Dim apellidos As String = TxtApellido.Text
             Dim cedula As String = TxtCedula.Text
-            Dim fotoEmp As String
+            Dim fotoEmp As New MemoryStream
+            PBEmp.Image.Save(fotoEmp, format:=PBEmp.Image.RawFormat)
             Dim fechaNac As String
             Dim direccion As String = TxtDireccion.Text
             Dim telefono As String = TxtTel.Text
@@ -37,7 +38,7 @@ Public Class FrmAddEmpleado
             Dim username As String = nombres & Math.Ceiling(Rnd() * 20)
             Dim pwpin As String = "123"
             Dim estado As Integer = 1
-            empleado.InsertarTemporal(nombres, apellidos, cedula, direccion, telefono, correo, correoInst, username, pwpin, estado)
+            empleado.InsertarTemporal(nombres, apellidos, cedula, fotoEmp.ToArray(), direccion, telefono, correo, correoInst, username, pwpin, estado)
             llenarGrid()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
@@ -111,18 +112,29 @@ Public Class FrmAddEmpleado
     Private Sub DgvEmpleado_DoubleClick(sender As Object, e As EventArgs) Handles DgvEmpleado.DoubleClick
         Try
             Dim fila As Integer = DgvEmpleado.CurrentRow.Index
+            Dim imagen() As Byte
 
             idEmpleado = DgvEmpleado.Item(0, fila).Value
             TxtNombre.Text = DgvEmpleado.Item(1, fila).Value
             TxtApellido.Text = DgvEmpleado.Item(2, fila).Value
             TxtCedula.Text = DgvEmpleado.Item(3, fila).Value
-            TxtDireccion.Text = DgvEmpleado.Item(4, fila).Value
-            TxtTel.Text = DgvEmpleado.Item(5, fila).Value
-            TxtCorreo.Text = DgvEmpleado.Item(6, fila).Value
-            TxtCorreoInst.Text = DgvEmpleado.Item(7, fila).Value
+            imagen = DgvEmpleado.Item(4, fila).Value
+            Dim memoria As New MemoryStream(imagen)
+            PBEmp.Image = Image.FromStream(memoria)
+            TxtDireccion.Text = DgvEmpleado.Item(5, fila).Value
+            TxtTel.Text = DgvEmpleado.Item(6, fila).Value
+            TxtCorreo.Text = DgvEmpleado.Item(7, fila).Value
+            TxtCorreoInst.Text = DgvEmpleado.Item(8, fila).Value
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
         End Try
+    End Sub
+
+    Private Sub PBEmp_Click(sender As Object, e As EventArgs) Handles PBEmp.Click
+        Dim op As OpenFileDialog = New OpenFileDialog
+        If op.ShowDialog = DialogResult.OK Then
+            PBEmp.Image = Image.FromFile(op.FileName)
+        End If
     End Sub
 End Class
