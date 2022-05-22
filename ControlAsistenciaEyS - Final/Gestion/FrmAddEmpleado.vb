@@ -138,4 +138,10 @@ Public Class FrmAddEmpleado
             PBEmp.Image = Image.FromFile(op.FileName)
         End If
     End Sub
+
+    Private Sub BtnNewEmp_Click(sender As Object, e As EventArgs) Handles BtnNewEmp.Click
+        Me.Close()
+        Me.Show()
+        Me.Mostrar()
+    End Sub
 End Class
