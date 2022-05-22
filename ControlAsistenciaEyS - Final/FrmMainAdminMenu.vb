@@ -36,6 +36,14 @@
         FrmMarcadoEyS.Show()
     End Sub
 
+    Private Sub ReporteDeDepartamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeDepartamentosToolStripMenuItem.Click
+        If (Not FrmSeeDepartamento.Visible) Then
+            FrmSeeDepartamento.Show()
+        Else
+            FrmSeeDepartamento.Mostrar()
+        End If
+    End Sub
+
     Private Sub GestionDeDepartamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeDepartamentosToolStripMenuItem.Click
         If (Not FrmAddDepartamento.Visible) Then
             FrmAddDepartamento.Show()
@@ -44,8 +52,16 @@
         End If
     End Sub
 
+    Private Sub ReporteDeCargosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeCargosToolStripMenuItem.Click
+        If (Not FrmSeeCargos.Visible) Then
+            FrmSeeCargos.Show()
+        Else
+            FrmSeeCargos.Mostrar()
+        End If
+    End Sub
+
     Private Sub GestionDeCargosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDeCargosToolStripMenuItem.Click
-        If (Not FrmAddDepartamento.Visible) Then
+        If (Not FrmAddCargo.Visible) Then
             FrmAddCargo.Show()
         Else
             FrmAddCargo.Mostrar()

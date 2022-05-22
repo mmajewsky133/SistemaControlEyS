@@ -27,20 +27,22 @@ Partial Class FrmSeeDepartamento
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtDepSelct = New System.Windows.Forms.TextBox()
         Me.DgvDepartamentos = New System.Windows.Forms.DataGridView()
-        Me.IddepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombredepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ExttelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ControlAsistenciaDataSet = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSet()
-        Me.DepartamentoTableAdapter = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSetTableAdapters.DepartamentoTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.BtnAddDep = New System.Windows.Forms.Button()
         Me.BtnSeeReport = New System.Windows.Forms.Button()
+        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
+        Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DepartamentoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.departamentoTableAdapter()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DgvDepartamentos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -78,63 +80,13 @@ Partial Class FrmSeeDepartamento
         Me.DgvDepartamentos.AllowUserToDeleteRows = False
         Me.DgvDepartamentos.AutoGenerateColumns = False
         Me.DgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvDepartamentos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IddepDataGridViewTextBoxColumn, Me.NombredepDataGridViewTextBoxColumn, Me.ExttelDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn})
+        Me.DgvDepartamentos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.DgvDepartamentos.DataSource = Me.DepartamentoBindingSource
         Me.DgvDepartamentos.Location = New System.Drawing.Point(12, 182)
         Me.DgvDepartamentos.Name = "DgvDepartamentos"
         Me.DgvDepartamentos.ReadOnly = True
         Me.DgvDepartamentos.Size = New System.Drawing.Size(513, 393)
         Me.DgvDepartamentos.TabIndex = 17
-        '
-        'IddepDataGridViewTextBoxColumn
-        '
-        Me.IddepDataGridViewTextBoxColumn.DataPropertyName = "id_dep"
-        Me.IddepDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IddepDataGridViewTextBoxColumn.Name = "IddepDataGridViewTextBoxColumn"
-        Me.IddepDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IddepDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.IddepDataGridViewTextBoxColumn.Width = 50
-        '
-        'NombredepDataGridViewTextBoxColumn
-        '
-        Me.NombredepDataGridViewTextBoxColumn.DataPropertyName = "nombre_dep"
-        Me.NombredepDataGridViewTextBoxColumn.HeaderText = "Departamento"
-        Me.NombredepDataGridViewTextBoxColumn.Name = "NombredepDataGridViewTextBoxColumn"
-        Me.NombredepDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombredepDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NombredepDataGridViewTextBoxColumn.Width = 150
-        '
-        'ExttelDataGridViewTextBoxColumn
-        '
-        Me.ExttelDataGridViewTextBoxColumn.DataPropertyName = "ext_tel"
-        Me.ExttelDataGridViewTextBoxColumn.HeaderText = "Extencion"
-        Me.ExttelDataGridViewTextBoxColumn.Name = "ExttelDataGridViewTextBoxColumn"
-        Me.ExttelDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ExttelDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ExttelDataGridViewTextBoxColumn.Width = 70
-        '
-        'CorreoDataGridViewTextBoxColumn
-        '
-        Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "correo"
-        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "Correo"
-        Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
-        Me.CorreoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CorreoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.CorreoDataGridViewTextBoxColumn.Width = 200
-        '
-        'DepartamentoBindingSource
-        '
-        Me.DepartamentoBindingSource.DataMember = "Departamento"
-        Me.DepartamentoBindingSource.DataSource = Me.ControlAsistenciaDataSet
-        '
-        'ControlAsistenciaDataSet
-        '
-        Me.ControlAsistenciaDataSet.DataSetName = "ControlAsistenciaDataSet"
-        Me.ControlAsistenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DepartamentoTableAdapter
-        '
-        Me.DepartamentoTableAdapter.ClearBeforeFill = True
         '
         'Label1
         '
@@ -174,6 +126,60 @@ Partial Class FrmSeeDepartamento
         Me.BtnSeeReport.Text = "Ver Reporte Completo"
         Me.BtnSeeReport.UseVisualStyleBackColor = True
         '
+        'BDAsistenciasEySDataSet
+        '
+        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
+        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BDAsistenciasEySDataSetBindingSource
+        '
+        Me.BDAsistenciasEySDataSetBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        Me.BDAsistenciasEySDataSetBindingSource.Position = 0
+        '
+        'DepartamentoBindingSource
+        '
+        Me.DepartamentoBindingSource.DataMember = "departamento"
+        Me.DepartamentoBindingSource.DataSource = Me.BDAsistenciasEySDataSetBindingSource
+        '
+        'DepartamentoTableAdapter
+        '
+        Me.DepartamentoTableAdapter.ClearBeforeFill = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "idDep"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn1.Width = 40
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombreDep"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Departamento"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn2.Width = 130
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "extTel"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Extension de Telefono"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewTextBoxColumn3.Width = 200
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "correo"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Correo"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
         'FrmSeeDepartamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -190,8 +196,9 @@ Partial Class FrmSeeDepartamento
         Me.Name = "FrmSeeDepartamento"
         Me.Text = "Control de Asistencias - Reporte de Departamentos"
         CType(Me.DgvDepartamentos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -201,9 +208,6 @@ Partial Class FrmSeeDepartamento
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtDepSelct As TextBox
     Friend WithEvents DgvDepartamentos As DataGridView
-    Friend WithEvents ControlAsistenciaDataSet As ControlAsistenciaDataSet
-    Friend WithEvents DepartamentoBindingSource As BindingSource
-    Friend WithEvents DepartamentoTableAdapter As ControlAsistenciaDataSetTableAdapters.DepartamentoTableAdapter
     Friend WithEvents IddepDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombredepDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExttelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -212,4 +216,12 @@ Partial Class FrmSeeDepartamento
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents BtnAddDep As Button
     Friend WithEvents BtnSeeReport As Button
+    Friend WithEvents BDAsistenciasEySDataSetBindingSource As BindingSource
+    Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
+    Friend WithEvents DepartamentoBindingSource As BindingSource
+    Friend WithEvents DepartamentoTableAdapter As BDAsistenciasEySDataSetTableAdapters.departamentoTableAdapter
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
 End Class

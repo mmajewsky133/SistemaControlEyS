@@ -5,8 +5,9 @@
     Dim IdSelected
 
     Private Sub FrmSeeDepartamento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.departamento' table. You can move, or remove it, as needed.
+        Me.DepartamentoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.departamento)
         'TODO: This line of code loads data into the 'ControlAsistenciaDataSet.Departamento' table. You can move, or remove it, as needed.
-        Me.DepartamentoTableAdapter.Fill(Me.ControlAsistenciaDataSet.Departamento)
     End Sub
 
     Sub Mostrar()
@@ -15,7 +16,7 @@
 
     Private Sub BtnSeeReport_Click(sender As Object, e As EventArgs) Handles BtnSeeReport.Click
         dep.Fill(tblDep)
-        VerReporte(tblDep, "DsDepartamentos", "C:\Reportes\RptDepartamento.rdlc")
+        VerReporte(tblDep, "DsDepartamentos", "RptDepartamento.rdlc")
     End Sub
 
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged

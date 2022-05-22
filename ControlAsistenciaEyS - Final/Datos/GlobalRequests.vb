@@ -7,7 +7,7 @@ Module GlobalRequests
             With RptDisplay
                 .ReportViewer1.LocalReport.DataSources.Clear()
                 .ReportViewer1.LocalReport.DataSources.Add(rpt)
-                .ReportViewer1.LocalReport.ReportPath = nombreRpt
+                .ReportViewer1.LocalReport.ReportPath = "..\..\Reportes\" + nombreRpt
                 .ReportViewer1.Refresh()
                 .Show()
             End With

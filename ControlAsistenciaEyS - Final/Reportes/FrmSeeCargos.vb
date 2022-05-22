@@ -16,7 +16,7 @@
 
     Private Sub BtnSeeReport_Click(sender As Object, e As EventArgs) Handles BtnSeeReport.Click
         cargo.Fill(tblCargo)
-        VerReporte(tblCargo, "DsCargos", "C:\Reportes\RptCargos.rdlc")
+        VerReporte(tblCargo, "DsCargos", "RptCargos.rdlc")
     End Sub
 
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged

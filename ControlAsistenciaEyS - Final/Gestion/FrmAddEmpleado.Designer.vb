@@ -58,16 +58,12 @@ Partial Class FrmAddEmpleado
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
-        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ControlAsistenciaDataSet = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSet()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.BtnNewEmp = New System.Windows.Forms.Button()
         Me.BtnGuardarEmp = New System.Windows.Forms.Button()
         Me.BtnEditarEmp = New System.Windows.Forms.Button()
         Me.BtnEliminarEmp = New System.Windows.Forms.Button()
-        Me.ControlAsistenciaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmpleadosTableAdapter = New ControlAsistenciaEyS___Final.ControlAsistenciaDataSetTableAdapters.EmpleadosTableAdapter()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         CType(Me.PBEmp, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,9 +71,6 @@ Partial Class FrmAddEmpleado
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ControlAsistenciaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -413,17 +406,6 @@ Partial Class FrmAddEmpleado
         '
         Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
         Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EmpleadosBindingSource
-        '
-        Me.EmpleadosBindingSource.DataMember = "Empleados"
-        Me.EmpleadosBindingSource.DataSource = Me.ControlAsistenciaDataSet
-        '
-        'ControlAsistenciaDataSet
-        '
-        Me.ControlAsistenciaDataSet.DataSetName = "ControlAsistenciaDataSet"
-        Me.ControlAsistenciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -490,12 +472,9 @@ Partial Class FrmAddEmpleado
         '
         'ControlAsistenciaDataSetBindingSource
         '
-        Me.ControlAsistenciaDataSetBindingSource.DataSource = Me.ControlAsistenciaDataSet
-        Me.ControlAsistenciaDataSetBindingSource.Position = 0
         '
         'EmpleadosTableAdapter
-        '
-        Me.EmpleadosTableAdapter.ClearBeforeFill = True
+
         '
         'GroupBox1
         '
@@ -551,9 +530,6 @@ Partial Class FrmAddEmpleado
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ControlAsistenciaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ControlAsistenciaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -583,14 +559,10 @@ Partial Class FrmAddEmpleado
     Friend WithEvents DgvEmpleado As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtBuscar As TextBox
-    Friend WithEvents ControlAsistenciaDataSetBindingSource As BindingSource
-    Friend WithEvents ControlAsistenciaDataSet As ControlAsistenciaDataSet
     Friend WithEvents BtnNewEmp As Button
     Friend WithEvents BtnGuardarEmp As Button
     Friend WithEvents BtnEditarEmp As Button
     Friend WithEvents BtnEliminarEmp As Button
-    Friend WithEvents EmpleadosBindingSource As BindingSource
-    Friend WithEvents EmpleadosTableAdapter As ControlAsistenciaDataSetTableAdapters.EmpleadosTableAdapter
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents BDAsistenciasEySDataSetBindingSource As BindingSource
     Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet

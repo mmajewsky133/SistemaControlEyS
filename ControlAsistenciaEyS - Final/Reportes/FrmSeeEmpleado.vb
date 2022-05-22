@@ -15,7 +15,7 @@
 
     Private Sub BtnSeeReport_Click(sender As Object, e As EventArgs) Handles BtnSeeReport.Click
         emp.Fill(tblEmp)
-        VerReporte(tblEmp, "DsEmpleados", "C:\Reportes\RptEmpleados.rdlc")
+        VerReporte(tblEmp, "DsEmpleados", "RptEmpleados.rdlc")
     End Sub
 
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
