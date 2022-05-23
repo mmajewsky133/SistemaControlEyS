@@ -8,6 +8,7 @@
         DgvDepartamento.Refresh()
         GBDepartamento.Text = "Departamentos registrados: " + DgvDepartamento.Rows.Count.ToString
     End Sub
+
     Sub Mostrar()
         Me.Focus()
     End Sub
@@ -80,5 +81,27 @@
         departamento.EditarDepartamento(nombreDep, extension, correo, 2, idDepartamento)
         llenarGrid()
 
+    End Sub
+
+    Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
+        Me.Close()
+        FrmMainAdminMenu.Show()
+    End Sub
+
+    Private Sub TxtBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscar.KeyPress
+        If Asc(e.KeyChar()) = 13 Then
+            If (TxtBuscar.Text.Equals("")) Then
+                llenarGrid()
+            Else
+                Try
+                    Dim dato As String = TxtBuscar.Text & "%"
+                    DgvDepartamento.DataSource = departamento.buscarDepartamento(dato)
+                    DgvDepartamento.Refresh()
+                    GBDepartamento.Text = "Empleados similares: " & DgvDepartamento.Rows.Count.ToString
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+                End Try
+            End If
+        End If
     End Sub
 End Class

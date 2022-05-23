@@ -79,20 +79,18 @@ Partial Class FrmAddEmpleado
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label3.Location = New System.Drawing.Point(15, 26)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(11, 21)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(307, 31)
+        Me.Label3.Size = New System.Drawing.Size(249, 25)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Gestion de Empleados"
         '
         'PBEmp
         '
         Me.PBEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PBEmp.Location = New System.Drawing.Point(21, 121)
-        Me.PBEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PBEmp.Location = New System.Drawing.Point(16, 98)
         Me.PBEmp.Name = "PBEmp"
-        Me.PBEmp.Size = New System.Drawing.Size(253, 225)
+        Me.PBEmp.Size = New System.Drawing.Size(190, 183)
         Me.PBEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PBEmp.TabIndex = 15
         Me.PBEmp.TabStop = False
@@ -101,10 +99,9 @@ Partial Class FrmAddEmpleado
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 87)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(13, 71)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(238, 29)
+        Me.Label1.Size = New System.Drawing.Size(185, 24)
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Foto (Dar doble clic):"
         '
@@ -112,10 +109,9 @@ Partial Class FrmAddEmpleado
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label2.Location = New System.Drawing.Point(283, 90)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(212, 73)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(218, 29)
+        Me.Label2.Size = New System.Drawing.Size(170, 24)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "Nombre Completo:"
         '
@@ -123,10 +119,9 @@ Partial Class FrmAddEmpleado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label5.Location = New System.Drawing.Point(283, 194)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(212, 158)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(96, 29)
+        Me.Label5.Size = New System.Drawing.Size(75, 24)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Cedula:"
         '
@@ -134,10 +129,9 @@ Partial Class FrmAddEmpleado
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label6.Location = New System.Drawing.Point(487, 194)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(365, 158)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(196, 29)
+        Me.Label6.Size = New System.Drawing.Size(152, 24)
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "Correo Personal:"
         '
@@ -145,10 +139,9 @@ Partial Class FrmAddEmpleado
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label7.Location = New System.Drawing.Point(487, 279)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(365, 227)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(226, 29)
+        Me.Label7.Size = New System.Drawing.Size(175, 24)
         Me.Label7.TabIndex = 21
         Me.Label7.Text = "Correo Institucional:"
         '
@@ -156,10 +149,9 @@ Partial Class FrmAddEmpleado
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label8.Location = New System.Drawing.Point(283, 279)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(212, 227)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(116, 29)
+        Me.Label8.Size = New System.Drawing.Size(90, 24)
         Me.Label8.TabIndex = 22
         Me.Label8.Text = "Telefono:"
         '
@@ -167,39 +159,35 @@ Partial Class FrmAddEmpleado
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label9.Location = New System.Drawing.Point(16, 361)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(12, 293)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(121, 29)
+        Me.Label9.Size = New System.Drawing.Size(95, 24)
         Me.Label9.TabIndex = 23
         Me.Label9.Text = "Direccion:"
         '
         'TxtNombre
         '
         Me.TxtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtNombre.Location = New System.Drawing.Point(288, 121)
-        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombre.Location = New System.Drawing.Point(216, 98)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(265, 34)
+        Me.TxtNombre.Size = New System.Drawing.Size(200, 29)
         Me.TxtNombre.TabIndex = 26
         '
         'TxtApellido
         '
         Me.TxtApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtApellido.Location = New System.Drawing.Point(563, 121)
-        Me.TxtApellido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtApellido.Location = New System.Drawing.Point(422, 98)
         Me.TxtApellido.Name = "TxtApellido"
-        Me.TxtApellido.Size = New System.Drawing.Size(265, 34)
+        Me.TxtApellido.Size = New System.Drawing.Size(200, 29)
         Me.TxtApellido.TabIndex = 27
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label11.Location = New System.Drawing.Point(284, 160)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(213, 130)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(77, 20)
+        Me.Label11.Size = New System.Drawing.Size(63, 16)
         Me.Label11.TabIndex = 28
         Me.Label11.Text = "Nombres"
         '
@@ -207,56 +195,50 @@ Partial Class FrmAddEmpleado
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label12.Location = New System.Drawing.Point(559, 160)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Location = New System.Drawing.Point(419, 130)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(77, 20)
+        Me.Label12.Size = New System.Drawing.Size(64, 16)
         Me.Label12.TabIndex = 29
         Me.Label12.Text = "Apellidos"
         '
         'TxtCedula
         '
         Me.TxtCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtCedula.Location = New System.Drawing.Point(288, 224)
-        Me.TxtCedula.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCedula.Location = New System.Drawing.Point(216, 182)
         Me.TxtCedula.Name = "TxtCedula"
-        Me.TxtCedula.Size = New System.Drawing.Size(195, 34)
+        Me.TxtCedula.Size = New System.Drawing.Size(147, 29)
         Me.TxtCedula.TabIndex = 30
         '
         'TxtCorreo
         '
         Me.TxtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtCorreo.Location = New System.Drawing.Point(492, 224)
-        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCorreo.Location = New System.Drawing.Point(369, 182)
         Me.TxtCorreo.Name = "TxtCorreo"
-        Me.TxtCorreo.Size = New System.Drawing.Size(336, 34)
+        Me.TxtCorreo.Size = New System.Drawing.Size(253, 29)
         Me.TxtCorreo.TabIndex = 31
         '
         'TxtTel
         '
         Me.TxtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtTel.Location = New System.Drawing.Point(288, 309)
-        Me.TxtTel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtTel.Location = New System.Drawing.Point(216, 251)
         Me.TxtTel.Name = "TxtTel"
-        Me.TxtTel.Size = New System.Drawing.Size(195, 34)
+        Me.TxtTel.Size = New System.Drawing.Size(147, 29)
         Me.TxtTel.TabIndex = 32
         '
         'TxtDireccion
         '
         Me.TxtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtDireccion.Location = New System.Drawing.Point(21, 390)
-        Me.TxtDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtDireccion.Location = New System.Drawing.Point(16, 317)
         Me.TxtDireccion.Name = "TxtDireccion"
-        Me.TxtDireccion.Size = New System.Drawing.Size(807, 34)
+        Me.TxtDireccion.Size = New System.Drawing.Size(606, 29)
         Me.TxtDireccion.TabIndex = 33
         '
         'TxtCorreoInst
         '
         Me.TxtCorreoInst.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtCorreoInst.Location = New System.Drawing.Point(492, 309)
-        Me.TxtCorreoInst.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCorreoInst.Location = New System.Drawing.Point(369, 251)
         Me.TxtCorreoInst.Name = "TxtCorreoInst"
-        Me.TxtCorreoInst.Size = New System.Drawing.Size(336, 34)
+        Me.TxtCorreoInst.Size = New System.Drawing.Size(253, 29)
         Me.TxtCorreoInst.TabIndex = 34
         '
         'DgvEmpleado
@@ -267,12 +249,11 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvEmpleado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idEmp, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.fotoEmp, Me.fechaNac, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn})
         Me.DgvEmpleado.DataSource = Me.EmpleadoBindingSource
-        Me.DgvEmpleado.Location = New System.Drawing.Point(20, 22)
-        Me.DgvEmpleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DgvEmpleado.Location = New System.Drawing.Point(15, 18)
         Me.DgvEmpleado.Name = "DgvEmpleado"
         Me.DgvEmpleado.ReadOnly = True
         Me.DgvEmpleado.RowHeadersWidth = 51
-        Me.DgvEmpleado.Size = New System.Drawing.Size(768, 242)
+        Me.DgvEmpleado.Size = New System.Drawing.Size(576, 197)
         Me.DgvEmpleado.TabIndex = 35
         '
         'idEmp
@@ -394,29 +375,26 @@ Partial Class FrmAddEmpleado
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label4.Location = New System.Drawing.Point(17, 593)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(13, 482)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 29)
+        Me.Label4.Size = New System.Drawing.Size(73, 24)
         Me.Label4.TabIndex = 36
         Me.Label4.Text = "Buscar:"
         '
         'TxtBuscar
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(117, 590)
-        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtBuscar.Location = New System.Drawing.Point(88, 479)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(284, 34)
+        Me.TxtBuscar.Size = New System.Drawing.Size(214, 29)
         Me.TxtBuscar.TabIndex = 37
         '
         'BtnNewEmp
         '
         Me.BtnNewEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnNewEmp.Location = New System.Drawing.Point(607, 448)
-        Me.BtnNewEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnNewEmp.Location = New System.Drawing.Point(449, 364)
         Me.BtnNewEmp.Name = "BtnNewEmp"
-        Me.BtnNewEmp.Size = New System.Drawing.Size(223, 70)
+        Me.BtnNewEmp.Size = New System.Drawing.Size(173, 57)
         Me.BtnNewEmp.TabIndex = 38
         Me.BtnNewEmp.Text = "Limpiar Campos"
         Me.BtnNewEmp.UseVisualStyleBackColor = True
@@ -424,10 +402,9 @@ Partial Class FrmAddEmpleado
         'BtnGuardarEmp
         '
         Me.BtnGuardarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnGuardarEmp.Location = New System.Drawing.Point(411, 590)
-        Me.BtnGuardarEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnGuardarEmp.Location = New System.Drawing.Point(308, 479)
         Me.BtnGuardarEmp.Name = "BtnGuardarEmp"
-        Me.BtnGuardarEmp.Size = New System.Drawing.Size(144, 37)
+        Me.BtnGuardarEmp.Size = New System.Drawing.Size(108, 30)
         Me.BtnGuardarEmp.TabIndex = 39
         Me.BtnGuardarEmp.Text = "Guardar"
         Me.BtnGuardarEmp.UseVisualStyleBackColor = True
@@ -435,10 +412,9 @@ Partial Class FrmAddEmpleado
         'BtnEditarEmp
         '
         Me.BtnEditarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEditarEmp.Location = New System.Drawing.Point(563, 590)
-        Me.BtnEditarEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEditarEmp.Location = New System.Drawing.Point(422, 479)
         Me.BtnEditarEmp.Name = "BtnEditarEmp"
-        Me.BtnEditarEmp.Size = New System.Drawing.Size(127, 37)
+        Me.BtnEditarEmp.Size = New System.Drawing.Size(95, 30)
         Me.BtnEditarEmp.TabIndex = 40
         Me.BtnEditarEmp.Text = "Editar"
         Me.BtnEditarEmp.UseVisualStyleBackColor = True
@@ -446,10 +422,9 @@ Partial Class FrmAddEmpleado
         'BtnEliminarEmp
         '
         Me.BtnEliminarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEliminarEmp.Location = New System.Drawing.Point(697, 588)
-        Me.BtnEliminarEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEliminarEmp.Location = New System.Drawing.Point(523, 478)
         Me.BtnEliminarEmp.Name = "BtnEliminarEmp"
-        Me.BtnEliminarEmp.Size = New System.Drawing.Size(132, 37)
+        Me.BtnEliminarEmp.Size = New System.Drawing.Size(99, 30)
         Me.BtnEliminarEmp.TabIndex = 41
         Me.BtnEliminarEmp.Text = "Eliminar"
         Me.BtnEliminarEmp.UseVisualStyleBackColor = True
@@ -457,11 +432,11 @@ Partial Class FrmAddEmpleado
         'GBEmpleado
         '
         Me.GBEmpleado.Controls.Add(Me.DgvEmpleado)
-        Me.GBEmpleado.Location = New System.Drawing.Point(21, 657)
-        Me.GBEmpleado.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GBEmpleado.Location = New System.Drawing.Point(16, 534)
+        Me.GBEmpleado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GBEmpleado.Name = "GBEmpleado"
-        Me.GBEmpleado.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GBEmpleado.Size = New System.Drawing.Size(808, 287)
+        Me.GBEmpleado.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBEmpleado.Size = New System.Drawing.Size(606, 233)
         Me.GBEmpleado.TabIndex = 42
         Me.GBEmpleado.TabStop = False
         Me.GBEmpleado.Text = "Lista de Empleados"
@@ -471,10 +446,10 @@ Partial Class FrmAddEmpleado
         Me.DTPNac.CustomFormat = "dd-MM-yyyy"
         Me.DTPNac.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.DTPNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DTPNac.Location = New System.Drawing.Point(21, 479)
-        Me.DTPNac.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DTPNac.Location = New System.Drawing.Point(16, 392)
+        Me.DTPNac.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DTPNac.Name = "DTPNac"
-        Me.DTPNac.Size = New System.Drawing.Size(241, 34)
+        Me.DTPNac.Size = New System.Drawing.Size(182, 29)
         Me.DTPNac.TabIndex = 43
         Me.DTPNac.Value = New Date(2022, 5, 22, 22, 9, 58, 0)
         '
@@ -482,19 +457,20 @@ Partial Class FrmAddEmpleado
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.Label13.Location = New System.Drawing.Point(17, 448)
+        Me.Label13.Location = New System.Drawing.Point(13, 363)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(243, 29)
+        Me.Label13.Size = New System.Drawing.Size(193, 24)
         Me.Label13.TabIndex = 44
         Me.Label13.Text = "Fecha de nacimiento:"
         '
         'BtnAsignar
         '
         Me.BtnAsignar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnAsignar.Location = New System.Drawing.Point(288, 448)
-        Me.BtnAsignar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnAsignar.Location = New System.Drawing.Point(210, 364)
+        Me.BtnAsignar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BtnAsignar.Name = "BtnAsignar"
-        Me.BtnAsignar.Size = New System.Drawing.Size(312, 70)
+        Me.BtnAsignar.Size = New System.Drawing.Size(234, 57)
         Me.BtnAsignar.TabIndex = 45
         Me.BtnAsignar.Text = "Asignar cargo"
         Me.BtnAsignar.UseVisualStyleBackColor = True
@@ -506,19 +482,18 @@ Partial Class FrmAddEmpleado
         'BtnRegresar
         '
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnRegresar.Location = New System.Drawing.Point(644, 26)
-        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnRegresar.Location = New System.Drawing.Point(483, 21)
         Me.BtnRegresar.Name = "BtnRegresar"
-        Me.BtnRegresar.Size = New System.Drawing.Size(185, 41)
+        Me.BtnRegresar.Size = New System.Drawing.Size(139, 33)
         Me.BtnRegresar.TabIndex = 46
         Me.BtnRegresar.Text = "Regresar"
         Me.BtnRegresar.UseVisualStyleBackColor = True
         '
         'FrmAddEmpleado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(853, 964)
+        Me.ClientSize = New System.Drawing.Size(640, 783)
         Me.Controls.Add(Me.BtnRegresar)
         Me.Controls.Add(Me.BtnAsignar)
         Me.Controls.Add(Me.Label13)
@@ -548,7 +523,6 @@ Partial Class FrmAddEmpleado
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PBEmp)
         Me.Controls.Add(Me.Label3)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmAddEmpleado"
         Me.Text = "Gestor de empleados"
         CType(Me.PBEmp, System.ComponentModel.ISupportInitialize).EndInit()

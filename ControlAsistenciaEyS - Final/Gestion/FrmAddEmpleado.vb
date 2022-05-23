@@ -18,10 +18,7 @@ Public Class FrmAddEmpleado
     Private Sub FrmAddEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.empleado' table. You can move, or remove it, as needed.
         Me.EmpleadoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.empleado)
-        'TODO: This line of code loads data into the 'ControlAsistenciaDataSet.Empleados' table. You can move, or remove it, as needed.
-        'Me.EmpleadosTableAdapter.Fill(Me.ControlAsistenciaDataSet.Empleados)
         llenarGrid()
-
     End Sub
 
     Private Sub BtnGuardarEmp_Click(sender As Object, e As EventArgs) Handles BtnGuardarEmp.Click
@@ -160,7 +157,8 @@ Public Class FrmAddEmpleado
     End Sub
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
-
+        Me.Close()
+        FrmMainAdminMenu.Show()
     End Sub
 
     Private Sub TxtBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscar.KeyPress

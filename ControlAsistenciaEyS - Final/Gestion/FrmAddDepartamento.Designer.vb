@@ -44,6 +44,10 @@ Partial Class FrmAddDepartamento
         Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.DepartamentoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.departamentoTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtBuscar = New System.Windows.Forms.TextBox()
+        Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.GBDepartamento.SuspendLayout()
         CType(Me.DgvDepartamento, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,20 +57,18 @@ Partial Class FrmAddDepartamento
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(41, 11)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(324, 29)
+        Me.Label1.Size = New System.Drawing.Size(292, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Gestion de Departamentos"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(87, 84)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(14, 69)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(138, 24)
         Me.Label2.TabIndex = 1
@@ -74,18 +76,17 @@ Partial Class FrmAddDepartamento
         '
         'TxtDepartamento
         '
-        Me.TxtDepartamento.Location = New System.Drawing.Point(241, 85)
-        Me.TxtDepartamento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtDepartamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDepartamento.Location = New System.Drawing.Point(17, 101)
         Me.TxtDepartamento.Name = "TxtDepartamento"
-        Me.TxtDepartamento.Size = New System.Drawing.Size(415, 22)
+        Me.TxtDepartamento.Size = New System.Drawing.Size(316, 29)
         Me.TxtDepartamento.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(125, 140)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(339, 74)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(104, 24)
         Me.Label3.TabIndex = 3
@@ -93,18 +94,17 @@ Partial Class FrmAddDepartamento
         '
         'TxtExtension
         '
-        Me.TxtExtension.Location = New System.Drawing.Point(241, 142)
-        Me.TxtExtension.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtExtension.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtExtension.Location = New System.Drawing.Point(343, 101)
         Me.TxtExtension.Name = "TxtExtension"
-        Me.TxtExtension.Size = New System.Drawing.Size(132, 22)
+        Me.TxtExtension.Size = New System.Drawing.Size(159, 29)
         Me.TxtExtension.TabIndex = 4
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(49, 198)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(14, 140)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(173, 24)
         Me.Label4.TabIndex = 5
@@ -112,30 +112,28 @@ Partial Class FrmAddDepartamento
         '
         'TxtCorreo
         '
-        Me.TxtCorreo.Location = New System.Drawing.Point(241, 196)
-        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCorreo.Location = New System.Drawing.Point(18, 167)
         Me.TxtCorreo.Name = "TxtCorreo"
-        Me.TxtCorreo.Size = New System.Drawing.Size(415, 22)
+        Me.TxtCorreo.Size = New System.Drawing.Size(484, 29)
         Me.TxtCorreo.TabIndex = 6
         '
         'BtnNuevo
         '
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnNuevo.Location = New System.Drawing.Point(549, 6)
-        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnNuevo.Location = New System.Drawing.Point(343, 207)
         Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(107, 38)
+        Me.BtnNuevo.Size = New System.Drawing.Size(159, 59)
         Me.BtnNuevo.TabIndex = 7
-        Me.BtnNuevo.Text = "Nuevo"
+        Me.BtnNuevo.Text = "Limpiar Campos"
         Me.BtnNuevo.UseVisualStyleBackColor = True
         '
         'BtnGuardar
         '
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnGuardar.Location = New System.Drawing.Point(241, 255)
-        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnGuardar.Location = New System.Drawing.Point(238, 315)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(113, 38)
+        Me.BtnGuardar.Size = New System.Drawing.Size(95, 31)
         Me.BtnGuardar.TabIndex = 8
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
@@ -143,10 +141,9 @@ Partial Class FrmAddDepartamento
         'BtnEditar
         '
         Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEditar.Location = New System.Drawing.Point(363, 255)
-        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEditar.Location = New System.Drawing.Point(339, 315)
         Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(107, 38)
+        Me.BtnEditar.Size = New System.Drawing.Size(71, 31)
         Me.BtnEditar.TabIndex = 9
         Me.BtnEditar.Text = "Editar"
         Me.BtnEditar.UseVisualStyleBackColor = True
@@ -154,10 +151,9 @@ Partial Class FrmAddDepartamento
         'BtnEliminar
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(477, 255)
-        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEliminar.Location = New System.Drawing.Point(416, 315)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(109, 38)
+        Me.BtnEliminar.Size = New System.Drawing.Size(86, 31)
         Me.BtnEliminar.TabIndex = 10
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
@@ -165,61 +161,69 @@ Partial Class FrmAddDepartamento
         'GBDepartamento
         '
         Me.GBDepartamento.Controls.Add(Me.DgvDepartamento)
-        Me.GBDepartamento.Location = New System.Drawing.Point(45, 338)
-        Me.GBDepartamento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GBDepartamento.Location = New System.Drawing.Point(18, 374)
         Me.GBDepartamento.Name = "GBDepartamento"
-        Me.GBDepartamento.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GBDepartamento.Size = New System.Drawing.Size(683, 359)
+        Me.GBDepartamento.Size = New System.Drawing.Size(484, 316)
         Me.GBDepartamento.TabIndex = 11
         Me.GBDepartamento.TabStop = False
+        Me.GBDepartamento.Text = "Lista de Departamentos"
         '
         'DgvDepartamento
         '
+        Me.DgvDepartamento.AllowUserToAddRows = False
+        Me.DgvDepartamento.AllowUserToDeleteRows = False
         Me.DgvDepartamento.AutoGenerateColumns = False
         Me.DgvDepartamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvDepartamento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDepDataGridViewTextBoxColumn, Me.NombreDepDataGridViewTextBoxColumn, Me.ExtTelDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
         Me.DgvDepartamento.DataSource = Me.DepartamentoBindingSource
-        Me.DgvDepartamento.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvDepartamento.Location = New System.Drawing.Point(4, 19)
-        Me.DgvDepartamento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DgvDepartamento.Location = New System.Drawing.Point(15, 22)
+        Me.DgvDepartamento.Margin = New System.Windows.Forms.Padding(2)
         Me.DgvDepartamento.Name = "DgvDepartamento"
+        Me.DgvDepartamento.ReadOnly = True
         Me.DgvDepartamento.RowHeadersWidth = 51
         Me.DgvDepartamento.RowTemplate.Height = 24
-        Me.DgvDepartamento.Size = New System.Drawing.Size(675, 336)
+        Me.DgvDepartamento.Size = New System.Drawing.Size(453, 281)
         Me.DgvDepartamento.TabIndex = 0
         '
         'IdDepDataGridViewTextBoxColumn
         '
         Me.IdDepDataGridViewTextBoxColumn.DataPropertyName = "idDep"
-        Me.IdDepDataGridViewTextBoxColumn.HeaderText = "idDep"
+        Me.IdDepDataGridViewTextBoxColumn.HeaderText = "ID"
         Me.IdDepDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdDepDataGridViewTextBoxColumn.Name = "IdDepDataGridViewTextBoxColumn"
         Me.IdDepDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdDepDataGridViewTextBoxColumn.Visible = False
         Me.IdDepDataGridViewTextBoxColumn.Width = 125
         '
         'NombreDepDataGridViewTextBoxColumn
         '
         Me.NombreDepDataGridViewTextBoxColumn.DataPropertyName = "nombreDep"
-        Me.NombreDepDataGridViewTextBoxColumn.HeaderText = "nombreDep"
+        Me.NombreDepDataGridViewTextBoxColumn.HeaderText = "Departamento"
         Me.NombreDepDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.NombreDepDataGridViewTextBoxColumn.Name = "NombreDepDataGridViewTextBoxColumn"
+        Me.NombreDepDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreDepDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.NombreDepDataGridViewTextBoxColumn.Width = 125
         '
         'ExtTelDataGridViewTextBoxColumn
         '
         Me.ExtTelDataGridViewTextBoxColumn.DataPropertyName = "extTel"
-        Me.ExtTelDataGridViewTextBoxColumn.HeaderText = "extTel"
+        Me.ExtTelDataGridViewTextBoxColumn.HeaderText = "Extension"
         Me.ExtTelDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ExtTelDataGridViewTextBoxColumn.Name = "ExtTelDataGridViewTextBoxColumn"
-        Me.ExtTelDataGridViewTextBoxColumn.Width = 125
+        Me.ExtTelDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ExtTelDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ExtTelDataGridViewTextBoxColumn.Width = 80
         '
         'CorreoDataGridViewTextBoxColumn
         '
         Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "correo"
-        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "correo"
+        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "Correo"
         Me.CorreoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
-        Me.CorreoDataGridViewTextBoxColumn.Width = 125
+        Me.CorreoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CorreoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.CorreoDataGridViewTextBoxColumn.Width = 190
         '
         'EstadoDataGridViewTextBoxColumn
         '
@@ -227,6 +231,8 @@ Partial Class FrmAddDepartamento
         Me.EstadoDataGridViewTextBoxColumn.HeaderText = "estado"
         Me.EstadoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EstadoDataGridViewTextBoxColumn.Visible = False
         Me.EstadoDataGridViewTextBoxColumn.Width = 125
         '
         'DepartamentoBindingSource
@@ -243,11 +249,53 @@ Partial Class FrmAddDepartamento
         '
         Me.DepartamentoTableAdapter.ClearBeforeFill = True
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Button1.Location = New System.Drawing.Point(18, 207)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(315, 59)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Asignar a Cargo"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(14, 318)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(78, 24)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Buscar: "
+        '
+        'TxtBuscar
+        '
+        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBuscar.Location = New System.Drawing.Point(87, 315)
+        Me.TxtBuscar.Name = "TxtBuscar"
+        Me.TxtBuscar.Size = New System.Drawing.Size(145, 29)
+        Me.TxtBuscar.TabIndex = 14
+        '
+        'BtnRegresar
+        '
+        Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnRegresar.Location = New System.Drawing.Point(363, 19)
+        Me.BtnRegresar.Name = "BtnRegresar"
+        Me.BtnRegresar.Size = New System.Drawing.Size(139, 33)
+        Me.BtnRegresar.TabIndex = 47
+        Me.BtnRegresar.Text = "Regresar"
+        Me.BtnRegresar.UseVisualStyleBackColor = True
+        '
         'FrmAddDepartamento
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(944, 722)
+        Me.ClientSize = New System.Drawing.Size(520, 703)
+        Me.Controls.Add(Me.BtnRegresar)
+        Me.Controls.Add(Me.TxtBuscar)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GBDepartamento)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnEditar)
@@ -260,7 +308,6 @@ Partial Class FrmAddDepartamento
         Me.Controls.Add(Me.TxtDepartamento)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmAddDepartamento"
         Me.Text = "Administración de departamentos"
         Me.GBDepartamento.ResumeLayout(False)
@@ -288,6 +335,10 @@ Partial Class FrmAddDepartamento
     Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
     Friend WithEvents DepartamentoBindingSource As BindingSource
     Friend WithEvents DepartamentoTableAdapter As BDAsistenciasEySDataSetTableAdapters.departamentoTableAdapter
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TxtBuscar As TextBox
+    Friend WithEvents BtnRegresar As Button
     Friend WithEvents IdDepDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDepDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ExtTelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
