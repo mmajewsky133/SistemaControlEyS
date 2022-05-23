@@ -44,7 +44,7 @@ Partial Class FrmAddCargo
         Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
-        Me.TxtIdDep = New System.Windows.Forms.TextBox()
+        Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,8 +65,8 @@ Partial Class FrmAddCargo
         'BtnEliminar
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(456, 355)
-        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEliminar.Location = New System.Drawing.Point(626, 355)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(125, 39)
         Me.BtnEliminar.TabIndex = 20
@@ -76,8 +76,8 @@ Partial Class FrmAddCargo
         'BtnEditar
         '
         Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEditar.Location = New System.Drawing.Point(333, 355)
-        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEditar.Location = New System.Drawing.Point(503, 355)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(115, 39)
         Me.BtnEditar.TabIndex = 19
@@ -87,8 +87,8 @@ Partial Class FrmAddCargo
         'BtnGuardar
         '
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnGuardar.Location = New System.Drawing.Point(208, 355)
-        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnGuardar.Location = New System.Drawing.Point(378, 355)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(117, 39)
         Me.BtnGuardar.TabIndex = 18
@@ -99,7 +99,7 @@ Partial Class FrmAddCargo
         '
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnNuevo.Location = New System.Drawing.Point(664, 68)
-        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(115, 39)
         Me.BtnNuevo.TabIndex = 17
@@ -109,7 +109,7 @@ Partial Class FrmAddCargo
         'TxtDescripcion
         '
         Me.TxtDescripcion.Location = New System.Drawing.Point(208, 134)
-        Me.TxtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtDescripcion.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtDescripcion.Multiline = True
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.Size = New System.Drawing.Size(415, 149)
@@ -129,7 +129,7 @@ Partial Class FrmAddCargo
         'TxtCargo
         '
         Me.TxtCargo.Location = New System.Drawing.Point(208, 78)
-        Me.TxtCargo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCargo.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCargo.Name = "TxtCargo"
         Me.TxtCargo.Size = New System.Drawing.Size(415, 22)
         Me.TxtCargo.TabIndex = 12
@@ -160,7 +160,7 @@ Partial Class FrmAddCargo
         '
         Me.CmbDepartamento.FormattingEnabled = True
         Me.CmbDepartamento.Location = New System.Drawing.Point(208, 318)
-        Me.CmbDepartamento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CmbDepartamento.Margin = New System.Windows.Forms.Padding(4)
         Me.CmbDepartamento.Name = "CmbDepartamento"
         Me.CmbDepartamento.Size = New System.Drawing.Size(160, 24)
         Me.CmbDepartamento.TabIndex = 22
@@ -169,9 +169,9 @@ Partial Class FrmAddCargo
         '
         Me.GroupBox1.Controls.Add(Me.DgvCargo)
         Me.GroupBox1.Location = New System.Drawing.Point(63, 402)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(688, 255)
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
@@ -246,20 +246,22 @@ Partial Class FrmAddCargo
         '
         Me.CargoTableAdapter.ClearBeforeFill = True
         '
-        'TxtIdDep
+        'BtnRegresar
         '
-        Me.TxtIdDep.Location = New System.Drawing.Point(387, 319)
-        Me.TxtIdDep.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TxtIdDep.Name = "TxtIdDep"
-        Me.TxtIdDep.Size = New System.Drawing.Size(135, 22)
-        Me.TxtIdDep.TabIndex = 24
+        Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.BtnRegresar.Location = New System.Drawing.Point(652, 133)
+        Me.BtnRegresar.Name = "BtnRegresar"
+        Me.BtnRegresar.Size = New System.Drawing.Size(136, 38)
+        Me.BtnRegresar.TabIndex = 24
+        Me.BtnRegresar.Text = "Regresar"
+        Me.BtnRegresar.UseVisualStyleBackColor = True
         '
         'FrmAddCargo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(830, 683)
-        Me.Controls.Add(Me.TxtIdDep)
+        Me.ClientSize = New System.Drawing.Size(830, 687)
+        Me.Controls.Add(Me.BtnRegresar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.CmbDepartamento)
         Me.Controls.Add(Me.Label4)
@@ -272,7 +274,7 @@ Partial Class FrmAddCargo
         Me.Controls.Add(Me.TxtCargo)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmAddCargo"
         Me.Text = "Administrador de cargos"
         Me.GroupBox1.ResumeLayout(False)
@@ -305,5 +307,5 @@ Partial Class FrmAddCargo
     Friend WithEvents DescCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdDepDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TxtIdDep As TextBox
+    Friend WithEvents BtnRegresar As Button
 End Class

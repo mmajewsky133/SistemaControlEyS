@@ -41,15 +41,15 @@
         End If
         If (String.IsNullOrEmpty(CmbDepartamento.ValueMember)) Then
             MsgBox("Ingrese el id del departamento", MsgBoxStyle.Critical, "ERROR")
-            TxtIdDep.Focus()
+            'TxtIdDep.Focus()'
             Exit Sub
         End If
 
         Dim nombreCargo As String = TxtCargo.Text.Trim
         Dim descripcion As String = TxtDescripcion.Text.Trim
-        Dim idDepartamento As Integer = CInt(TxtIdDep.Text.Trim)
+        'Dim idDepartamento As Integer = CInt(TxtIdDep.Text.Trim)'
 
-        cargo.ActualizarCargo(nombreCargo, descripcion, idDepartamento, 2, idCargo)
+        cargo.ActualizarCargo(nombreCargo, descripcion, 2, idCargo)
 
         llenarGrid()
     End Sub
@@ -74,7 +74,7 @@
             idCargo = DgvCargo.Item(0, fila).Value
             TxtCargo.Text = DgvCargo.Item(1, fila).Value
             TxtDescripcion.Text = DgvCargo.Item(2, fila).Value
-            TxtIdDep.Text = DgvCargo.Item(3, fila).Value
+            'TxtIdDep.Text = DgvCargo.Item(3, fila).Value'
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
@@ -86,5 +86,14 @@
         Me.CargoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.cargo)
         llenarGrid()
         llenarCmbDepartamento()
+    End Sub
+
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+        TxtCargo.Text = ""
+        TxtDescripcion.Text = ""
+    End Sub
+
+    Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
+
     End Sub
 End Class
