@@ -42,22 +42,9 @@ Partial Class FrmAddEmpleado
         Me.TxtDireccion = New System.Windows.Forms.TextBox()
         Me.TxtCorreoInst = New System.Windows.Forms.TextBox()
         Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
-        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fotoEmp = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fechaNac = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoInstDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PwpinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.BtnNewEmp = New System.Windows.Forms.Button()
@@ -67,14 +54,27 @@ Partial Class FrmAddEmpleado
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DTPNac = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         Me.BtnAsignar = New System.Windows.Forms.Button()
+        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CorreoInstDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PwpinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
+        Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         CType(Me.PBEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
@@ -92,7 +92,7 @@ Partial Class FrmAddEmpleado
         '
         Me.PBEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PBEmp.Location = New System.Drawing.Point(21, 102)
-        Me.PBEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PBEmp.Margin = New System.Windows.Forms.Padding(4)
         Me.PBEmp.Name = "PBEmp"
         Me.PBEmp.Size = New System.Drawing.Size(253, 225)
         Me.PBEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -106,9 +106,9 @@ Partial Class FrmAddEmpleado
         Me.Label1.Location = New System.Drawing.Point(17, 69)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(219, 29)
+        Me.Label1.Size = New System.Drawing.Size(238, 29)
         Me.Label1.TabIndex = 16
-        Me.Label1.Text = "Foto de Empleado:"
+        Me.Label1.Text = "Foto (Dar doble clic):"
         '
         'Label2
         '
@@ -180,7 +180,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtNombre.Location = New System.Drawing.Point(288, 102)
-        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(265, 34)
         Me.TxtNombre.TabIndex = 26
@@ -189,7 +189,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtApellido.Location = New System.Drawing.Point(563, 102)
-        Me.TxtApellido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtApellido.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtApellido.Name = "TxtApellido"
         Me.TxtApellido.Size = New System.Drawing.Size(265, 34)
         Me.TxtApellido.TabIndex = 27
@@ -220,7 +220,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtCedula.Location = New System.Drawing.Point(288, 206)
-        Me.TxtCedula.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCedula.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCedula.Name = "TxtCedula"
         Me.TxtCedula.Size = New System.Drawing.Size(195, 34)
         Me.TxtCedula.TabIndex = 30
@@ -229,7 +229,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtCorreo.Location = New System.Drawing.Point(492, 206)
-        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCorreo.Name = "TxtCorreo"
         Me.TxtCorreo.Size = New System.Drawing.Size(336, 34)
         Me.TxtCorreo.TabIndex = 31
@@ -238,7 +238,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtTel.Location = New System.Drawing.Point(288, 290)
-        Me.TxtTel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtTel.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtTel.Name = "TxtTel"
         Me.TxtTel.Size = New System.Drawing.Size(195, 34)
         Me.TxtTel.TabIndex = 32
@@ -247,7 +247,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtDireccion.Location = New System.Drawing.Point(21, 372)
-        Me.TxtDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtDireccion.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtDireccion.Name = "TxtDireccion"
         Me.TxtDireccion.Size = New System.Drawing.Size(807, 34)
         Me.TxtDireccion.TabIndex = 33
@@ -256,7 +256,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtCorreoInst.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtCorreoInst.Location = New System.Drawing.Point(492, 290)
-        Me.TxtCorreoInst.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCorreoInst.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCorreoInst.Name = "TxtCorreoInst"
         Me.TxtCorreoInst.Size = New System.Drawing.Size(336, 34)
         Me.TxtCorreoInst.TabIndex = 34
@@ -270,12 +270,143 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.fotoEmp, Me.fechaNac, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PwpinDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
         Me.DgvEmpleado.DataSource = Me.EmpleadoBindingSource
         Me.DgvEmpleado.Location = New System.Drawing.Point(20, 46)
-        Me.DgvEmpleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DgvEmpleado.Margin = New System.Windows.Forms.Padding(4)
         Me.DgvEmpleado.Name = "DgvEmpleado"
         Me.DgvEmpleado.ReadOnly = True
         Me.DgvEmpleado.RowHeadersWidth = 51
         Me.DgvEmpleado.Size = New System.Drawing.Size(768, 217)
         Me.DgvEmpleado.TabIndex = 35
+        '
+        'fotoEmp
+        '
+        Me.fotoEmp.DataPropertyName = "fotoEmp"
+        Me.fotoEmp.HeaderText = "fotoEmp"
+        Me.fotoEmp.MinimumWidth = 6
+        Me.fotoEmp.Name = "fotoEmp"
+        Me.fotoEmp.ReadOnly = True
+        Me.fotoEmp.Visible = False
+        Me.fotoEmp.Width = 125
+        '
+        'fechaNac
+        '
+        Me.fechaNac.DataPropertyName = "fechaNac"
+        Me.fechaNac.HeaderText = "fechaNac"
+        Me.fechaNac.MinimumWidth = 6
+        Me.fechaNac.Name = "fechaNac"
+        Me.fechaNac.ReadOnly = True
+        Me.fechaNac.Width = 125
+        '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDAsistenciasEySDataSetBindingSource
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label4.Location = New System.Drawing.Point(17, 526)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 29)
+        Me.Label4.TabIndex = 36
+        Me.Label4.Text = "Buscar:"
+        '
+        'TxtBuscar
+        '
+        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.TxtBuscar.Location = New System.Drawing.Point(117, 526)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtBuscar.Name = "TxtBuscar"
+        Me.TxtBuscar.Size = New System.Drawing.Size(333, 34)
+        Me.TxtBuscar.TabIndex = 37
+        '
+        'BtnNewEmp
+        '
+        Me.BtnNewEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnNewEmp.Location = New System.Drawing.Point(719, 14)
+        Me.BtnNewEmp.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnNewEmp.Name = "BtnNewEmp"
+        Me.BtnNewEmp.Size = New System.Drawing.Size(103, 37)
+        Me.BtnNewEmp.TabIndex = 38
+        Me.BtnNewEmp.Text = "Nuevo"
+        Me.BtnNewEmp.UseVisualStyleBackColor = True
+        '
+        'BtnGuardarEmp
+        '
+        Me.BtnGuardarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnGuardarEmp.Location = New System.Drawing.Point(469, 524)
+        Me.BtnGuardarEmp.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnGuardarEmp.Name = "BtnGuardarEmp"
+        Me.BtnGuardarEmp.Size = New System.Drawing.Size(125, 37)
+        Me.BtnGuardarEmp.TabIndex = 39
+        Me.BtnGuardarEmp.Text = "Guardar"
+        Me.BtnGuardarEmp.UseVisualStyleBackColor = True
+        '
+        'BtnEditarEmp
+        '
+        Me.BtnEditarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnEditarEmp.Location = New System.Drawing.Point(603, 526)
+        Me.BtnEditarEmp.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEditarEmp.Name = "BtnEditarEmp"
+        Me.BtnEditarEmp.Size = New System.Drawing.Size(109, 37)
+        Me.BtnEditarEmp.TabIndex = 40
+        Me.BtnEditarEmp.Text = "Editar"
+        Me.BtnEditarEmp.UseVisualStyleBackColor = True
+        '
+        'BtnEliminarEmp
+        '
+        Me.BtnEliminarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnEliminarEmp.Location = New System.Drawing.Point(719, 526)
+        Me.BtnEliminarEmp.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEliminarEmp.Name = "BtnEliminarEmp"
+        Me.BtnEliminarEmp.Size = New System.Drawing.Size(121, 37)
+        Me.BtnEliminarEmp.TabIndex = 41
+        Me.BtnEliminarEmp.Text = "Eliminar"
+        Me.BtnEliminarEmp.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.DgvEmpleado)
+        Me.GroupBox1.Location = New System.Drawing.Point(21, 590)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(805, 286)
+        Me.GroupBox1.TabIndex = 42
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
+        '
+        'DTPNac
+        '
+        Me.DTPNac.CustomFormat = "dd-MM-yyyy"
+        Me.DTPNac.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.DTPNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DTPNac.Location = New System.Drawing.Point(22, 460)
+        Me.DTPNac.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DTPNac.Name = "DTPNac"
+        Me.DTPNac.Size = New System.Drawing.Size(161, 34)
+        Me.DTPNac.TabIndex = 43
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.Label13.Location = New System.Drawing.Point(17, 429)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(243, 29)
+        Me.Label13.TabIndex = 44
+        Me.Label13.Text = "Fecha de nacimiento:"
+        '
+        'BtnAsignar
+        '
+        Me.BtnAsignar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.BtnAsignar.Location = New System.Drawing.Point(374, 13)
+        Me.BtnAsignar.Name = "BtnAsignar"
+        Me.BtnAsignar.Size = New System.Drawing.Size(270, 38)
+        Me.BtnAsignar.TabIndex = 45
+        Me.BtnAsignar.Text = "Asignar cargo"
+        Me.BtnAsignar.UseVisualStyleBackColor = True
         '
         'IdEmpDataGridViewTextBoxColumn
         '
@@ -312,25 +443,6 @@ Partial Class FrmAddEmpleado
         Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
         Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
         Me.CedulaDataGridViewTextBoxColumn.Width = 125
-        '
-        'fotoEmp
-        '
-        Me.fotoEmp.DataPropertyName = "fotoEmp"
-        Me.fotoEmp.HeaderText = "fotoEmp"
-        Me.fotoEmp.MinimumWidth = 6
-        Me.fotoEmp.Name = "fotoEmp"
-        Me.fotoEmp.ReadOnly = True
-        Me.fotoEmp.Visible = False
-        Me.fotoEmp.Width = 125
-        '
-        'fechaNac
-        '
-        Me.fechaNac.DataPropertyName = "fechaNac"
-        Me.fechaNac.HeaderText = "fechaNac"
-        Me.fechaNac.MinimumWidth = 6
-        Me.fechaNac.Name = "fechaNac"
-        Me.fechaNac.ReadOnly = True
-        Me.fechaNac.Width = 125
         '
         'DireccionDataGridViewTextBoxColumn
         '
@@ -395,11 +507,6 @@ Partial Class FrmAddEmpleado
         Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
         Me.EstadoDataGridViewTextBoxColumn.Width = 125
         '
-        'EmpleadoBindingSource
-        '
-        Me.EmpleadoBindingSource.DataMember = "empleado"
-        Me.EmpleadoBindingSource.DataSource = Me.BDAsistenciasEySDataSetBindingSource
-        '
         'BDAsistenciasEySDataSetBindingSource
         '
         Me.BDAsistenciasEySDataSetBindingSource.DataSource = Me.BDAsistenciasEySDataSet
@@ -410,116 +517,9 @@ Partial Class FrmAddEmpleado
         Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
         Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label4.Location = New System.Drawing.Point(17, 526)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 29)
-        Me.Label4.TabIndex = 36
-        Me.Label4.Text = "Buscar:"
-        '
-        'TxtBuscar
-        '
-        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(117, 526)
-        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(333, 34)
-        Me.TxtBuscar.TabIndex = 37
-        '
-        'BtnNewEmp
-        '
-        Me.BtnNewEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnNewEmp.Location = New System.Drawing.Point(719, 14)
-        Me.BtnNewEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnNewEmp.Name = "BtnNewEmp"
-        Me.BtnNewEmp.Size = New System.Drawing.Size(103, 37)
-        Me.BtnNewEmp.TabIndex = 38
-        Me.BtnNewEmp.Text = "Nuevo"
-        Me.BtnNewEmp.UseVisualStyleBackColor = True
-        '
-        'BtnGuardarEmp
-        '
-        Me.BtnGuardarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnGuardarEmp.Location = New System.Drawing.Point(469, 524)
-        Me.BtnGuardarEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnGuardarEmp.Name = "BtnGuardarEmp"
-        Me.BtnGuardarEmp.Size = New System.Drawing.Size(125, 37)
-        Me.BtnGuardarEmp.TabIndex = 39
-        Me.BtnGuardarEmp.Text = "Guardar"
-        Me.BtnGuardarEmp.UseVisualStyleBackColor = True
-        '
-        'BtnEditarEmp
-        '
-        Me.BtnEditarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEditarEmp.Location = New System.Drawing.Point(603, 526)
-        Me.BtnEditarEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnEditarEmp.Name = "BtnEditarEmp"
-        Me.BtnEditarEmp.Size = New System.Drawing.Size(109, 37)
-        Me.BtnEditarEmp.TabIndex = 40
-        Me.BtnEditarEmp.Text = "Editar"
-        Me.BtnEditarEmp.UseVisualStyleBackColor = True
-        '
-        'BtnEliminarEmp
-        '
-        Me.BtnEliminarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEliminarEmp.Location = New System.Drawing.Point(719, 526)
-        Me.BtnEliminarEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnEliminarEmp.Name = "BtnEliminarEmp"
-        Me.BtnEliminarEmp.Size = New System.Drawing.Size(121, 37)
-        Me.BtnEliminarEmp.TabIndex = 41
-        Me.BtnEliminarEmp.Text = "Eliminar"
-        Me.BtnEliminarEmp.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.DgvEmpleado)
-        Me.GroupBox1.Location = New System.Drawing.Point(21, 590)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(805, 286)
-        Me.GroupBox1.TabIndex = 42
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
-        '
-        'DTPNac
-        '
-        Me.DTPNac.CustomFormat = "dd-MM-yyyy"
-        Me.DTPNac.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.DTPNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DTPNac.Location = New System.Drawing.Point(22, 460)
-        Me.DTPNac.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DTPNac.Name = "DTPNac"
-        Me.DTPNac.Size = New System.Drawing.Size(161, 34)
-        Me.DTPNac.TabIndex = 43
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.Label13.Location = New System.Drawing.Point(17, 429)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(243, 29)
-        Me.Label13.TabIndex = 44
-        Me.Label13.Text = "Fecha de nacimiento:"
-        '
         'EmpleadoTableAdapter
         '
         Me.EmpleadoTableAdapter.ClearBeforeFill = True
-        '
-        'BtnAsignar
-        '
-        Me.BtnAsignar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnAsignar.Location = New System.Drawing.Point(374, 13)
-        Me.BtnAsignar.Name = "BtnAsignar"
-        Me.BtnAsignar.Size = New System.Drawing.Size(270, 38)
-        Me.BtnAsignar.TabIndex = 45
-        Me.BtnAsignar.Text = "Asignar cargo"
-        Me.BtnAsignar.UseVisualStyleBackColor = True
         '
         'FrmAddEmpleado
         '
@@ -554,15 +554,15 @@ Partial Class FrmAddEmpleado
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PBEmp)
         Me.Controls.Add(Me.Label3)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmAddEmpleado"
         Me.Text = "Gestor de empleados"
         CType(Me.PBEmp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -27,24 +27,23 @@ Partial Class FrmAsignarCargo
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DgvCargoEmp = New System.Windows.Forms.DataGridView()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.CmbEmpleado = New System.Windows.Forms.ComboBox()
+        Me.CmbCargo = New System.Windows.Forms.ComboBox()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.IdCargoEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CargoEmpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.CargoEmpTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoEmpTableAdapter()
-        Me.CmbEmpleado = New System.Windows.Forms.ComboBox()
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CargoEmpBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CmbCargo = New System.Windows.Forms.ComboBox()
         Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CargoEmpBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.BtnEditar = New System.Windows.Forms.Button()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DgvCargoEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CargoEmpBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,6 +98,52 @@ Partial Class FrmAsignarCargo
         Me.DgvCargoEmp.Size = New System.Drawing.Size(514, 141)
         Me.DgvCargoEmp.TabIndex = 0
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.5!)
+        Me.Label4.Location = New System.Drawing.Point(115, 149)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(70, 25)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Cargo"
+        '
+        'CmbEmpleado
+        '
+        Me.CmbEmpleado.FormattingEnabled = True
+        Me.CmbEmpleado.Location = New System.Drawing.Point(211, 97)
+        Me.CmbEmpleado.Name = "CmbEmpleado"
+        Me.CmbEmpleado.Size = New System.Drawing.Size(121, 24)
+        Me.CmbEmpleado.TabIndex = 5
+        '
+        'CmbCargo
+        '
+        Me.CmbCargo.FormattingEnabled = True
+        Me.CmbCargo.Location = New System.Drawing.Point(211, 153)
+        Me.CmbCargo.Name = "CmbCargo"
+        Me.CmbCargo.Size = New System.Drawing.Size(121, 24)
+        Me.CmbCargo.TabIndex = 6
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.BtnGuardar.Location = New System.Drawing.Point(85, 219)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(108, 36)
+        Me.BtnGuardar.TabIndex = 7
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.BtnEliminar.Location = New System.Drawing.Point(211, 219)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(114, 36)
+        Me.BtnEliminar.TabIndex = 9
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
+        '
         'IdCargoEmpDataGridViewTextBoxColumn
         '
         Me.IdCargoEmpDataGridViewTextBoxColumn.DataPropertyName = "idCargoEmp"
@@ -134,27 +179,9 @@ Partial Class FrmAsignarCargo
         Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
         Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.5!)
-        Me.Label4.Location = New System.Drawing.Point(115, 149)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 25)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Cargo"
-        '
         'CargoEmpTableAdapter
         '
         Me.CargoEmpTableAdapter.ClearBeforeFill = True
-        '
-        'CmbEmpleado
-        '
-        Me.CmbEmpleado.FormattingEnabled = True
-        Me.CmbEmpleado.Location = New System.Drawing.Point(211, 97)
-        Me.CmbEmpleado.Name = "CmbEmpleado"
-        Me.CmbEmpleado.Size = New System.Drawing.Size(121, 24)
-        Me.CmbEmpleado.TabIndex = 5
         '
         'EmpleadoBindingSource
         '
@@ -165,14 +192,6 @@ Partial Class FrmAsignarCargo
         '
         Me.CargoEmpBindingSource1.DataMember = "cargoEmp"
         Me.CargoEmpBindingSource1.DataSource = Me.BDAsistenciasEySDataSet
-        '
-        'CmbCargo
-        '
-        Me.CmbCargo.FormattingEnabled = True
-        Me.CmbCargo.Location = New System.Drawing.Point(211, 153)
-        Me.CmbCargo.Name = "CmbCargo"
-        Me.CmbCargo.Size = New System.Drawing.Size(121, 24)
-        Me.CmbCargo.TabIndex = 6
         '
         'CargoBindingSource
         '
@@ -192,43 +211,12 @@ Partial Class FrmAsignarCargo
         '
         Me.CargoTableAdapter.ClearBeforeFill = True
         '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnGuardar.Location = New System.Drawing.Point(85, 219)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(108, 36)
-        Me.BtnGuardar.TabIndex = 7
-        Me.BtnGuardar.Text = "Guardar"
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
-        'BtnEditar
-        '
-        Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnEditar.Location = New System.Drawing.Point(371, 219)
-        Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(108, 36)
-        Me.BtnEditar.TabIndex = 8
-        Me.BtnEditar.Text = "Editar"
-        Me.BtnEditar.UseVisualStyleBackColor = True
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnEliminar.Location = New System.Drawing.Point(485, 219)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(114, 36)
-        Me.BtnEliminar.TabIndex = 9
-        Me.BtnEliminar.Text = "Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
         'FrmAsignarCargo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(685, 517)
         Me.Controls.Add(Me.BtnEliminar)
-        Me.Controls.Add(Me.BtnEditar)
         Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.CmbCargo)
         Me.Controls.Add(Me.CmbEmpleado)
@@ -237,7 +225,7 @@ Partial Class FrmAsignarCargo
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmAsignarCargo"
-        Me.Text = "FrmAsignarCargo"
+        Me.Text = "Asignar cargo"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DgvCargoEmp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CargoEmpBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -271,6 +259,5 @@ Partial Class FrmAsignarCargo
     Friend WithEvents CargoTableAdapter As BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter
     Friend WithEvents CargoEmpBindingSource2 As BindingSource
     Friend WithEvents BtnGuardar As Button
-    Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnEliminar As Button
 End Class

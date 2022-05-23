@@ -2,7 +2,6 @@
     Dim cargoEmp As New BDAsistenciasEySDataSetTableAdapters.cargoEmpTableAdapter
     Dim emp As New BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter
     Dim cargo As New BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter
-
     Dim idCargoEmp As Integer
     Private Sub FrmAsignarCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.cargo' table. You can move, or remove it, as needed.
@@ -44,7 +43,26 @@
         End Try
     End Sub
 
-    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
+    Private Sub DgvCargoEmp_DoubleClick(sender As Object, e As EventArgs) Handles DgvCargoEmp.DoubleClick
+        Try
+            Dim fila As Integer = DgvCargoEmp.CurrentRow.Index
+            idCargoEmp = DgvCargoEmp.Item(0, fila).Value
 
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        Try
+            Dim resp As VariantType
+            resp = MsgBox("¿Desea eliminar este cargo?", vbQuestion + vbYesNo)
+            If (resp = vbYes) Then
+                cargoEmp.EliminarCargoEmp(idCargoEmp)
+                llenarGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
     End Sub
 End Class
