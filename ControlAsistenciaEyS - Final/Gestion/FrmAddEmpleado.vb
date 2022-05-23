@@ -157,4 +157,8 @@ Public Class FrmAddEmpleado
     Private Sub BtnAsignar_Click(sender As Object, e As EventArgs) Handles BtnAsignar.Click
         FrmAsignarCargo.Show()
     End Sub
+
+    Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
+
+    End Sub
 End Class

@@ -14,7 +14,6 @@ Module GlobalRequests
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error al mostrar reporte")
         End Try
-
     End Sub
 
 End Module
