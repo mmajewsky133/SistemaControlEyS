@@ -6,6 +6,7 @@
     Sub llenarGrid()
         DgvDepartamento.DataSource = departamento.GetData
         DgvDepartamento.Refresh()
+        GBDepartamento.Text = "Departamentos registrados: " + DgvDepartamento.Rows.Count.ToString
     End Sub
     Sub Mostrar()
         Me.Focus()
@@ -13,6 +14,7 @@
     Private Sub FrmAddDepartamento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.departamento' table. You can move, or remove it, as needed.
         Me.DepartamentoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.departamento)
+        llenarGrid()
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click

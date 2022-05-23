@@ -25,7 +25,7 @@ Partial Class FrmAsignarCargo
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GBCargoEmpleado = New System.Windows.Forms.GroupBox()
         Me.DgvCargoEmp = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CmbEmpleado = New System.Windows.Forms.ComboBox()
@@ -44,7 +44,7 @@ Partial Class FrmAsignarCargo
         Me.CargoEmpBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
-        Me.GroupBox1.SuspendLayout()
+        Me.GBCargoEmpleado.SuspendLayout()
         CType(Me.DgvCargoEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CargoEmpBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,15 +74,15 @@ Partial Class FrmAsignarCargo
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Empleado"
         '
-        'GroupBox1
+        'GBCargoEmpleado
         '
-        Me.GroupBox1.Controls.Add(Me.DgvCargoEmp)
-        Me.GroupBox1.Location = New System.Drawing.Point(82, 282)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(520, 162)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Empleados con cargos"
+        Me.GBCargoEmpleado.Controls.Add(Me.DgvCargoEmp)
+        Me.GBCargoEmpleado.Location = New System.Drawing.Point(82, 282)
+        Me.GBCargoEmpleado.Name = "GBCargoEmpleado"
+        Me.GBCargoEmpleado.Size = New System.Drawing.Size(520, 162)
+        Me.GBCargoEmpleado.TabIndex = 3
+        Me.GBCargoEmpleado.TabStop = False
+        Me.GBCargoEmpleado.Text = "Empleados con cargos"
         '
         'DgvCargoEmp
         '
@@ -221,12 +221,12 @@ Partial Class FrmAsignarCargo
         Me.Controls.Add(Me.CmbCargo)
         Me.Controls.Add(Me.CmbEmpleado)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GBCargoEmpleado)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmAsignarCargo"
         Me.Text = "Asignar cargo"
-        Me.GroupBox1.ResumeLayout(False)
+        Me.GBCargoEmpleado.ResumeLayout(False)
         CType(Me.DgvCargoEmp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CargoEmpBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -241,7 +241,7 @@ Partial Class FrmAsignarCargo
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GBCargoEmpleado As GroupBox
     Friend WithEvents DgvCargoEmp As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet

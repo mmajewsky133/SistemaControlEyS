@@ -5,6 +5,7 @@
     Sub llenarGrid()
         DgvCargo.DataSource = cargo.GetData
         DgvCargo.Refresh()
+        GBCargo.Text = "Cargos registrados: " + DgvCargo.Rows.Count.ToString
     End Sub
     Sub llenarCmbDepartamento()
         CmbDepartamento.DataSource = departamento.GetData

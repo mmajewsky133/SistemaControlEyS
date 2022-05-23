@@ -34,7 +34,7 @@ Partial Class FrmAddCargo
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CmbDepartamento = New System.Windows.Forms.ComboBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GBCargo = New System.Windows.Forms.GroupBox()
         Me.DgvCargo = New System.Windows.Forms.DataGridView()
         Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,7 +45,7 @@ Partial Class FrmAddCargo
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
         Me.BtnRegresar = New System.Windows.Forms.Button()
-        Me.GroupBox1.SuspendLayout()
+        Me.GBCargo.SuspendLayout()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -165,16 +165,16 @@ Partial Class FrmAddCargo
         Me.CmbDepartamento.Size = New System.Drawing.Size(160, 24)
         Me.CmbDepartamento.TabIndex = 22
         '
-        'GroupBox1
+        'GBCargo
         '
-        Me.GroupBox1.Controls.Add(Me.DgvCargo)
-        Me.GroupBox1.Location = New System.Drawing.Point(63, 402)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(688, 255)
-        Me.GroupBox1.TabIndex = 23
-        Me.GroupBox1.TabStop = False
+        Me.GBCargo.Controls.Add(Me.DgvCargo)
+        Me.GBCargo.Location = New System.Drawing.Point(63, 402)
+        Me.GBCargo.Margin = New System.Windows.Forms.Padding(4)
+        Me.GBCargo.Name = "GBCargo"
+        Me.GBCargo.Padding = New System.Windows.Forms.Padding(4)
+        Me.GBCargo.Size = New System.Drawing.Size(688, 255)
+        Me.GBCargo.TabIndex = 23
+        Me.GBCargo.TabStop = False
         '
         'DgvCargo
         '
@@ -262,7 +262,7 @@ Partial Class FrmAddCargo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 687)
         Me.Controls.Add(Me.BtnRegresar)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GBCargo)
         Me.Controls.Add(Me.CmbDepartamento)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.BtnEliminar)
@@ -277,7 +277,7 @@ Partial Class FrmAddCargo
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmAddCargo"
         Me.Text = "Administrador de cargos"
-        Me.GroupBox1.ResumeLayout(False)
+        Me.GBCargo.ResumeLayout(False)
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -297,7 +297,7 @@ Partial Class FrmAddCargo
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents CmbDepartamento As ComboBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GBCargo As GroupBox
     Friend WithEvents DgvCargo As DataGridView
     Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
     Friend WithEvents CargoBindingSource As BindingSource

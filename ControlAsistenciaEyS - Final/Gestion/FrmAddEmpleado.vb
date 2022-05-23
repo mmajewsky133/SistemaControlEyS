@@ -8,6 +8,7 @@ Public Class FrmAddEmpleado
     Sub llenarGrid()
         DgvEmpleado.DataSource = empleado.GetData
         DgvEmpleado.Refresh()
+        GBEmpleado.Text = "Registros guardados: " + DgvEmpleado.Rows.Count.ToString
     End Sub
 
     Sub Mostrar()

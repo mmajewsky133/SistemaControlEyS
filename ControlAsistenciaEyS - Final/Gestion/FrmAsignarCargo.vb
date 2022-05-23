@@ -17,6 +17,7 @@
     Sub llenarGrid()
         DgvCargoEmp.DataSource = cargoEmp.GetData
         DgvCargoEmp.Refresh()
+        GBCargoEmpleado.Text = DgvCargoEmp.Rows.Count.ToString
     End Sub
     Sub llenarCmbEmpleado()
         CmbEmpleado.DataSource = emp.GetData

@@ -15,5 +15,4 @@ Module GlobalRequests
             MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error al mostrar reporte")
         End Try
     End Sub
-
 End Module
