@@ -35,7 +35,7 @@ Public Class FrmAddEmpleado
             Dim telefono As String = TxtTel.Text
             Dim correo As String = TxtCorreo.Text
             Dim correoInst As String = TxtCorreoInst.Text
-            Dim username As String = nombres & Math.Ceiling(Rnd() * 20)
+            Dim username As String = nombres.Replace(" ", "") & Math.Ceiling(Rnd() * 20)
             Dim pwpin As String = "123"
             Dim estado As Integer = 1
             empleado.InsertarEmpleado(nombres, apellidos, cedula, fotoEmp.ToArray(), fechaNac, direccion, telefono, correo, correoInst, username, pwpin, estado)
@@ -152,5 +152,9 @@ Public Class FrmAddEmpleado
         DTPNac.ResetText()
 
         Me.Mostrar()
+    End Sub
+
+    Private Sub BtnAsignar_Click(sender As Object, e As EventArgs) Handles BtnAsignar.Click
+        FrmAsignarCargo.Show()
     End Sub
 End Class

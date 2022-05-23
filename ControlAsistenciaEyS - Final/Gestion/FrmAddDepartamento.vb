@@ -20,9 +20,7 @@
             Dim nombreDep As String = TxtDepartamento.Text
             Dim extTel As String = TxtExtension.Text
             Dim correo As String = TxtCorreo.Text
-            Dim estado As Integer = 1
-            'Posiblemente eliminemos estado de la BD'
-            departamento.InsertarDepartamento(nombreDep, extTel, correo, estado)
+            departamento.InsertarDepartamento(nombreDep, extTel, correo, 1)
             llenarGrid()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")

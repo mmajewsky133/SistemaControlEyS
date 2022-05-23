@@ -1,9 +1,16 @@
 ﻿Public Class FrmAddCargo
     Dim cargo As New BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter
+    Dim departamento As New BDAsistenciasEySDataSetTableAdapters.departamentoTableAdapter
     Dim idCargo As Integer
     Sub llenarGrid()
         DgvCargo.DataSource = cargo.GetData
         DgvCargo.Refresh()
+    End Sub
+    Sub llenarCmbDepartamento()
+        CmbDepartamento.DataSource = departamento.GetData
+        CmbDepartamento.DisplayMember = "nombreDep"
+        CmbDepartamento.ValueMember = "idDep"
+        CmbDepartamento.Refresh()
     End Sub
     Sub Mostrar()
         Me.Focus()
@@ -12,10 +19,9 @@
         Try
             Dim nombreCargo As String = TxtCargo.Text
             Dim descripcion As String = TxtDescripcion.Text
-            Dim idDepartamento As String = TxtIdDep.Text
-            Dim estado As Integer = 1
-            'Posiblemente eliminemos estado de la BD'
-            cargo.InsertarCargo(nombreCargo, descripcion, idDepartamento, estado)
+            Dim idDepartamento As Integer = CInt(CmbDepartamento.SelectedValue)
+
+            cargo.InsertarCargo(nombreCargo, descripcion, idDepartamento, 1)
             llenarGrid()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
@@ -33,7 +39,7 @@
             TxtDescripcion.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtIdDep.Text)) Then
+        If (String.IsNullOrEmpty(CmbDepartamento.ValueMember)) Then
             MsgBox("Ingrese el id del departamento", MsgBoxStyle.Critical, "ERROR")
             TxtIdDep.Focus()
             Exit Sub
@@ -78,6 +84,7 @@
     Private Sub FrmAddCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.cargo' table. You can move, or remove it, as needed.
         Me.CargoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.cargo)
-
+        llenarGrid()
+        llenarCmbDepartamento()
     End Sub
 End Class

@@ -144,6 +144,12 @@
     <Compile Include="Gestion\FrmAddEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gestion\FrmAsignarCargo.Designer.vb">
+      <DependentUpon>FrmAsignarCargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\FrmAsignarCargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login\FrmAdminLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion\FrmAddEmpleado.resx">
       <DependentUpon>FrmAddEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion\FrmAsignarCargo.resx">
+      <DependentUpon>FrmAsignarCargo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmAdminLogin.resx">
       <DependentUpon>FrmAdminLogin.vb</DependentUpon>
