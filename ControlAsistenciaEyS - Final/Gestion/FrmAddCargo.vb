@@ -95,6 +95,24 @@
     End Sub
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
+        Me.Close()
+        FrmMainAdminMenu.Show()
+    End Sub
 
+    Private Sub TxtBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscar.KeyPress
+        If Asc(e.KeyChar()) = 13 Then
+            If (TxtBuscar.Text.Equals("")) Then
+                llenarGrid()
+            Else
+                Try
+                    Dim dato As String = TxtBuscar.Text & "%"
+                    'DgvCargo.DataSource = cargo.BuscarNombre(dato)
+                    DgvCargo.Refresh()
+                    GBCargo.Text = "Empleados similares: " & DgvCargo.Rows.Count.ToString
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+                End Try
+            End If
+        End If
     End Sub
 End Class
