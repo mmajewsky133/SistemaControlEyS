@@ -60,16 +60,20 @@ Partial Class FrmSeeEmpleado
         Me.DgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn})
         Me.DgvEmpleados.DataSource = Me.EmpleadoBindingSource
-        Me.DgvEmpleados.Location = New System.Drawing.Point(6, 19)
+        Me.DgvEmpleados.Location = New System.Drawing.Point(8, 23)
+        Me.DgvEmpleados.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DgvEmpleados.Name = "DgvEmpleados"
         Me.DgvEmpleados.ReadOnly = True
-        Me.DgvEmpleados.Size = New System.Drawing.Size(763, 393)
+        Me.DgvEmpleados.RowHeadersWidth = 51
+        Me.DgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvEmpleados.Size = New System.Drawing.Size(1017, 484)
         Me.DgvEmpleados.TabIndex = 0
         '
         'IdEmpDataGridViewTextBoxColumn
         '
         Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
         Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IdEmpDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
         Me.IdEmpDataGridViewTextBoxColumn.ReadOnly = True
         Me.IdEmpDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
@@ -79,38 +83,47 @@ Partial Class FrmSeeEmpleado
         '
         Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
         Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
+        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
         Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
         Me.NombresDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NombresDataGridViewTextBoxColumn.Width = 125
         '
         'ApellidosDataGridViewTextBoxColumn
         '
         Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
         Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
         Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
         Me.ApellidosDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
         '
         'CedulaDataGridViewTextBoxColumn
         '
         Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
         Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cedula"
+        Me.CedulaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
         Me.CedulaDataGridViewTextBoxColumn.ReadOnly = True
         Me.CedulaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.CedulaDataGridViewTextBoxColumn.Width = 125
         '
         'TelefonoDataGridViewTextBoxColumn
         '
         Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
         Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
         Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
         Me.TelefonoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.TelefonoDataGridViewTextBoxColumn.Width = 125
         '
         'UsernameDataGridViewTextBoxColumn
         '
         Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "username"
         Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario"
+        Me.UsernameDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
         Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
         Me.UsernameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
@@ -120,6 +133,7 @@ Partial Class FrmSeeEmpleado
         '
         Me.CorreoInstDataGridViewTextBoxColumn.DataPropertyName = "correoInst"
         Me.CorreoInstDataGridViewTextBoxColumn.HeaderText = "Correo Institucional"
+        Me.CorreoInstDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.CorreoInstDataGridViewTextBoxColumn.Name = "CorreoInstDataGridViewTextBoxColumn"
         Me.CorreoInstDataGridViewTextBoxColumn.ReadOnly = True
         Me.CorreoInstDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
@@ -135,51 +149,54 @@ Partial Class FrmSeeEmpleado
         Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
         Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 164)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label1.Location = New System.Drawing.Point(16, 202)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 21)
+        Me.Label1.Size = New System.Drawing.Size(93, 29)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Buscar:"
         '
         'TxtBuscar
         '
-        Me.TxtBuscar.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(79, 161)
+        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.TxtBuscar.Location = New System.Drawing.Point(105, 198)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(562, 30)
+        Me.TxtBuscar.Size = New System.Drawing.Size(748, 34)
         Me.TxtBuscar.TabIndex = 7
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 82)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label2.Location = New System.Drawing.Point(16, 101)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(178, 21)
+        Me.Label2.Size = New System.Drawing.Size(284, 29)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Empleado Seleccionado:"
         '
         'TxtEmpSelct
         '
-        Me.TxtEmpSelct.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtEmpSelct.Location = New System.Drawing.Point(16, 106)
+        Me.TxtEmpSelct.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.TxtEmpSelct.Location = New System.Drawing.Point(21, 130)
+        Me.TxtEmpSelct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtEmpSelct.Name = "TxtEmpSelct"
         Me.TxtEmpSelct.ReadOnly = True
-        Me.TxtEmpSelct.Size = New System.Drawing.Size(174, 30)
+        Me.TxtEmpSelct.Size = New System.Drawing.Size(231, 34)
         Me.TxtEmpSelct.TabIndex = 9
         '
         'BtnAddCargos
         '
-        Me.BtnAddCargos.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnAddCargos.Location = New System.Drawing.Point(211, 106)
+        Me.BtnAddCargos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnAddCargos.Location = New System.Drawing.Point(281, 130)
+        Me.BtnAddCargos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnAddCargos.Name = "BtnAddCargos"
-        Me.BtnAddCargos.Size = New System.Drawing.Size(174, 31)
+        Me.BtnAddCargos.Size = New System.Drawing.Size(232, 38)
         Me.BtnAddCargos.TabIndex = 11
         Me.BtnAddCargos.Text = "Asignar Cargos"
         Me.BtnAddCargos.UseVisualStyleBackColor = True
@@ -187,22 +204,25 @@ Partial Class FrmSeeEmpleado
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Miriam CLM", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 9)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label3.Location = New System.Drawing.Point(16, 11)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(307, 23)
+        Me.Label3.Size = New System.Drawing.Size(435, 31)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Reporte y Manejo de Empleados"
         '
         'BtnSeeReport
         '
-        Me.BtnSeeReport.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnSeeReport.Location = New System.Drawing.Point(595, 418)
+        Me.BtnSeeReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnSeeReport.Location = New System.Drawing.Point(793, 514)
+        Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnSeeReport.Name = "BtnSeeReport"
-        Me.BtnSeeReport.Size = New System.Drawing.Size(174, 31)
+        Me.BtnSeeReport.Size = New System.Drawing.Size(232, 38)
         Me.BtnSeeReport.TabIndex = 14
         Me.BtnSeeReport.Text = "Ver Reporte Completo"
         Me.BtnSeeReport.UseVisualStyleBackColor = True
+        '
         'BDAsistenciasEySDataSetBindingSource
         '
         Me.BDAsistenciasEySDataSetBindingSource.DataSource = Me.BDAsistenciasEySDataSet
@@ -216,17 +236,19 @@ Partial Class FrmSeeEmpleado
         '
         Me.GroupBox1.Controls.Add(Me.DgvEmpleados)
         Me.GroupBox1.Controls.Add(Me.BtnSeeReport)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 197)
+        Me.GroupBox1.Location = New System.Drawing.Point(21, 242)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(775, 457)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1033, 562)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
         '
         'FrmSeeEmpleado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(806, 668)
+        Me.ClientSize = New System.Drawing.Size(1075, 822)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnAddCargos)
@@ -234,6 +256,7 @@ Partial Class FrmSeeEmpleado
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmSeeEmpleado"
         Me.Text = "Control de Asistencias - Reporte de Empleados"
         CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()

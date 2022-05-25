@@ -57,9 +57,10 @@ Partial Class FrmAddDepartamento
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 22)
+        Me.Label1.Location = New System.Drawing.Point(16, 27)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(292, 25)
+        Me.Label1.Size = New System.Drawing.Size(362, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Gestion de Departamentos"
         '
@@ -67,102 +68,114 @@ Partial Class FrmAddDepartamento
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 69)
+        Me.Label2.Location = New System.Drawing.Point(19, 85)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(138, 24)
+        Me.Label2.Size = New System.Drawing.Size(177, 29)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Departamento: "
         '
         'TxtDepartamento
         '
         Me.TxtDepartamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDepartamento.Location = New System.Drawing.Point(17, 101)
+        Me.TxtDepartamento.Location = New System.Drawing.Point(23, 124)
+        Me.TxtDepartamento.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtDepartamento.Name = "TxtDepartamento"
-        Me.TxtDepartamento.Size = New System.Drawing.Size(316, 29)
-        Me.TxtDepartamento.TabIndex = 2
+        Me.TxtDepartamento.Size = New System.Drawing.Size(420, 34)
+        Me.TxtDepartamento.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(339, 74)
+        Me.Label3.Location = New System.Drawing.Point(452, 91)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 24)
+        Me.Label3.Size = New System.Drawing.Size(130, 29)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Extensión: "
         '
         'TxtExtension
         '
         Me.TxtExtension.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtExtension.Location = New System.Drawing.Point(343, 101)
+        Me.TxtExtension.Location = New System.Drawing.Point(457, 124)
+        Me.TxtExtension.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtExtension.Name = "TxtExtension"
-        Me.TxtExtension.Size = New System.Drawing.Size(159, 29)
-        Me.TxtExtension.TabIndex = 4
+        Me.TxtExtension.Size = New System.Drawing.Size(211, 34)
+        Me.TxtExtension.TabIndex = 2
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(14, 140)
+        Me.Label4.Location = New System.Drawing.Point(19, 172)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(173, 24)
+        Me.Label4.Size = New System.Drawing.Size(221, 29)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Correo Electrónico:"
         '
         'TxtCorreo
         '
         Me.TxtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCorreo.Location = New System.Drawing.Point(18, 167)
+        Me.TxtCorreo.Location = New System.Drawing.Point(24, 206)
+        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCorreo.Name = "TxtCorreo"
-        Me.TxtCorreo.Size = New System.Drawing.Size(484, 29)
-        Me.TxtCorreo.TabIndex = 6
+        Me.TxtCorreo.Size = New System.Drawing.Size(644, 34)
+        Me.TxtCorreo.TabIndex = 3
         '
         'BtnNuevo
         '
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnNuevo.Location = New System.Drawing.Point(238, 207)
+        Me.BtnNuevo.Location = New System.Drawing.Point(317, 255)
+        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(264, 59)
-        Me.BtnNuevo.TabIndex = 7
+        Me.BtnNuevo.Size = New System.Drawing.Size(352, 73)
+        Me.BtnNuevo.TabIndex = 6
         Me.BtnNuevo.Text = "Limpiar Campos"
         Me.BtnNuevo.UseVisualStyleBackColor = True
         '
         'BtnGuardar
         '
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnGuardar.Location = New System.Drawing.Point(238, 315)
+        Me.BtnGuardar.Location = New System.Drawing.Point(317, 388)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(95, 31)
-        Me.BtnGuardar.TabIndex = 8
+        Me.BtnGuardar.Size = New System.Drawing.Size(127, 38)
+        Me.BtnGuardar.TabIndex = 5
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
         'BtnEditar
         '
         Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEditar.Location = New System.Drawing.Point(339, 315)
+        Me.BtnEditar.Location = New System.Drawing.Point(452, 388)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(71, 31)
-        Me.BtnEditar.TabIndex = 9
+        Me.BtnEditar.Size = New System.Drawing.Size(95, 38)
+        Me.BtnEditar.TabIndex = 7
         Me.BtnEditar.Text = "Editar"
         Me.BtnEditar.UseVisualStyleBackColor = True
         '
         'BtnEliminar
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(416, 315)
+        Me.BtnEliminar.Location = New System.Drawing.Point(555, 388)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(86, 31)
-        Me.BtnEliminar.TabIndex = 10
+        Me.BtnEliminar.Size = New System.Drawing.Size(115, 38)
+        Me.BtnEliminar.TabIndex = 8
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
         '
         'GBDepartamento
         '
         Me.GBDepartamento.Controls.Add(Me.DgvDepartamento)
-        Me.GBDepartamento.Location = New System.Drawing.Point(18, 374)
+        Me.GBDepartamento.Location = New System.Drawing.Point(24, 460)
+        Me.GBDepartamento.Margin = New System.Windows.Forms.Padding(4)
         Me.GBDepartamento.Name = "GBDepartamento"
-        Me.GBDepartamento.Size = New System.Drawing.Size(484, 316)
+        Me.GBDepartamento.Padding = New System.Windows.Forms.Padding(4)
+        Me.GBDepartamento.Size = New System.Drawing.Size(645, 389)
         Me.GBDepartamento.TabIndex = 11
         Me.GBDepartamento.TabStop = False
         Me.GBDepartamento.Text = "Lista de Departamentos"
@@ -175,13 +188,15 @@ Partial Class FrmAddDepartamento
         Me.DgvDepartamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvDepartamento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDepDataGridViewTextBoxColumn, Me.NombreDepDataGridViewTextBoxColumn, Me.ExtTelDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
         Me.DgvDepartamento.DataSource = Me.DepartamentoBindingSource
-        Me.DgvDepartamento.Location = New System.Drawing.Point(15, 22)
-        Me.DgvDepartamento.Margin = New System.Windows.Forms.Padding(2)
+        Me.DgvDepartamento.Location = New System.Drawing.Point(20, 27)
+        Me.DgvDepartamento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DgvDepartamento.MultiSelect = False
         Me.DgvDepartamento.Name = "DgvDepartamento"
         Me.DgvDepartamento.ReadOnly = True
         Me.DgvDepartamento.RowHeadersWidth = 51
         Me.DgvDepartamento.RowTemplate.Height = 24
-        Me.DgvDepartamento.Size = New System.Drawing.Size(453, 281)
+        Me.DgvDepartamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvDepartamento.Size = New System.Drawing.Size(604, 346)
         Me.DgvDepartamento.TabIndex = 0
         '
         'IdDepDataGridViewTextBoxColumn
@@ -252,35 +267,38 @@ Partial Class FrmAddDepartamento
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(14, 318)
+        Me.Label5.Location = New System.Drawing.Point(19, 391)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 24)
+        Me.Label5.Size = New System.Drawing.Size(99, 29)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Buscar: "
         '
         'TxtBuscar
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(87, 315)
+        Me.TxtBuscar.Location = New System.Drawing.Point(116, 388)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(145, 29)
-        Me.TxtBuscar.TabIndex = 14
+        Me.TxtBuscar.Size = New System.Drawing.Size(192, 34)
+        Me.TxtBuscar.TabIndex = 4
         '
         'BtnRegresar
         '
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnRegresar.Location = New System.Drawing.Point(363, 19)
+        Me.BtnRegresar.Location = New System.Drawing.Point(484, 23)
+        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnRegresar.Name = "BtnRegresar"
-        Me.BtnRegresar.Size = New System.Drawing.Size(139, 33)
+        Me.BtnRegresar.Size = New System.Drawing.Size(185, 41)
         Me.BtnRegresar.TabIndex = 47
         Me.BtnRegresar.Text = "Regresar"
         Me.BtnRegresar.UseVisualStyleBackColor = True
         '
         'FrmAddDepartamento
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 703)
+        Me.ClientSize = New System.Drawing.Size(693, 865)
         Me.Controls.Add(Me.BtnRegresar)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label5)
@@ -296,6 +314,7 @@ Partial Class FrmAddDepartamento
         Me.Controls.Add(Me.TxtDepartamento)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmAddDepartamento"
         Me.Text = "Administración de departamentos"
         Me.GBDepartamento.ResumeLayout(False)
