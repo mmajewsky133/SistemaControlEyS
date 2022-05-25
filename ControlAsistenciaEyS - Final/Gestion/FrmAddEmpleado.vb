@@ -1,6 +1,5 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
-
 Public Class FrmAddEmpleado
 
     Dim empleado As New BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter
@@ -23,6 +22,44 @@ Public Class FrmAddEmpleado
 
     Private Sub BtnGuardarEmp_Click(sender As Object, e As EventArgs) Handles BtnGuardarEmp.Click
         Try
+
+
+            If (String.IsNullOrEmpty(TxtNombre.Text)) Then
+                MsgBox("No puede quedar vacío el nombre", MsgBoxStyle.Critical, "ERROR")
+                TxtNombre.Focus()
+                Exit Sub
+            End If
+            If (String.IsNullOrEmpty(TxtApellido.Text)) Then
+                MsgBox("Los apellidos requieren ser ingresados", MsgBoxStyle.Critical, "ERROR")
+                TxtApellido.Focus()
+                Exit Sub
+            End If
+            If (String.IsNullOrEmpty(TxtCedula.Text)) Then
+                MsgBox("La cedula requiere ser ingresada", MsgBoxStyle.Critical, "ERROR")
+                TxtCedula.Focus()
+                Exit Sub
+            End If
+            If (String.IsNullOrEmpty(TxtCorreo.Text)) Then
+                MsgBox("Correo vacio", MsgBoxStyle.Critical, "ERROR")
+                TxtCorreo.Focus()
+                Exit Sub
+            End If
+            If (String.IsNullOrEmpty(TxtTel.Text)) Then
+                MsgBox("Telefono vacio", MsgBoxStyle.Critical, "ERROR")
+                TxtTel.Focus()
+                Exit Sub
+            End If
+            If (String.IsNullOrEmpty(TxtCorreoInst.Text)) Then
+                MsgBox("Institucional vacio", MsgBoxStyle.Critical, "ERROR")
+                TxtCorreoInst.Focus()
+                Exit Sub
+            End If
+            If (PBEmp.Image Is Nothing) Then
+                MsgBox("Imagen Vacia", MsgBoxStyle.Critical, "ERROR")
+
+                Exit Sub
+            End If
+
             Dim nombres As String = TxtNombre.Text
             Dim apellidos As String = TxtApellido.Text
             Dim cedula As String = TxtCedula.Text
@@ -36,10 +73,11 @@ Public Class FrmAddEmpleado
             Dim username As String = nombres.Replace(" ", "") & Math.Ceiling(Rnd() * 20)
             Dim pwpin As String = "123"
             Dim estado As Integer = 1
+
             empleado.InsertarEmpleado(nombres, apellidos, cedula, fotoEmp.ToArray(), fechaNac, direccion, telefono, correo, correoInst, username, pwpin, estado)
             llenarGrid()
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+            MsgBox("Un campo vacío, datos no guardados", MsgBoxStyle.Critical, "ERROR")
         End Try
 
     End Sub
@@ -88,11 +126,12 @@ Public Class FrmAddEmpleado
             TxtCorreoInst.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtDireccion.Text)) Then
-            MsgBox("Direccion", MsgBoxStyle.Critical, "ERROR")
+        If (PBEmp.Image Is Nothing) Then
+            MsgBox("Foto de Empleado vacía", MsgBoxStyle.Critical, "ERROR")
             TxtDireccion.Focus()
             Exit Sub
         End If
+
 
         Dim nombre As String = TxtNombre.Text.Trim
         Dim apellido As String = TxtApellido.Text.Trim

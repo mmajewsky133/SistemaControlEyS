@@ -18,6 +18,22 @@
     End Sub
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
+            If (String.IsNullOrEmpty(TxtCargo.Text)) Then
+                MsgBox("No puede quedar vacío el nombre del cargo", MsgBoxStyle.Critical, "ERROR")
+                TxtCargo.Focus()
+                Exit Sub
+            End If
+            If (String.IsNullOrEmpty(TxtDescripcion.Text)) Then
+                MsgBox("La descripcion debe ser ingresada", MsgBoxStyle.Critical, "ERROR")
+                TxtDescripcion.Focus()
+                Exit Sub
+            End If
+            If (String.IsNullOrEmpty(CmbDepartamento.ValueMember)) Then
+                MsgBox("Ingrese el id del departamento", MsgBoxStyle.Critical, "ERROR")
+                'TxtIdDep.Focus()'
+                Exit Sub
+            End If
+
             Dim nombreCargo As String = TxtCargo.Text
             Dim descripcion As String = TxtDescripcion.Text
             Dim idDepartamento As Integer = CInt(CmbDepartamento.SelectedValue)

@@ -7,7 +7,11 @@
     End Sub
 
     Private Sub BtnMarcarE_Click(sender As Object, e As EventArgs) Handles BtnMarcarE.Click
-        Me.LblComMarcado.Text = "[ A Marcar: Entrada ]"
+        Dim Tiempo As DateTime? = Now
+        Dim Time As DateTime? = Nothing
+
+        Me.LblComMarcado.Text = Tiempo
+        '[ A Marcar: Entrada ]"
         EoS = "E"
         VerfHora(EoS)
     End Sub
@@ -23,6 +27,10 @@
     End Sub
 
     Private Sub BtnMarcar_Click(sender As Object, e As EventArgs) Handles BtnMarcar.Click
+
+    End Sub
+
+    Private Sub FrmMarcadoEyS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
