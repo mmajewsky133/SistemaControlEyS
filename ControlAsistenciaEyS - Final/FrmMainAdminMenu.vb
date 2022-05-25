@@ -9,6 +9,7 @@
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         FrmAdminLogin.Show()
+        FrmAdminLogin.TxtUsuarioAdmin.Focus()
         Close()
     End Sub
 

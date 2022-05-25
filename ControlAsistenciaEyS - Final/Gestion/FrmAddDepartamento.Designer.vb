@@ -44,7 +44,6 @@ Partial Class FrmAddDepartamento
         Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.DepartamentoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.departamentoTableAdapter()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.BtnRegresar = New System.Windows.Forms.Button()
@@ -121,9 +120,9 @@ Partial Class FrmAddDepartamento
         'BtnNuevo
         '
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnNuevo.Location = New System.Drawing.Point(343, 207)
+        Me.BtnNuevo.Location = New System.Drawing.Point(238, 207)
         Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(159, 59)
+        Me.BtnNuevo.Size = New System.Drawing.Size(264, 59)
         Me.BtnNuevo.TabIndex = 7
         Me.BtnNuevo.Text = "Limpiar Campos"
         Me.BtnNuevo.UseVisualStyleBackColor = True
@@ -249,16 +248,6 @@ Partial Class FrmAddDepartamento
         '
         Me.DepartamentoTableAdapter.ClearBeforeFill = True
         '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Button1.Location = New System.Drawing.Point(18, 207)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(315, 59)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Asignar a Cargo"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -295,7 +284,6 @@ Partial Class FrmAddDepartamento
         Me.Controls.Add(Me.BtnRegresar)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GBDepartamento)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnEditar)
@@ -335,7 +323,6 @@ Partial Class FrmAddDepartamento
     Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
     Friend WithEvents DepartamentoBindingSource As BindingSource
     Friend WithEvents DepartamentoTableAdapter As BDAsistenciasEySDataSetTableAdapters.departamentoTableAdapter
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents BtnRegresar As Button

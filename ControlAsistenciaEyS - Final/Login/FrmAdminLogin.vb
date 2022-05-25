@@ -31,8 +31,13 @@
 
         If (user.Equals("admin") And pw.Equals("123")) Then
             FrmMainAdminMenu.Show()
+            Me.Hide()
+            Me.TxtUsuarioAdmin.Clear()
+            Me.TxtPwAdmin.Clear()
         Else
             MsgBox("Usuario o contraseña incorrecta. Verifique sus credenciales", MsgBoxStyle.Critical, "Error")
+            Me.TxtUsuarioAdmin.Clear()
+            Me.TxtPwAdmin.Clear()
             Me.TxtUsuarioAdmin.Focus()
         End If
 
@@ -48,10 +53,5 @@
         'TxtPwAdmin.Clear()
         'Me.Hide()
         'End If
-
-        TxtUsuarioAdmin.Clear()
-        TxtPwAdmin.Clear()
-        Me.Hide()
-
     End Sub
 End Class

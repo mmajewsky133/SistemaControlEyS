@@ -4,10 +4,6 @@
     Dim cargo As New BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter
     Dim idCargoEmp As Integer
     Private Sub FrmAsignarCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.cargo' table. You can move, or remove it, as needed.
-        Me.CargoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.cargo)
-        'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.empleado' table. You can move, or remove it, as needed.
-        Me.EmpleadoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.empleado)
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.cargoEmp' table. You can move, or remove it, as needed.
         Me.CargoEmpTableAdapter.Fill(Me.BDAsistenciasEySDataSet.cargoEmp)
         llenarGrid()

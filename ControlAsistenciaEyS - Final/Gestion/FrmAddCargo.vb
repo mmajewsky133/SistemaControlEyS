@@ -112,7 +112,6 @@
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
         Me.Close()
-        FrmMainAdminMenu.Show()
     End Sub
 
     Private Sub TxtBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscar.KeyPress
@@ -130,5 +129,9 @@
                 End Try
             End If
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnAddDep.Click
+        FrmAddDepartamento.Show()
     End Sub
 End Class

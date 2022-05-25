@@ -36,17 +36,18 @@ Partial Class FrmAddCargo
         Me.CmbDepartamento = New System.Windows.Forms.ComboBox()
         Me.GBCargo = New System.Windows.Forms.GroupBox()
         Me.DgvCargo = New System.Windows.Forms.DataGridView()
+        Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdDepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
         Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdDepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BtnAddDep = New System.Windows.Forms.Button()
         Me.GBCargo.SuspendLayout()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,9 +97,9 @@ Partial Class FrmAddCargo
         'BtnNuevo
         '
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnNuevo.Location = New System.Drawing.Point(264, 257)
+        Me.BtnNuevo.Location = New System.Drawing.Point(287, 257)
         Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(252, 59)
+        Me.BtnNuevo.Size = New System.Drawing.Size(229, 59)
         Me.BtnNuevo.TabIndex = 17
         Me.BtnNuevo.Text = "Limpiar Campos"
         Me.BtnNuevo.UseVisualStyleBackColor = True
@@ -156,7 +157,7 @@ Partial Class FrmAddCargo
         Me.CmbDepartamento.FormattingEnabled = True
         Me.CmbDepartamento.Location = New System.Drawing.Point(17, 284)
         Me.CmbDepartamento.Name = "CmbDepartamento"
-        Me.CmbDepartamento.Size = New System.Drawing.Size(241, 32)
+        Me.CmbDepartamento.Size = New System.Drawing.Size(264, 32)
         Me.CmbDepartamento.TabIndex = 22
         '
         'GBCargo
@@ -178,56 +179,13 @@ Partial Class FrmAddCargo
         Me.DgvCargo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdCargoDataGridViewTextBoxColumn, Me.NombreCargoDataGridViewTextBoxColumn, Me.DescCargoDataGridViewTextBoxColumn, Me.IdDepDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
         Me.DgvCargo.DataSource = Me.CargoBindingSource
         Me.DgvCargo.Location = New System.Drawing.Point(16, 21)
-        Me.DgvCargo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DgvCargo.Margin = New System.Windows.Forms.Padding(2)
         Me.DgvCargo.Name = "DgvCargo"
         Me.DgvCargo.ReadOnly = True
         Me.DgvCargo.RowHeadersWidth = 51
         Me.DgvCargo.RowTemplate.Height = 24
         Me.DgvCargo.Size = New System.Drawing.Size(466, 190)
         Me.DgvCargo.TabIndex = 0
-        '
-        'CargoBindingSource
-        '
-        Me.CargoBindingSource.DataMember = "cargo"
-        Me.CargoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
-        '
-        'BDAsistenciasEySDataSet
-        '
-        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
-        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CargoTableAdapter
-        '
-        Me.CargoTableAdapter.ClearBeforeFill = True
-        '
-        'BtnRegresar
-        '
-        Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnRegresar.Location = New System.Drawing.Point(414, 19)
-        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.BtnRegresar.Name = "BtnRegresar"
-        Me.BtnRegresar.Size = New System.Drawing.Size(102, 33)
-        Me.BtnRegresar.TabIndex = 24
-        Me.BtnRegresar.Text = "Regresar"
-        Me.BtnRegresar.UseVisualStyleBackColor = True
-        '
-        'TxtBuscar
-        '
-        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(85, 357)
-        Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(145, 29)
-        Me.TxtBuscar.TabIndex = 26
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(12, 360)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 24)
-        Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Buscar: "
         '
         'IdCargoDataGridViewTextBoxColumn
         '
@@ -279,11 +237,65 @@ Partial Class FrmAddCargo
         Me.EstadoDataGridViewTextBoxColumn.Visible = False
         Me.EstadoDataGridViewTextBoxColumn.Width = 125
         '
+        'CargoBindingSource
+        '
+        Me.CargoBindingSource.DataMember = "cargo"
+        Me.CargoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'BDAsistenciasEySDataSet
+        '
+        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
+        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CargoTableAdapter
+        '
+        Me.CargoTableAdapter.ClearBeforeFill = True
+        '
+        'BtnRegresar
+        '
+        Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.BtnRegresar.Location = New System.Drawing.Point(414, 19)
+        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnRegresar.Name = "BtnRegresar"
+        Me.BtnRegresar.Size = New System.Drawing.Size(102, 33)
+        Me.BtnRegresar.TabIndex = 24
+        Me.BtnRegresar.Text = "Regresar"
+        Me.BtnRegresar.UseVisualStyleBackColor = True
+        '
+        'TxtBuscar
+        '
+        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBuscar.Location = New System.Drawing.Point(85, 357)
+        Me.TxtBuscar.Name = "TxtBuscar"
+        Me.TxtBuscar.Size = New System.Drawing.Size(145, 29)
+        Me.TxtBuscar.TabIndex = 26
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(12, 360)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(78, 24)
+        Me.Label5.TabIndex = 25
+        Me.Label5.Text = "Buscar: "
+        '
+        'BtnAddDep
+        '
+        Me.BtnAddDep.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnAddDep.Location = New System.Drawing.Point(152, 257)
+        Me.BtnAddDep.Name = "BtnAddDep"
+        Me.BtnAddDep.Size = New System.Drawing.Size(129, 24)
+        Me.BtnAddDep.TabIndex = 27
+        Me.BtnAddDep.Text = "Nuevo"
+        Me.BtnAddDep.UseVisualStyleBackColor = True
+        '
         'FrmAddCargo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(534, 645)
+        Me.Controls.Add(Me.BtnAddDep)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnRegresar)
@@ -334,4 +346,5 @@ Partial Class FrmAddCargo
     Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents BtnAddDep As Button
 End Class

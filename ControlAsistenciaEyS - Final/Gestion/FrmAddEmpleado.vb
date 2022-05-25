@@ -22,8 +22,6 @@ Public Class FrmAddEmpleado
 
     Private Sub BtnGuardarEmp_Click(sender As Object, e As EventArgs) Handles BtnGuardarEmp.Click
         Try
-
-
             If (String.IsNullOrEmpty(TxtNombre.Text)) Then
                 MsgBox("No puede quedar vacío el nombre", MsgBoxStyle.Critical, "ERROR")
                 TxtNombre.Focus()
@@ -76,6 +74,7 @@ Public Class FrmAddEmpleado
 
             empleado.InsertarEmpleado(nombres, apellidos, cedula, fotoEmp.ToArray(), fechaNac, direccion, telefono, correo, correoInst, username, pwpin, estado)
             llenarGrid()
+            MsgBox("Se ha guardado el empleado en la base de datos", MsgBoxStyle.Information, "Gestion de Empleados")
         Catch ex As Exception
             MsgBox("Un campo vacío, datos no guardados", MsgBoxStyle.Critical, "ERROR")
         End Try
@@ -143,6 +142,7 @@ Public Class FrmAddEmpleado
 
         empleado.EditarEmpleado(nombre, apellido, cedula, direccion, telefono, correo, correoInstitucional, 2, idEmpleado)
         llenarGrid()
+        MsgBox("Se ha editado el empleado en la base de datos", MsgBoxStyle.Information, "Gestion de Empleados")
 
     End Sub
 
@@ -197,7 +197,6 @@ Public Class FrmAddEmpleado
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
         Me.Close()
-        FrmMainAdminMenu.Show()
     End Sub
 
     Private Sub TxtBuscar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscar.KeyPress

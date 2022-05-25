@@ -27,16 +27,13 @@ Partial Class FrmAsignarCargo
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GBCargoEmpleado = New System.Windows.Forms.GroupBox()
         Me.DgvCargoEmp = New System.Windows.Forms.DataGridView()
+        Me.CargoEmpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CmbEmpleado = New System.Windows.Forms.ComboBox()
         Me.CmbCargo = New System.Windows.Forms.ComboBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
-        Me.IdCargoEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CargoEmpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.CargoEmpTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoEmpTableAdapter()
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CargoEmpBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
@@ -44,6 +41,9 @@ Partial Class FrmAsignarCargo
         Me.CargoEmpBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
+        Me.IdCargoEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBCargoEmpleado.SuspendLayout()
         CType(Me.DgvCargoEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CargoEmpBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,116 +58,52 @@ Partial Class FrmAsignarCargo
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(35, 13)
+        Me.Label1.Location = New System.Drawing.Point(14, 23)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(411, 32)
+        Me.Label1.Size = New System.Drawing.Size(323, 26)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Asignar cargo a un empleado"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.5!)
-        Me.Label2.Location = New System.Drawing.Point(77, 97)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(12, 79)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 25)
+        Me.Label2.Size = New System.Drawing.Size(102, 24)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Empleado"
+        Me.Label2.Text = "Empleado:"
         '
         'GBCargoEmpleado
         '
         Me.GBCargoEmpleado.Controls.Add(Me.DgvCargoEmp)
-        Me.GBCargoEmpleado.Location = New System.Drawing.Point(82, 282)
+        Me.GBCargoEmpleado.Location = New System.Drawing.Point(16, 229)
+        Me.GBCargoEmpleado.Margin = New System.Windows.Forms.Padding(2)
         Me.GBCargoEmpleado.Name = "GBCargoEmpleado"
-        Me.GBCargoEmpleado.Size = New System.Drawing.Size(520, 162)
+        Me.GBCargoEmpleado.Padding = New System.Windows.Forms.Padding(2)
+        Me.GBCargoEmpleado.Size = New System.Drawing.Size(333, 207)
         Me.GBCargoEmpleado.TabIndex = 3
         Me.GBCargoEmpleado.TabStop = False
         Me.GBCargoEmpleado.Text = "Empleados con cargos"
         '
         'DgvCargoEmp
         '
+        Me.DgvCargoEmp.AllowUserToAddRows = False
+        Me.DgvCargoEmp.AllowUserToDeleteRows = False
         Me.DgvCargoEmp.AutoGenerateColumns = False
         Me.DgvCargoEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCargoEmp.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdCargoEmpDataGridViewTextBoxColumn, Me.IdEmpDataGridViewTextBoxColumn, Me.IdCargoDataGridViewTextBoxColumn})
         Me.DgvCargoEmp.DataSource = Me.CargoEmpBindingSource
-        Me.DgvCargoEmp.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvCargoEmp.Location = New System.Drawing.Point(3, 18)
+        Me.DgvCargoEmp.Location = New System.Drawing.Point(15, 29)
+        Me.DgvCargoEmp.Margin = New System.Windows.Forms.Padding(2)
         Me.DgvCargoEmp.Name = "DgvCargoEmp"
+        Me.DgvCargoEmp.ReadOnly = True
         Me.DgvCargoEmp.RowHeadersWidth = 51
         Me.DgvCargoEmp.RowTemplate.Height = 24
-        Me.DgvCargoEmp.Size = New System.Drawing.Size(514, 141)
+        Me.DgvCargoEmp.Size = New System.Drawing.Size(303, 164)
         Me.DgvCargoEmp.TabIndex = 0
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.5!)
-        Me.Label4.Location = New System.Drawing.Point(115, 149)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 25)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Cargo"
-        '
-        'CmbEmpleado
-        '
-        Me.CmbEmpleado.FormattingEnabled = True
-        Me.CmbEmpleado.Location = New System.Drawing.Point(211, 97)
-        Me.CmbEmpleado.Name = "CmbEmpleado"
-        Me.CmbEmpleado.Size = New System.Drawing.Size(121, 24)
-        Me.CmbEmpleado.TabIndex = 5
-        '
-        'CmbCargo
-        '
-        Me.CmbCargo.FormattingEnabled = True
-        Me.CmbCargo.Location = New System.Drawing.Point(211, 153)
-        Me.CmbCargo.Name = "CmbCargo"
-        Me.CmbCargo.Size = New System.Drawing.Size(121, 24)
-        Me.CmbCargo.TabIndex = 6
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnGuardar.Location = New System.Drawing.Point(85, 219)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(108, 36)
-        Me.BtnGuardar.TabIndex = 7
-        Me.BtnGuardar.Text = "Guardar"
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnEliminar.Location = New System.Drawing.Point(211, 219)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(114, 36)
-        Me.BtnEliminar.TabIndex = 9
-        Me.BtnEliminar.Text = "Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
-        'IdCargoEmpDataGridViewTextBoxColumn
-        '
-        Me.IdCargoEmpDataGridViewTextBoxColumn.DataPropertyName = "idCargoEmp"
-        Me.IdCargoEmpDataGridViewTextBoxColumn.HeaderText = "idCargoEmp"
-        Me.IdCargoEmpDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdCargoEmpDataGridViewTextBoxColumn.Name = "IdCargoEmpDataGridViewTextBoxColumn"
-        Me.IdCargoEmpDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdCargoEmpDataGridViewTextBoxColumn.Width = 125
-        '
-        'IdEmpDataGridViewTextBoxColumn
-        '
-        Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
-        Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "idEmp"
-        Me.IdEmpDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
-        Me.IdEmpDataGridViewTextBoxColumn.Width = 125
-        '
-        'IdCargoDataGridViewTextBoxColumn
-        '
-        Me.IdCargoDataGridViewTextBoxColumn.DataPropertyName = "idCargo"
-        Me.IdCargoDataGridViewTextBoxColumn.HeaderText = "idCargo"
-        Me.IdCargoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdCargoDataGridViewTextBoxColumn.Name = "IdCargoDataGridViewTextBoxColumn"
-        Me.IdCargoDataGridViewTextBoxColumn.Width = 125
         '
         'CargoEmpBindingSource
         '
@@ -178,6 +114,59 @@ Partial Class FrmAsignarCargo
         '
         Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
         Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(48, 124)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(66, 24)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Cargo:"
+        '
+        'CmbEmpleado
+        '
+        Me.CmbEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CmbEmpleado.FormattingEnabled = True
+        Me.CmbEmpleado.Location = New System.Drawing.Point(118, 76)
+        Me.CmbEmpleado.Margin = New System.Windows.Forms.Padding(2)
+        Me.CmbEmpleado.Name = "CmbEmpleado"
+        Me.CmbEmpleado.Size = New System.Drawing.Size(231, 32)
+        Me.CmbEmpleado.TabIndex = 5
+        '
+        'CmbCargo
+        '
+        Me.CmbCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CmbCargo.FormattingEnabled = True
+        Me.CmbCargo.Location = New System.Drawing.Point(118, 124)
+        Me.CmbCargo.Margin = New System.Windows.Forms.Padding(2)
+        Me.CmbCargo.Name = "CmbCargo"
+        Me.CmbCargo.Size = New System.Drawing.Size(231, 32)
+        Me.CmbCargo.TabIndex = 6
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.BtnGuardar.Location = New System.Drawing.Point(31, 178)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(123, 29)
+        Me.BtnGuardar.TabIndex = 7
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.BtnEliminar.Location = New System.Drawing.Point(213, 178)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(121, 29)
+        Me.BtnEliminar.TabIndex = 9
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
         '
         'CargoEmpTableAdapter
         '
@@ -211,11 +200,39 @@ Partial Class FrmAsignarCargo
         '
         Me.CargoTableAdapter.ClearBeforeFill = True
         '
+        'IdCargoEmpDataGridViewTextBoxColumn
+        '
+        Me.IdCargoEmpDataGridViewTextBoxColumn.DataPropertyName = "idCargoEmp"
+        Me.IdCargoEmpDataGridViewTextBoxColumn.HeaderText = "idCargoEmp"
+        Me.IdCargoEmpDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdCargoEmpDataGridViewTextBoxColumn.Name = "IdCargoEmpDataGridViewTextBoxColumn"
+        Me.IdCargoEmpDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdCargoEmpDataGridViewTextBoxColumn.Visible = False
+        Me.IdCargoEmpDataGridViewTextBoxColumn.Width = 50
+        '
+        'IdEmpDataGridViewTextBoxColumn
+        '
+        Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
+        Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "ID Empleado"
+        Me.IdEmpDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
+        Me.IdEmpDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdEmpDataGridViewTextBoxColumn.Width = 125
+        '
+        'IdCargoDataGridViewTextBoxColumn
+        '
+        Me.IdCargoDataGridViewTextBoxColumn.DataPropertyName = "idCargo"
+        Me.IdCargoDataGridViewTextBoxColumn.HeaderText = "ID Cargo"
+        Me.IdCargoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdCargoDataGridViewTextBoxColumn.Name = "IdCargoDataGridViewTextBoxColumn"
+        Me.IdCargoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdCargoDataGridViewTextBoxColumn.Width = 125
+        '
         'FrmAsignarCargo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(685, 517)
+        Me.ClientSize = New System.Drawing.Size(369, 447)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.CmbCargo)
@@ -224,6 +241,7 @@ Partial Class FrmAsignarCargo
         Me.Controls.Add(Me.GBCargoEmpleado)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmAsignarCargo"
         Me.Text = "Asignar cargo"
         Me.GBCargoEmpleado.ResumeLayout(False)
@@ -247,9 +265,6 @@ Partial Class FrmAsignarCargo
     Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
     Friend WithEvents CargoEmpBindingSource As BindingSource
     Friend WithEvents CargoEmpTableAdapter As BDAsistenciasEySDataSetTableAdapters.cargoEmpTableAdapter
-    Friend WithEvents IdCargoEmpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdEmpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CmbEmpleado As ComboBox
     Friend WithEvents CmbCargo As ComboBox
     Friend WithEvents EmpleadoBindingSource As BindingSource
@@ -260,4 +275,7 @@ Partial Class FrmAsignarCargo
     Friend WithEvents CargoEmpBindingSource2 As BindingSource
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnEliminar As Button
+    Friend WithEvents IdCargoEmpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdEmpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
