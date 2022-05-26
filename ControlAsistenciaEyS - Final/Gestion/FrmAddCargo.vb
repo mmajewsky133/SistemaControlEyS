@@ -34,11 +34,12 @@
                 Exit Sub
             End If
 
-            Dim nombreCargo As String = TxtCargo.Text
-            Dim descripcion As String = TxtDescripcion.Text
+            Dim nombreCargo As String = TxtCargo.Text.Trim
+            Dim descripcion As String = TxtDescripcion.Text.Trim
             Dim idDepartamento As Integer = CInt(CmbDepartamento.SelectedValue)
+            Dim nombreDepartamento As String = CmbDepartamento.Text
 
-            cargo.InsertarCargo(nombreCargo, descripcion, idDepartamento, 1)
+            cargo.InsertarCargo(nombreCargo, descripcion, idDepartamento, nombreDepartamento, 1)
             llenarGrid()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
@@ -57,16 +58,17 @@
             Exit Sub
         End If
         If (String.IsNullOrEmpty(CmbDepartamento.ValueMember)) Then
-            MsgBox("Ingrese el id del departamento", MsgBoxStyle.Critical, "ERROR")
+            MsgBox("Seleccione un departamento", MsgBoxStyle.Critical, "ERROR")
             'TxtIdDep.Focus()'
             Exit Sub
         End If
 
         Dim nombreCargo As String = TxtCargo.Text.Trim
         Dim descripcion As String = TxtDescripcion.Text.Trim
-        'Dim idDepartamento As Integer = CInt(TxtIdDep.Text.Trim)'
+        Dim idDepartamento As Integer = CInt(CmbDepartamento.SelectedValue)
+        Dim nombreDepartamento As String = CmbDepartamento.SelectedText
 
-        cargo.ActualizarCargo(nombreCargo, descripcion, 2, idCargo)
+        cargo.ActualizarCargo(nombreCargo, descripcion, idDepartamento, nombreDepartamento, 2, idCargo)
 
         llenarGrid()
     End Sub
@@ -91,7 +93,7 @@
             idCargo = DgvCargo.Item(0, fila).Value
             TxtCargo.Text = DgvCargo.Item(1, fila).Value
             TxtDescripcion.Text = DgvCargo.Item(2, fila).Value
-            'TxtIdDep.Text = DgvCargo.Item(3, fila).Value'
+            'CmbDepartamento.SelectedValue(DgvCargo.Item(4, fila).Value)
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")

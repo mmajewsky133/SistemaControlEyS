@@ -31,9 +31,11 @@
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
             Dim idEmpleado As Integer = CInt(CmbEmpleado.SelectedValue)
+            Dim nombreEmpleado As String = CmbEmpleado.SelectedText
             Dim idCargo As Integer = CInt(CmbCargo.SelectedValue)
+            Dim nombreCargo As String = CmbCargo.SelectedText
 
-            cargoEmp.InsertarEmpleadoCargo(idEmpleado, idCargo)
+            cargoEmp.InsertarEmpleadoCargo(idEmpleado, nombreEmpleado, idCargo, nombreCargo)
             llenarGrid()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")

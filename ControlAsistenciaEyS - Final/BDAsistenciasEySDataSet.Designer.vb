@@ -4418,10 +4418,13 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "UPDATE [dbo].[cargo] SET [nombreCargo] = @nombreCargo, [descCargo] = @descCargo, "& _ 
-                "[estado] = @estado WHERE ([idCargo] = @idCargo)"
+                "[idDep] = @idDep, [nombreDep] = @nombreDep, [estado] = @estado WHERE ([idCargo] "& _ 
+                "= @idCargo)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreCargo", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descCargo", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "descCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreCargo", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descCargo", Global.System.Data.SqlDbType.NVarChar, 300, Global.System.Data.ParameterDirection.Input, 0, 0, "descCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idDep", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idDep", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreDep", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreDep", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
@@ -4431,13 +4434,15 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "INSERT INTO [dbo].[cargo] ([nombreCargo], [descCargo], [idDep], [estado]) VALUES "& _ 
-                "(@nombreCargo, @descCargo, @idDep, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idCargo, nombreCargo, descC"& _ 
-                "argo, idDep, estado FROM cargo WHERE (idCargo = SCOPE_IDENTITY())"
+            Me._commandCollection(3).CommandText = "INSERT INTO [dbo].[cargo] ([nombreCargo], [descCargo], [idDep], [nombreDep], [est"& _ 
+                "ado]) VALUES (@nombreCargo, @descCargo, @idDep, @nombreDep, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id"& _ 
+                "Cargo, nombreCargo, descCargo, idDep, nombreDep, estado FROM cargo WHERE (idCarg"& _ 
+                "o = SCOPE_IDENTITY())"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreCargo", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descCargo", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "descCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreCargo", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descCargo", Global.System.Data.SqlDbType.NVarChar, 300, Global.System.Data.ParameterDirection.Input, 0, 0, "descCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idDep", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idDep", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreDep", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreDep", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -4660,7 +4665,7 @@ Namespace BDAsistenciasEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function ActualizarCargo(ByVal nombreCargo As String, ByVal descCargo As String, ByVal estado As Integer, ByVal idCargo As Integer) As Integer
+        Public Overloads Overridable Function ActualizarCargo(ByVal nombreCargo As String, ByVal descCargo As String, ByVal idDep As Global.System.Nullable(Of Integer), ByVal nombreDep As String, ByVal estado As Integer, ByVal idCargo As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
             If (nombreCargo Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("nombreCargo")
@@ -4672,8 +4677,18 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Else
                 command.Parameters(1).Value = CType(descCargo,String)
             End If
-            command.Parameters(2).Value = CType(estado,Integer)
-            command.Parameters(3).Value = CType(idCargo,Integer)
+            If (idDep.HasValue = true) Then
+                command.Parameters(2).Value = CType(idDep.Value,Integer)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (nombreDep Is Nothing) Then
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(3).Value = CType(nombreDep,String)
+            End If
+            command.Parameters(4).Value = CType(estado,Integer)
+            command.Parameters(5).Value = CType(idCargo,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4717,7 +4732,7 @@ Namespace BDAsistenciasEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertarCargo(ByVal nombreCargo As String, ByVal descCargo As String, ByVal idDep As Global.System.Nullable(Of Integer), ByVal estado As Integer) As Integer
+        Public Overloads Overridable Function InsertarCargo(ByVal nombreCargo As String, ByVal descCargo As String, ByVal idDep As Global.System.Nullable(Of Integer), ByVal nombreDep As String, ByVal estado As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
             If (nombreCargo Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("nombreCargo")
@@ -4734,7 +4749,12 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Else
                 command.Parameters(2).Value = Global.System.DBNull.Value
             End If
-            command.Parameters(3).Value = CType(estado,Integer)
+            If (nombreDep Is Nothing) Then
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(3).Value = CType(nombreDep,String)
+            End If
+            command.Parameters(4).Value = CType(estado,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4945,17 +4965,14 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "UPDATE [dbo].[cargoEmp] SET [idEmp] = @idEmp, [idCargo] = @idCargo WHERE (([idCar"& _ 
-                "goEmp] = @Original_idCargoEmp) AND ([idEmp] = @Original_idEmp) AND ([idCargo] = "& _ 
-                "@Original_idCargo));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idCargoEmp, idEmp, idCargo FROM cargoEmp WHERE (idC"& _ 
-                "argoEmp = @idCargoEmp)"
+            Me._commandCollection(1).CommandText = "UPDATE [dbo].[cargoEmp] SET [idEmp] = @idEmp, [nombreEmpleado] = @nombreEmpleado,"& _ 
+                " [idCargo] = @idCargo [nombreCargo] = @nombreCargo WHERE (([idCargoEmp] = @Origi"& _ 
+                "nal_idCargoEmp) AND ([idEmp] = @Original_idEmp) AND ([nombreEmpleado] = @Origina"& _ 
+                "l_nombreEmpleado) AND ([idCargo] = @Original_idCargo) AND ([nombreCargo] = @Orig"& _ 
+                "inal_nombreCargo));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idCargoEmp, idEmp,  nombreEmpleado, idCargo, nombreC"& _ 
+                "argo FROM cargoEmp WHERE (idCargoEmp = @idCargoEmp)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmp", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmp", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idCargoEmp", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargoEmp", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmp", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmp", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargoEmp", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargoEmp", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargoEmp", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargoEmp", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "DELETE FROM [dbo].[cargoEmp] WHERE ([idCargoEmp] = @Original_idCargoEmp)"
@@ -4963,12 +4980,15 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idCargoEmp", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargoEmp", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "INSERT INTO [dbo].[cargoEmp] ([idEmp], [idCargo]) VALUES (@idEmp, @idCargo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SEL"& _ 
-                "ECT idCargoEmp, idEmp, idCargo FROM cargoEmp WHERE (idCargoEmp = SCOPE_IDENTITY("& _ 
-                "))"
+            Me._commandCollection(3).CommandText = "INSERT INTO [dbo].[cargoEmp] ([idEmp], [nombreEmpleado], [idCargo], [nombreCargo]"& _ 
+                ") VALUES (@idEmp, @nombreEmpleado, @idCargo, @nombreCargo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idCargoEmp, "& _ 
+                "idEmp, nombreEmpleado, idCargo, nombreCargo FROM cargoEmp WHERE (idCargoEmp = SC"& _ 
+                "OPE_IDENTITY())"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmp", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmp", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreEmpleado", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreCargo", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5146,14 +5166,9 @@ Namespace BDAsistenciasEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function ActualizarCargoEmpleado(ByVal idEmp As Integer, ByVal idCargo As Integer, ByVal Original_idCargoEmp As Integer, ByVal Original_idEmp As Integer, ByVal Original_idCargo As Integer, ByVal idCargoEmp As Integer) As Integer
+        Public Overloads Overridable Function ActualizarCargoEmpleado(ByVal idCargoEmp As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
-            command.Parameters(0).Value = CType(idEmp,Integer)
-            command.Parameters(1).Value = CType(idCargo,Integer)
-            command.Parameters(2).Value = CType(Original_idCargoEmp,Integer)
-            command.Parameters(3).Value = CType(Original_idEmp,Integer)
-            command.Parameters(4).Value = CType(Original_idCargo,Integer)
-            command.Parameters(5).Value = CType(idCargoEmp,Integer)
+            command.Parameters(0).Value = CType(idCargoEmp,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5197,10 +5212,20 @@ Namespace BDAsistenciasEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertarEmpleadoCargo(ByVal idEmp As Integer, ByVal idCargo As Integer) As Integer
+        Public Overloads Overridable Function InsertarEmpleadoCargo(ByVal idEmp As Integer, ByVal nombreEmpleado As String, ByVal idCargo As Integer, ByVal nombreCargo As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
             command.Parameters(0).Value = CType(idEmp,Integer)
-            command.Parameters(1).Value = CType(idCargo,Integer)
+            If (nombreEmpleado Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("nombreEmpleado")
+            Else
+                command.Parameters(1).Value = CType(nombreEmpleado,String)
+            End If
+            command.Parameters(2).Value = CType(idCargo,Integer)
+            If (nombreCargo Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("nombreCargo")
+            Else
+                command.Parameters(3).Value = CType(nombreCargo,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6096,11 +6121,11 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
             Me._commandCollection(4).CommandText = "INSERT INTO [dbo].[empleado] ([nombres], [apellidos], [cedula], [fotoEmp], [fecha"& _ 
-                "Nac], [direccion], [telefono], [correo], [correoInst], [username], [pwpin], [est"& _ 
-                "ado]) VALUES (@nombres, @apellidos, @cedula, @fotoEmp, @fechaNac, @direccion, @t"& _ 
-                "elefono, @correo, @correoInst, @username, @pwpin, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmp, nombr"& _ 
-                "es, apellidos, cedula, fotoEmp, fechaNac, direccion, telefono, correo, correoIns"& _ 
-                "t, username, pwpin, estado FROM empleado WHERE (idEmp = SCOPE_IDENTITY())"
+                "Nac], [direccion], [telefono], [correo], [correoInst], [pwpin], [estado]) VALUES"& _ 
+                " (@nombres, @apellidos, @cedula, @fotoEmp, @fechaNac, @direccion, @telefono, @co"& _ 
+                "rreo, @correoInst, @pwpin, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmp, nombres, apellidos, cedula, "& _ 
+                "fotoEmp, fechaNac, direccion, telefono, correo, correoInst, pwpin, estado FROM e"& _ 
+                "mpleado WHERE (idEmp = SCOPE_IDENTITY())"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombres", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombres", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@apellidos", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "apellidos", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6111,7 +6136,6 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@telefono", Global.System.Data.SqlDbType.NVarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "correo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correoInst", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "correoInst", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.NVarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pwpin", Global.System.Data.SqlDbType.NVarChar, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "pwpin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
@@ -6308,7 +6332,7 @@ Namespace BDAsistenciasEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertarEmpleado(ByVal nombres As String, ByVal apellidos As String, ByVal cedula As String, ByVal fotoEmp() As Byte, ByVal fechaNac As String, ByVal direccion As String, ByVal telefono As String, ByVal correo As String, ByVal correoInst As String, ByVal username As String, ByVal pwpin As String, ByVal estado As Integer) As Integer
+        Public Overloads Overridable Function InsertarEmpleado(ByVal nombres As String, ByVal apellidos As String, ByVal cedula As String, ByVal fotoEmp() As Byte, ByVal fechaNac As String, ByVal direccion As String, ByVal telefono As String, ByVal correo As String, ByVal correoInst As String, ByVal pwpin As String, ByVal estado As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
             If (nombres Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("nombres")
@@ -6355,17 +6379,12 @@ Namespace BDAsistenciasEySDataSetTableAdapters
             Else
                 command.Parameters(8).Value = CType(correoInst,String)
             End If
-            If (username Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("username")
-            Else
-                command.Parameters(9).Value = CType(username,String)
-            End If
             If (pwpin Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("pwpin")
             Else
-                command.Parameters(10).Value = CType(pwpin,String)
+                command.Parameters(9).Value = CType(pwpin,String)
             End If
-            command.Parameters(11).Value = CType(estado,Integer)
+            command.Parameters(10).Value = CType(estado,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
