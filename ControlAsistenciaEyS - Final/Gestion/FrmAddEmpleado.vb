@@ -72,7 +72,7 @@ Public Class FrmAddEmpleado
             Dim pwpin As String = "123"
             Dim estado As Integer = 1
 
-            empleado.InsertarEmpleado(nombres, apellidos, cedula, fotoEmp.ToArray(), fechaNac, direccion, telefono, correo, correoInst, username, pwpin, estado)
+            empleado.InsertarEmpleado(nombres, apellidos, cedula, fotoEmp.ToArray(), fechaNac, direccion, telefono, correo, correoInst, estado)
             llenarGrid()
             MsgBox("Se ha guardado el empleado en la base de datos", MsgBoxStyle.Information, "Gestion de Empleados")
         Catch ex As Exception

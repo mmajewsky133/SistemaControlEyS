@@ -1,8 +1,2 @@
-﻿
-
-Partial Public Class BDAsistenciasEySDataSet
-End Class
-
-
-Partial Public Class BDAsistenciasEySDataSet
+﻿Partial Class BDAsistenciasEySDataSet
 End Class
