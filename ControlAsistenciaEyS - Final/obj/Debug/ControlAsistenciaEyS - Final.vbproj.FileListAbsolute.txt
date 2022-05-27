@@ -1,0 +1,77 @@
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ControlAsistenciaEyS - Final.exe.config
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ControlAsistenciaEyS - Final.exe
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ControlAsistenciaEyS - Final.pdb
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ControlAsistenciaEyS - Final.xml
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.vbproj.AssemblyReference.cache
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmMainAdminMenu.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmAddCargo.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmAddDepartamento.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmAddEmpleado.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmAdminLogin.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.Resources.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmSeeCargos.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmSeeDepartamento.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmSeeEmpleado.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmMarcadoEyS.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.vbproj.GenerateResource.cache
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.vbproj.CoreCompileInputs.cache
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.exe
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.xml
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.pdb
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\EnvDTE.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\stdole.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.RptDisplay.resources
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.vbproj.CopyComplete
+C:\Users\Josar\source\repos\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmAsignarCargo.resources
