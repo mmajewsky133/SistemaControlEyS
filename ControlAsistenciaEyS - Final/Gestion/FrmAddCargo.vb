@@ -2,10 +2,18 @@
     Dim cargo As New BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter
     Dim departamento As New BDAsistenciasEySDataSetTableAdapters.departamentoTableAdapter
     Dim idCargo As Integer
+    Dim tablaCargoDep As New BDAsistenciasEySDataSetTableAdapters.DatosCargoDepTableAdapter
+    Dim dtCargoDep As New BDAsistenciasEySDataSet.DatosCargoDepDataTable
+
     Sub llenarGrid()
-        DgvCargo.DataSource = cargo.GetData
+        tablaCargoDep.Fill(dtCargoDep)
+        DgvCargo.DataSource = dtCargoDep
         DgvCargo.Refresh()
-        GBCargo.Text = "Cargos registrados: " + DgvCargo.Rows.Count.ToString
+        DgvCargo.Columns.Item("ID Cargo").Visible = False
+        DgvCargo.Columns.Item("ID Dep").Visible = False
+        DgvCargo.Columns.Item("Estado").Visible = False
+
+        GBCargo.Text = "Cargos registrados: " & DgvCargo.Rows.Count.ToString - 1
     End Sub
     Sub llenarCmbDepartamento()
         CmbDepartamento.DataSource = departamento.GetData
@@ -64,7 +72,7 @@
 
         Dim nombreCargo As String = TxtCargo.Text.Trim
         Dim descripcion As String = TxtDescripcion.Text.Trim
-        'Dim idDepartamento As Integer = CInt(TxtIdDep.Text.Trim)'
+        'Dim idDepartamento As Integer = CInt(TxtIdDep.Text.Trim)
 
         cargo.ActualizarCargo(nombreCargo, descripcion, 2, idCargo)
 
@@ -84,14 +92,14 @@
         End Try
     End Sub
 
-    Private Sub DgvCargo_DoubleClick(sender As Object, e As EventArgs) Handles DgvCargo.DoubleClick
+    Private Sub DgvCargo_DoubleClick(sender As Object, e As EventArgs)
         Try
             Dim fila As Integer = DgvCargo.CurrentRow.Index
-
+            'Arreglar este evento
             idCargo = DgvCargo.Item(0, fila).Value
             TxtCargo.Text = DgvCargo.Item(1, fila).Value
             TxtDescripcion.Text = DgvCargo.Item(2, fila).Value
-            'TxtIdDep.Text = DgvCargo.Item(3, fila).Value'
+            CmbDepartamento.SelectedValue = DgvCargo.Item(3, fila).Value
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
@@ -100,7 +108,6 @@
 
     Private Sub FrmAddCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.cargo' table. You can move, or remove it, as needed.
-        Me.CargoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.cargo)
         llenarGrid()
         llenarCmbDepartamento()
     End Sub

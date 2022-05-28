@@ -1,2 +1,4 @@
-﻿Partial Class BDAsistenciasEySDataSet
+﻿
+
+Partial Class BDAsistenciasEySDataSet
 End Class
