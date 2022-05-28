@@ -1,7 +1,8 @@
 ﻿Public Class FrmAdminLogin
 
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
-        End
+        FrmMarcadoEyS.Show()
+        Me.Hide()
     End Sub
 
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
@@ -26,6 +27,9 @@
         Dim user As String = TxtUsuarioAdmin.Text
         Dim pw As String = TxtPwAdmin.Text
 
+        If (user.Equals("hola") And pw.Equals("123")) Then
+            FrmMarcadoEyS.Show()
+        End If
 
         'Dim empleado As String = login.ObtenerDatosEmpleado(Me.TxtUsuarioAdmin, Me.TxtPwAdmin)
 
@@ -53,5 +57,14 @@
         'TxtPwAdmin.Clear()
         'Me.Hide()
         'End If
+    End Sub
+
+    Private Sub FrmAdminLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If (Not FrmMarcadoEyS.Visible) Then
+            FrmMarcadoEyS.Show()
+            Me.Dispose()
+        Else
+            FrmMarcadoEyS.Mostrar()
+        End If
     End Sub
 End Class

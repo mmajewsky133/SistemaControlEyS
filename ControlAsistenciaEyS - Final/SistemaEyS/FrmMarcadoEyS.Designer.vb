@@ -22,171 +22,348 @@ Partial Class FrmMarcadoEyS
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.BtnMarcarE = New System.Windows.Forms.Button()
-        Me.BtnMarcarS = New System.Windows.Forms.Button()
-        Me.BtnAtras = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.LblComMarcado = New System.Windows.Forms.Label()
+        Me.components = New System.ComponentModel.Container()
+        Me.BtnEntrada = New System.Windows.Forms.Button()
+        Me.BtnSalida = New System.Windows.Forms.Button()
+        Me.lblCed = New System.Windows.Forms.Label()
         Me.LblWarningMarcar = New System.Windows.Forms.Label()
-        Me.BtnMarcar = New System.Windows.Forms.Button()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.DgvAsistencia = New System.Windows.Forms.DataGridView()
+        Me.IdRegDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HoraEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HoraSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RegistroAsistenciaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtCedula = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblHora = New System.Windows.Forms.Label()
+        Me.Contador = New System.Windows.Forms.Timer(Me.components)
+        Me.GPEmpleado = New System.Windows.Forms.GroupBox()
+        Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
+        Me.IdEmpDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RegistroAsistenciaTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.registroAsistenciaTableAdapter()
+        Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
+        Me.PAdmin = New System.Windows.Forms.Panel()
+        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RegistroAsistenciaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GPEmpleado.SuspendLayout()
+        CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'BtnMarcarE
+        'BtnEntrada
         '
-        Me.BtnMarcarE.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnMarcarE.Location = New System.Drawing.Point(209, 181)
-        Me.BtnMarcarE.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnMarcarE.Name = "BtnMarcarE"
-        Me.BtnMarcarE.Size = New System.Drawing.Size(268, 174)
-        Me.BtnMarcarE.TabIndex = 11
-        Me.BtnMarcarE.Text = "Marcar Entrada"
-        Me.BtnMarcarE.UseVisualStyleBackColor = True
+        Me.BtnEntrada.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnEntrada.Location = New System.Drawing.Point(130, 213)
+        Me.BtnEntrada.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEntrada.Name = "BtnEntrada"
+        Me.BtnEntrada.Size = New System.Drawing.Size(184, 80)
+        Me.BtnEntrada.TabIndex = 11
+        Me.BtnEntrada.Text = "Marcar Entrada"
+        Me.BtnEntrada.UseVisualStyleBackColor = True
         '
-        'BtnMarcarS
+        'BtnSalida
         '
-        Me.BtnMarcarS.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnMarcarS.Location = New System.Drawing.Point(609, 181)
-        Me.BtnMarcarS.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnMarcarS.Name = "BtnMarcarS"
-        Me.BtnMarcarS.Size = New System.Drawing.Size(268, 174)
-        Me.BtnMarcarS.TabIndex = 12
-        Me.BtnMarcarS.Text = "Marcar Salida"
-        Me.BtnMarcarS.UseVisualStyleBackColor = True
+        Me.BtnSalida.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnSalida.Location = New System.Drawing.Point(130, 213)
+        Me.BtnSalida.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSalida.Name = "BtnSalida"
+        Me.BtnSalida.Size = New System.Drawing.Size(184, 80)
+        Me.BtnSalida.TabIndex = 12
+        Me.BtnSalida.Text = "Marcar Salida"
+        Me.BtnSalida.UseVisualStyleBackColor = True
         '
-        'BtnAtras
+        'lblCed
         '
-        Me.BtnAtras.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnAtras.Location = New System.Drawing.Point(16, 15)
-        Me.BtnAtras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnAtras.Name = "BtnAtras"
-        Me.BtnAtras.Size = New System.Drawing.Size(181, 34)
-        Me.BtnAtras.TabIndex = 13
-        Me.BtnAtras.Text = "Regresar"
-        Me.BtnAtras.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Miriam CLM", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(996, 15)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(53, 47)
-        Me.TextBox1.TabIndex = 14
-        Me.TextBox1.Text = "XX"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Miriam CLM", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(901, 15)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(53, 47)
-        Me.TextBox2.TabIndex = 15
-        Me.TextBox2.Text = "XX"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Miriam CLM", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(807, 15)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(53, 47)
-        Me.TextBox3.TabIndex = 16
-        Me.TextBox3.Text = "XX"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Miriam CLM", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label1.Location = New System.Drawing.Point(964, 18)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(24, 37)
-        Me.Label1.TabIndex = 17
-        Me.Label1.Text = ":"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Miriam CLM", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label2.Location = New System.Drawing.Point(869, 18)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(24, 37)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = ":"
-        '
-        'LblComMarcado
-        '
-        Me.LblComMarcado.AutoSize = True
-        Me.LblComMarcado.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.LblComMarcado.Location = New System.Drawing.Point(513, 79)
-        Me.LblComMarcado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblComMarcado.Name = "LblComMarcado"
-        Me.LblComMarcado.Size = New System.Drawing.Size(61, 27)
-        Me.LblComMarcado.TabIndex = 19
-        Me.LblComMarcado.Text = "[ ... ]"
+        Me.lblCed.AutoSize = True
+        Me.lblCed.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.lblCed.Location = New System.Drawing.Point(39, 95)
+        Me.lblCed.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCed.Name = "lblCed"
+        Me.lblCed.Size = New System.Drawing.Size(356, 29)
+        Me.lblCed.TabIndex = 19
+        Me.lblCed.Text = "[ Ingrese su cedula aqui dentro ]"
         '
         'LblWarningMarcar
         '
         Me.LblWarningMarcar.AutoSize = True
-        Me.LblWarningMarcar.Font = New System.Drawing.Font("Miriam CLM", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.LblWarningMarcar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.LblWarningMarcar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.LblWarningMarcar.Location = New System.Drawing.Point(529, 105)
+        Me.LblWarningMarcar.Location = New System.Drawing.Point(47, 150)
         Me.LblWarningMarcar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblWarningMarcar.Name = "LblWarningMarcar"
-        Me.LblWarningMarcar.Size = New System.Drawing.Size(29, 23)
+        Me.LblWarningMarcar.Size = New System.Drawing.Size(26, 29)
         Me.LblWarningMarcar.TabIndex = 20
-        Me.LblWarningMarcar.Text = "[ ]"
+        Me.LblWarningMarcar.Text = "[ "
         '
-        'BtnMarcar
+        'MonthCalendar1
         '
-        Me.BtnMarcar.Font = New System.Drawing.Font("Miriam CLM", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnMarcar.Location = New System.Drawing.Point(876, 478)
-        Me.BtnMarcar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnMarcar.Name = "BtnMarcar"
-        Me.BtnMarcar.Size = New System.Drawing.Size(175, 62)
-        Me.BtnMarcar.TabIndex = 21
-        Me.BtnMarcar.Text = "Marcar"
-        Me.BtnMarcar.UseVisualStyleBackColor = True
+        Me.MonthCalendar1.Location = New System.Drawing.Point(81, 326)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 22
+        '
+        'DgvAsistencia
+        '
+        Me.DgvAsistencia.AutoGenerateColumns = False
+        Me.DgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvAsistencia.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdRegDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.HoraEntradaDataGridViewTextBoxColumn, Me.HoraSalidaDataGridViewTextBoxColumn, Me.IdEmpDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn})
+        Me.DgvAsistencia.DataSource = Me.RegistroAsistenciaBindingSource
+        Me.DgvAsistencia.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgvAsistencia.Location = New System.Drawing.Point(3, 18)
+        Me.DgvAsistencia.Name = "DgvAsistencia"
+        Me.DgvAsistencia.RowHeadersWidth = 51
+        Me.DgvAsistencia.RowTemplate.Height = 24
+        Me.DgvAsistencia.Size = New System.Drawing.Size(394, 239)
+        Me.DgvAsistencia.TabIndex = 23
+        '
+        'IdRegDataGridViewTextBoxColumn
+        '
+        Me.IdRegDataGridViewTextBoxColumn.DataPropertyName = "idReg"
+        Me.IdRegDataGridViewTextBoxColumn.HeaderText = "idReg"
+        Me.IdRegDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdRegDataGridViewTextBoxColumn.Name = "IdRegDataGridViewTextBoxColumn"
+        Me.IdRegDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdRegDataGridViewTextBoxColumn.Visible = False
+        Me.IdRegDataGridViewTextBoxColumn.Width = 125
+        '
+        'FechaDataGridViewTextBoxColumn
+        '
+        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "fecha"
+        Me.FechaDataGridViewTextBoxColumn.HeaderText = "fecha"
+        Me.FechaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
+        Me.FechaDataGridViewTextBoxColumn.Width = 125
+        '
+        'HoraEntradaDataGridViewTextBoxColumn
+        '
+        Me.HoraEntradaDataGridViewTextBoxColumn.DataPropertyName = "horaEntrada"
+        Me.HoraEntradaDataGridViewTextBoxColumn.HeaderText = "horaEntrada"
+        Me.HoraEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.HoraEntradaDataGridViewTextBoxColumn.Name = "HoraEntradaDataGridViewTextBoxColumn"
+        Me.HoraEntradaDataGridViewTextBoxColumn.Width = 125
+        '
+        'HoraSalidaDataGridViewTextBoxColumn
+        '
+        Me.HoraSalidaDataGridViewTextBoxColumn.DataPropertyName = "horaSalida"
+        Me.HoraSalidaDataGridViewTextBoxColumn.HeaderText = "horaSalida"
+        Me.HoraSalidaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.HoraSalidaDataGridViewTextBoxColumn.Name = "HoraSalidaDataGridViewTextBoxColumn"
+        Me.HoraSalidaDataGridViewTextBoxColumn.Width = 125
+        '
+        'IdEmpDataGridViewTextBoxColumn
+        '
+        Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
+        Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "idEmp"
+        Me.IdEmpDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
+        Me.IdEmpDataGridViewTextBoxColumn.Width = 125
+        '
+        'CedulaDataGridViewTextBoxColumn
+        '
+        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
+        Me.CedulaDataGridViewTextBoxColumn.Width = 125
+        '
+        'RegistroAsistenciaBindingSource
+        '
+        Me.RegistroAsistenciaBindingSource.DataMember = "registroAsistencia"
+        Me.RegistroAsistenciaBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'BDAsistenciasEySDataSet
+        '
+        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
+        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(383, 150)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(20, 29)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "]"
+        '
+        'TxtCedula
+        '
+        Me.TxtCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.TxtCedula.Location = New System.Drawing.Point(63, 150)
+        Me.TxtCedula.Name = "TxtCedula"
+        Me.TxtCedula.Size = New System.Drawing.Size(322, 34)
+        Me.TxtCedula.TabIndex = 25
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.DgvAsistencia)
+        Me.GroupBox1.Location = New System.Drawing.Point(494, 276)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(400, 260)
+        Me.GroupBox1.TabIndex = 26
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Asistencias: "
+        '
+        'lblHora
+        '
+        Me.lblHora.AutoSize = True
+        Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
+        Me.lblHora.Location = New System.Drawing.Point(150, 24)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(91, 39)
+        Me.lblHora.TabIndex = 27
+        Me.lblHora.Text = "Hora"
+        '
+        'Contador
+        '
+        '
+        'GPEmpleado
+        '
+        Me.GPEmpleado.Controls.Add(Me.DgvEmpleado)
+        Me.GPEmpleado.Location = New System.Drawing.Point(494, 24)
+        Me.GPEmpleado.Name = "GPEmpleado"
+        Me.GPEmpleado.Size = New System.Drawing.Size(397, 224)
+        Me.GPEmpleado.TabIndex = 28
+        Me.GPEmpleado.TabStop = False
+        Me.GPEmpleado.Text = "Empleado"
+        '
+        'DgvEmpleado
+        '
+        Me.DgvEmpleado.AutoGenerateColumns = False
+        Me.DgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvEmpleado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpDataGridViewTextBoxColumn1, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn1})
+        Me.DgvEmpleado.DataSource = Me.EmpleadoBindingSource
+        Me.DgvEmpleado.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgvEmpleado.Location = New System.Drawing.Point(3, 18)
+        Me.DgvEmpleado.Name = "DgvEmpleado"
+        Me.DgvEmpleado.RowHeadersWidth = 51
+        Me.DgvEmpleado.RowTemplate.Height = 24
+        Me.DgvEmpleado.Size = New System.Drawing.Size(391, 203)
+        Me.DgvEmpleado.TabIndex = 0
+        '
+        'IdEmpDataGridViewTextBoxColumn1
+        '
+        Me.IdEmpDataGridViewTextBoxColumn1.DataPropertyName = "idEmp"
+        Me.IdEmpDataGridViewTextBoxColumn1.HeaderText = "idEmp"
+        Me.IdEmpDataGridViewTextBoxColumn1.MinimumWidth = 6
+        Me.IdEmpDataGridViewTextBoxColumn1.Name = "IdEmpDataGridViewTextBoxColumn1"
+        Me.IdEmpDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.IdEmpDataGridViewTextBoxColumn1.Width = 125
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.Width = 125
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
+        '
+        'CedulaDataGridViewTextBoxColumn1
+        '
+        Me.CedulaDataGridViewTextBoxColumn1.DataPropertyName = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn1.HeaderText = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn1.MinimumWidth = 6
+        Me.CedulaDataGridViewTextBoxColumn1.Name = "CedulaDataGridViewTextBoxColumn1"
+        Me.CedulaDataGridViewTextBoxColumn1.Width = 125
+        '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'RegistroAsistenciaTableAdapter
+        '
+        Me.RegistroAsistenciaTableAdapter.ClearBeforeFill = True
+        '
+        'EmpleadoTableAdapter
+        '
+        Me.EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'PAdmin
+        '
+        Me.PAdmin.Location = New System.Drawing.Point(920, 493)
+        Me.PAdmin.Name = "PAdmin"
+        Me.PAdmin.Size = New System.Drawing.Size(37, 40)
+        Me.PAdmin.TabIndex = 29
         '
         'FrmMarcadoEyS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
-        Me.Controls.Add(Me.BtnMarcar)
+        Me.ClientSize = New System.Drawing.Size(981, 554)
+        Me.Controls.Add(Me.PAdmin)
+        Me.Controls.Add(Me.GPEmpleado)
+        Me.Controls.Add(Me.lblHora)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.TxtCedula)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.LblWarningMarcar)
-        Me.Controls.Add(Me.LblComMarcado)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.BtnAtras)
-        Me.Controls.Add(Me.BtnMarcarS)
-        Me.Controls.Add(Me.BtnMarcarE)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Controls.Add(Me.lblCed)
+        Me.Controls.Add(Me.BtnSalida)
+        Me.Controls.Add(Me.BtnEntrada)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmMarcadoEyS"
         Me.Text = "Marcado de Entrada y Salida"
+        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RegistroAsistenciaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GPEmpleado.ResumeLayout(False)
+        CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents BtnMarcarE As Button
-    Friend WithEvents BtnMarcarS As Button
-    Friend WithEvents BtnAtras As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents LblComMarcado As Label
+    Friend WithEvents BtnEntrada As Button
+    Friend WithEvents BtnSalida As Button
+    Friend WithEvents lblCed As Label
     Friend WithEvents LblWarningMarcar As Label
-    Friend WithEvents BtnMarcar As Button
+    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents DgvAsistencia As DataGridView
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TxtCedula As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents lblHora As Label
+    Friend WithEvents Contador As Timer
+    Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
+    Friend WithEvents RegistroAsistenciaBindingSource As BindingSource
+    Friend WithEvents RegistroAsistenciaTableAdapter As BDAsistenciasEySDataSetTableAdapters.registroAsistenciaTableAdapter
+    Friend WithEvents GPEmpleado As GroupBox
+    Friend WithEvents DgvEmpleado As DataGridView
+    Friend WithEvents EmpleadoBindingSource As BindingSource
+    Friend WithEvents EmpleadoTableAdapter As BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter
+    Friend WithEvents IdEmpDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CedulaDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents IdRegDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents HoraEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents HoraSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdEmpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PAdmin As Panel
 End Class
