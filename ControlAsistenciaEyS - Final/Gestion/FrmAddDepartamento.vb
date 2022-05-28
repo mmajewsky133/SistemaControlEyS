@@ -119,4 +119,10 @@
             End If
         End If
     End Sub
+
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+        TxtDepartamento.Text = ""
+        TxtCorreo.Text = ""
+        TxtExtension.Text = ""
+    End Sub
 End Class

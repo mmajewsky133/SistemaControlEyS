@@ -52,6 +52,8 @@ Partial Class FrmMarcadoEyS
         Me.RegistroAsistenciaTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.registroAsistenciaTableAdapter()
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         Me.PAdmin = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroAsistenciaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -301,16 +303,37 @@ Partial Class FrmMarcadoEyS
         '
         'PAdmin
         '
+        Me.PAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PAdmin.Location = New System.Drawing.Point(920, 493)
         Me.PAdmin.Name = "PAdmin"
         Me.PAdmin.Size = New System.Drawing.Size(37, 40)
         Me.PAdmin.TabIndex = 29
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(900, 454)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(67, 16)
+        Me.Label1.TabIndex = 30
+        Me.Label1.Text = "Doble clic"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(902, 470)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 16)
+        Me.Label2.TabIndex = 31
+        Me.Label2.Text = "cuadrito"
         '
         'FrmMarcadoEyS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(981, 554)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PAdmin)
         Me.Controls.Add(Me.GPEmpleado)
         Me.Controls.Add(Me.lblHora)
@@ -366,4 +389,6 @@ Partial Class FrmMarcadoEyS
     Friend WithEvents IdEmpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PAdmin As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

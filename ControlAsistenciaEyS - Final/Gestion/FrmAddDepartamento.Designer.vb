@@ -79,7 +79,7 @@ Partial Class FrmAddDepartamento
         '
         Me.TxtDepartamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtDepartamento.Location = New System.Drawing.Point(23, 124)
-        Me.TxtDepartamento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtDepartamento.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtDepartamento.Name = "TxtDepartamento"
         Me.TxtDepartamento.Size = New System.Drawing.Size(420, 34)
         Me.TxtDepartamento.TabIndex = 1
@@ -99,7 +99,7 @@ Partial Class FrmAddDepartamento
         '
         Me.TxtExtension.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtExtension.Location = New System.Drawing.Point(457, 124)
-        Me.TxtExtension.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtExtension.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtExtension.Name = "TxtExtension"
         Me.TxtExtension.Size = New System.Drawing.Size(211, 34)
         Me.TxtExtension.TabIndex = 2
@@ -119,7 +119,7 @@ Partial Class FrmAddDepartamento
         '
         Me.TxtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCorreo.Location = New System.Drawing.Point(24, 206)
-        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCorreo.Name = "TxtCorreo"
         Me.TxtCorreo.Size = New System.Drawing.Size(644, 34)
         Me.TxtCorreo.TabIndex = 3
@@ -128,7 +128,7 @@ Partial Class FrmAddDepartamento
         '
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnNuevo.Location = New System.Drawing.Point(317, 255)
-        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(352, 73)
         Me.BtnNuevo.TabIndex = 4
@@ -139,7 +139,7 @@ Partial Class FrmAddDepartamento
         '
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnGuardar.Location = New System.Drawing.Point(317, 388)
-        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(127, 38)
         Me.BtnGuardar.TabIndex = 6
@@ -150,7 +150,7 @@ Partial Class FrmAddDepartamento
         '
         Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnEditar.Location = New System.Drawing.Point(452, 388)
-        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(95, 38)
         Me.BtnEditar.TabIndex = 7
@@ -161,7 +161,7 @@ Partial Class FrmAddDepartamento
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnEliminar.Location = New System.Drawing.Point(555, 388)
-        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(115, 38)
         Me.BtnEliminar.TabIndex = 8
@@ -172,9 +172,9 @@ Partial Class FrmAddDepartamento
         '
         Me.GBDepartamento.Controls.Add(Me.DgvDepartamento)
         Me.GBDepartamento.Location = New System.Drawing.Point(24, 460)
-        Me.GBDepartamento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GBDepartamento.Margin = New System.Windows.Forms.Padding(4)
         Me.GBDepartamento.Name = "GBDepartamento"
-        Me.GBDepartamento.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GBDepartamento.Padding = New System.Windows.Forms.Padding(4)
         Me.GBDepartamento.Size = New System.Drawing.Size(645, 389)
         Me.GBDepartamento.TabIndex = 11
         Me.GBDepartamento.TabStop = False
@@ -276,7 +276,7 @@ Partial Class FrmAddDepartamento
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtBuscar.Location = New System.Drawing.Point(116, 388)
-        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtBuscar.Name = "TxtBuscar"
         Me.TxtBuscar.Size = New System.Drawing.Size(192, 34)
         Me.TxtBuscar.TabIndex = 5
@@ -285,7 +285,7 @@ Partial Class FrmAddDepartamento
         '
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnRegresar.Location = New System.Drawing.Point(484, 23)
-        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnRegresar.Name = "BtnRegresar"
         Me.BtnRegresar.Size = New System.Drawing.Size(185, 41)
         Me.BtnRegresar.TabIndex = 47
@@ -312,7 +312,7 @@ Partial Class FrmAddDepartamento
         Me.Controls.Add(Me.TxtDepartamento)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmAddDepartamento"
         Me.Text = "Administración de departamentos"
         Me.GBDepartamento.ResumeLayout(False)
