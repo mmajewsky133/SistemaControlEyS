@@ -3,26 +3,53 @@
 Public Class FrmMarcadoEyS
 
     Dim empleado As New BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter
-    Dim idEmp As Integer
+    Dim asistencia As New BDAsistenciasEySDataSetTableAdapters.registroAsistenciaTableAdapter
 
-    Dim EoS As String = ""
+    Dim adaptadorRegEmp As New BDAsistenciasEySDataSetTableAdapters.DatosRegEmpTableAdapter
+    Dim tablaRegEmp As New BDAsistenciasEySDataSet.DatosRegEmpDataTable
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
+    Dim fechaDeHoy As String 'date
+    Dim horaDeEntrada As String 'time(0)
+    Dim horaDeSalida As String 'time(0)
+    Dim idEmp As Integer = 0
+    Dim cedula As String
 
-    End Sub
+    'Dim EoS As String = ""
+
 
     Private Sub BtnMarcarE_Click(sender As Object, e As EventArgs) Handles BtnEntrada.Click
-        BtnSalida.Visible = True
+        If (idEmp.Equals(0)) Then
+            MsgBox("No hay ningun empleado seleccionado", MsgBoxStyle.Critical, "Error")
+        Else
+            BtnSalida.Visible = True
+            fechaDeHoy = DateTime.Now.ToString("yyyy-MM-dd")
+            horaDeEntrada = lblHora.Text.ToString
+            MsgBox(fechaDeHoy & " " & horaDeEntrada, MsgBoxStyle.Information, "Bienvenido xd")
+        End If
+
+        'La cedula y el ID del empleado se recolecta en el evento de doble clic del DgvEmpleado
     End Sub
 
     Private Sub BtnMarcarS_Click(sender As Object, e As EventArgs) Handles BtnSalida.Click
         BtnEntrada.Visible = True
         BtnSalida.Visible = False
 
-    End Sub
+        horaDeSalida = lblHora.Text.ToString
 
-    Sub VerfHora(ByVal EoS As String)
+        'Validar que no sea posible cambiar el id de asistencia una vez registrada la entrada con algo tipo...
+        'If (idGrabadoEmp =! idEmp) entonces no es posible guardar esta asistencia, ya que el id del empleado fue modificado
 
+        If (idEmp.Equals(0)) Then
+            MsgBox("No hay ningun empleado seleccionado", MsgBoxStyle.Critical, "Error")
+        Else
+            MsgBox(fechaDeHoy & " " & horaDeEntrada, MsgBoxStyle.Information, "Adioooos")
+            Try
+                asistencia.GrabarAsistencia(fechaDeHoy, horaDeEntrada, horaDeSalida, idEmp, cedula)
+                llenarGrid()
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+            End Try
+        End If
     End Sub
 
     Sub Mostrar()
@@ -30,6 +57,11 @@ Public Class FrmMarcadoEyS
     End Sub
 
     Sub llenarGrid()
+        adaptadorRegEmp.Fill(tablaRegEmp)
+        DgvAsistencia.DataSource = tablaRegEmp
+        DgvAsistencia.Columns.Item("ID Reg").Visible = False
+        DgvAsistencia.Columns.Item("ID Emp").Visible = False
+
         If (TxtCedula.Text.Equals("")) Then
             DgvEmpleado.Columns.Item(0).Visible = False
             DgvEmpleado.Columns.Item(1).Visible = False
@@ -47,7 +79,7 @@ Public Class FrmMarcadoEyS
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.empleado' table. You can move, or remove it, as needed.
         Me.EmpleadoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.empleado)
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.registroAsistencia' table. You can move, or remove it, as needed.
-        Me.RegistroAsistenciaTableAdapter.Fill(Me.BDAsistenciasEySDataSet.registroAsistencia)
+        'Me.RegistroAsistenciaTableAdapter.Fill(Me.BDAsistenciasEySDataSet.registroAsistencia)
         'Me.EmpleadoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.empleado)
         llenarGrid()
         BtnSalida.Visible = False
@@ -73,7 +105,7 @@ Public Class FrmMarcadoEyS
                 Try
                     Dim dato As String = TxtCedula.Text & "%"
                     DgvEmpleado.DataSource = empleado.BuscarCedula(dato)
-                    'DgvRegistro aqui tambien.
+                    'DgvRegistro aqui tambien copiando este mismo metodo ^.
                     DgvEmpleado.Refresh()
                     GPEmpleado.Text = "Referencias similares: " & DgvEmpleado.Rows.Count.ToString - 1
                 Catch ex As Exception
@@ -87,10 +119,10 @@ Public Class FrmMarcadoEyS
         Try
             Dim fila As Integer = DgvEmpleado.CurrentRow.Index
 
-
             idEmp = DgvEmpleado.Item(0, fila).Value
             TxtCedula.Text = DgvEmpleado.Item(3, fila).Value
 
+            cedula = TxtCedula.Text
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
         End Try

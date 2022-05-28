@@ -28,14 +28,6 @@ Partial Class FrmMarcadoEyS
         Me.lblCed = New System.Windows.Forms.Label()
         Me.LblWarningMarcar = New System.Windows.Forms.Label()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.DgvAsistencia = New System.Windows.Forms.DataGridView()
-        Me.IdRegDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HoraEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HoraSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RegistroAsistenciaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtCedula = New System.Windows.Forms.TextBox()
@@ -49,18 +41,17 @@ Partial Class FrmMarcadoEyS
         Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CedulaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RegistroAsistenciaTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.registroAsistenciaTableAdapter()
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         Me.PAdmin = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RegistroAsistenciaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DgvAsistencia = New System.Windows.Forms.DataGridView()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GPEmpleado.SuspendLayout()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnEntrada
@@ -113,75 +104,6 @@ Partial Class FrmMarcadoEyS
         Me.MonthCalendar1.Location = New System.Drawing.Point(81, 326)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 22
-        '
-        'DgvAsistencia
-        '
-        Me.DgvAsistencia.AutoGenerateColumns = False
-        Me.DgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvAsistencia.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdRegDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.HoraEntradaDataGridViewTextBoxColumn, Me.HoraSalidaDataGridViewTextBoxColumn, Me.IdEmpDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn})
-        Me.DgvAsistencia.DataSource = Me.RegistroAsistenciaBindingSource
-        Me.DgvAsistencia.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvAsistencia.Location = New System.Drawing.Point(3, 18)
-        Me.DgvAsistencia.Name = "DgvAsistencia"
-        Me.DgvAsistencia.RowHeadersWidth = 51
-        Me.DgvAsistencia.RowTemplate.Height = 24
-        Me.DgvAsistencia.Size = New System.Drawing.Size(394, 239)
-        Me.DgvAsistencia.TabIndex = 23
-        '
-        'IdRegDataGridViewTextBoxColumn
-        '
-        Me.IdRegDataGridViewTextBoxColumn.DataPropertyName = "idReg"
-        Me.IdRegDataGridViewTextBoxColumn.HeaderText = "idReg"
-        Me.IdRegDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdRegDataGridViewTextBoxColumn.Name = "IdRegDataGridViewTextBoxColumn"
-        Me.IdRegDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdRegDataGridViewTextBoxColumn.Visible = False
-        Me.IdRegDataGridViewTextBoxColumn.Width = 125
-        '
-        'FechaDataGridViewTextBoxColumn
-        '
-        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "fecha"
-        Me.FechaDataGridViewTextBoxColumn.HeaderText = "fecha"
-        Me.FechaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
-        Me.FechaDataGridViewTextBoxColumn.Width = 125
-        '
-        'HoraEntradaDataGridViewTextBoxColumn
-        '
-        Me.HoraEntradaDataGridViewTextBoxColumn.DataPropertyName = "horaEntrada"
-        Me.HoraEntradaDataGridViewTextBoxColumn.HeaderText = "horaEntrada"
-        Me.HoraEntradaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.HoraEntradaDataGridViewTextBoxColumn.Name = "HoraEntradaDataGridViewTextBoxColumn"
-        Me.HoraEntradaDataGridViewTextBoxColumn.Width = 125
-        '
-        'HoraSalidaDataGridViewTextBoxColumn
-        '
-        Me.HoraSalidaDataGridViewTextBoxColumn.DataPropertyName = "horaSalida"
-        Me.HoraSalidaDataGridViewTextBoxColumn.HeaderText = "horaSalida"
-        Me.HoraSalidaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.HoraSalidaDataGridViewTextBoxColumn.Name = "HoraSalidaDataGridViewTextBoxColumn"
-        Me.HoraSalidaDataGridViewTextBoxColumn.Width = 125
-        '
-        'IdEmpDataGridViewTextBoxColumn
-        '
-        Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
-        Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "idEmp"
-        Me.IdEmpDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
-        Me.IdEmpDataGridViewTextBoxColumn.Width = 125
-        '
-        'CedulaDataGridViewTextBoxColumn
-        '
-        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
-        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "cedula"
-        Me.CedulaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
-        Me.CedulaDataGridViewTextBoxColumn.Width = 125
-        '
-        'RegistroAsistenciaBindingSource
-        '
-        Me.RegistroAsistenciaBindingSource.DataMember = "registroAsistencia"
-        Me.RegistroAsistenciaBindingSource.DataSource = Me.BDAsistenciasEySDataSet
         '
         'BDAsistenciasEySDataSet
         '
@@ -293,10 +215,6 @@ Partial Class FrmMarcadoEyS
         Me.EmpleadoBindingSource.DataMember = "empleado"
         Me.EmpleadoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
         '
-        'RegistroAsistenciaTableAdapter
-        '
-        Me.RegistroAsistenciaTableAdapter.ClearBeforeFill = True
-        '
         'EmpleadoTableAdapter
         '
         Me.EmpleadoTableAdapter.ClearBeforeFill = True
@@ -327,6 +245,17 @@ Partial Class FrmMarcadoEyS
         Me.Label2.TabIndex = 31
         Me.Label2.Text = "cuadrito"
         '
+        'DgvAsistencia
+        '
+        Me.DgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvAsistencia.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgvAsistencia.Location = New System.Drawing.Point(3, 18)
+        Me.DgvAsistencia.Name = "DgvAsistencia"
+        Me.DgvAsistencia.RowHeadersWidth = 51
+        Me.DgvAsistencia.RowTemplate.Height = 24
+        Me.DgvAsistencia.Size = New System.Drawing.Size(394, 239)
+        Me.DgvAsistencia.TabIndex = 0
+        '
         'FrmMarcadoEyS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -348,13 +277,12 @@ Partial Class FrmMarcadoEyS
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmMarcadoEyS"
         Me.Text = "Marcado de Entrada y Salida"
-        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RegistroAsistenciaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GPEmpleado.ResumeLayout(False)
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -365,15 +293,12 @@ Partial Class FrmMarcadoEyS
     Friend WithEvents lblCed As Label
     Friend WithEvents LblWarningMarcar As Label
     Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents DgvAsistencia As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents TxtCedula As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents lblHora As Label
     Friend WithEvents Contador As Timer
     Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
-    Friend WithEvents RegistroAsistenciaBindingSource As BindingSource
-    Friend WithEvents RegistroAsistenciaTableAdapter As BDAsistenciasEySDataSetTableAdapters.registroAsistenciaTableAdapter
     Friend WithEvents GPEmpleado As GroupBox
     Friend WithEvents DgvEmpleado As DataGridView
     Friend WithEvents EmpleadoBindingSource As BindingSource
@@ -382,13 +307,8 @@ Partial Class FrmMarcadoEyS
     Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CedulaDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents IdRegDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents HoraEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents HoraSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IdEmpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PAdmin As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents DgvAsistencia As DataGridView
 End Class
