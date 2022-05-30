@@ -24,6 +24,11 @@ Partial Class FrmMainAdminMenu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CorreoInstDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
@@ -46,11 +51,6 @@ Partial Class FrmMainAdminMenu
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
-        Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoInstDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,12 +69,62 @@ Partial Class FrmMainAdminMenu
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.EmpleadoBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(16, 250)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(911, 414)
         Me.DataGridView1.TabIndex = 0
+        '
+        'IdEmpDataGridViewTextBoxColumn
+        '
+        Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
+        Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IdEmpDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
+        Me.IdEmpDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdEmpDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.IdEmpDataGridViewTextBoxColumn.Width = 40
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
+        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombresDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NombresDataGridViewTextBoxColumn.Width = 125
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ApellidosDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
+        '
+        'CorreoInstDataGridViewTextBoxColumn
+        '
+        Me.CorreoInstDataGridViewTextBoxColumn.DataPropertyName = "correoInst"
+        Me.CorreoInstDataGridViewTextBoxColumn.HeaderText = "Correo Institucional"
+        Me.CorreoInstDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CorreoInstDataGridViewTextBoxColumn.Name = "CorreoInstDataGridViewTextBoxColumn"
+        Me.CorreoInstDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CorreoInstDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.CorreoInstDataGridViewTextBoxColumn.Width = 150
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelefonoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.TelefonoDataGridViewTextBoxColumn.Width = 125
         '
         'EmpleadoBindingSource
         '
@@ -217,7 +267,7 @@ Partial Class FrmMainAdminMenu
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(121, 206)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(804, 34)
         Me.TextBox1.TabIndex = 6
@@ -225,56 +275,6 @@ Partial Class FrmMainAdminMenu
         'EmpleadoTableAdapter
         '
         Me.EmpleadoTableAdapter.ClearBeforeFill = True
-        '
-        'IdEmpDataGridViewTextBoxColumn
-        '
-        Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
-        Me.IdEmpDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IdEmpDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdEmpDataGridViewTextBoxColumn.Name = "IdEmpDataGridViewTextBoxColumn"
-        Me.IdEmpDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdEmpDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.IdEmpDataGridViewTextBoxColumn.Width = 40
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
-        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombresDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NombresDataGridViewTextBoxColumn.Width = 125
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ApellidosDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
-        '
-        'CorreoInstDataGridViewTextBoxColumn
-        '
-        Me.CorreoInstDataGridViewTextBoxColumn.DataPropertyName = "correoInst"
-        Me.CorreoInstDataGridViewTextBoxColumn.HeaderText = "Correo Institucional"
-        Me.CorreoInstDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CorreoInstDataGridViewTextBoxColumn.Name = "CorreoInstDataGridViewTextBoxColumn"
-        Me.CorreoInstDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CorreoInstDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.CorreoInstDataGridViewTextBoxColumn.Width = 150
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TelefonoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.TelefonoDataGridViewTextBoxColumn.Width = 125
         '
         'FrmMainAdminMenu
         '
@@ -288,7 +288,7 @@ Partial Class FrmMainAdminMenu
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "FrmMainAdminMenu"
         Me.Text = "Control de Asistencias - Panel de Control"

@@ -152,3 +152,4 @@ C:\Users\Josar\source\repos\FinalBD\SistemaControlEyS\ControlAsistenciaEyS - Fin
 C:\Users\Josar\source\repos\FinalBD\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.exe
 C:\Users\Josar\source\repos\FinalBD\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.xml
 C:\Users\Josar\source\repos\FinalBD\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS - Final.pdb
+C:\Users\Josar\source\repos\FinalBD\SistemaControlEyS\ControlAsistenciaEyS - Final\obj\Debug\ControlAsistenciaEyS___Final.FrmOpciones.resources

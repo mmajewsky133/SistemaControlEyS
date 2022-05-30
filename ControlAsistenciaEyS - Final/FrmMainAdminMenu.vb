@@ -68,4 +68,12 @@
             FrmAddCargo.Mostrar()
         End If
     End Sub
+
+    Private Sub ManejoDeOpcionesAdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManejoDeOpcionesAdminToolStripMenuItem.Click
+        If (Not FrmOpciones.Visible) Then
+            FrmOpciones.Show()
+        Else
+            FrmOpciones.Mostrar()
+        End If
+    End Sub
 End Class

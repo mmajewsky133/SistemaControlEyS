@@ -29,18 +29,21 @@ Partial Class RptDisplay
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(800, 450)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1067, 554)
         Me.ReportViewer1.TabIndex = 0
         '
         'RptDisplay
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "RptDisplay"
+        Me.Text = "Visualizador"
         Me.ResumeLayout(False)
 
     End Sub

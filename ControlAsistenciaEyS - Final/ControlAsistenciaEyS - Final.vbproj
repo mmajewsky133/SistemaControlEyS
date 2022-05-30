@@ -173,6 +173,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Opciones\FrmOpciones.Designer.vb">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones\FrmOpciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\FrmSeeCargos.Designer.vb">
       <DependentUpon>FrmSeeCargos.vb</DependentUpon>
     </Compile>
@@ -229,6 +235,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Opciones\FrmOpciones.resx">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmSeeCargos.resx">
       <DependentUpon>FrmSeeCargos.vb</DependentUpon>
     </EmbeddedResource>
@@ -284,9 +293,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Opciones\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="IMG\Blank.jpg" />
     <Content Include="SqlServerTypes\Loader.cs" />
