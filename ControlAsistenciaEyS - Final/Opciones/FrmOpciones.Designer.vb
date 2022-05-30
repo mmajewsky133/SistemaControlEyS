@@ -22,6 +22,7 @@ Partial Class FrmOpciones
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,13 +35,25 @@ Partial Class FrmOpciones
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TxtDep = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DgvAdmin = New System.Windows.Forms.DataGridView()
+        Me.IdAdminDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PwDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdDepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.BtnRegresar = New System.Windows.Forms.Button()
+        Me.AdminTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.adminTableAdapter()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AdminBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -145,7 +158,7 @@ Partial Class FrmOpciones
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Controls.Add(Me.DgvAdmin)
         Me.GroupBox1.Location = New System.Drawing.Point(377, 82)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(283, 372)
@@ -153,16 +166,89 @@ Partial Class FrmOpciones
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Usuarios"
         '
-        'DataGridView1
+        'DgvAdmin
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 18)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(277, 351)
-        Me.DataGridView1.TabIndex = 0
+        Me.DgvAdmin.AutoGenerateColumns = False
+        Me.DgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvAdmin.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAdminDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PwDataGridViewTextBoxColumn, Me.IdDepDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
+        Me.DgvAdmin.DataSource = Me.AdminBindingSource
+        Me.DgvAdmin.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgvAdmin.Location = New System.Drawing.Point(3, 18)
+        Me.DgvAdmin.Name = "DgvAdmin"
+        Me.DgvAdmin.RowHeadersWidth = 51
+        Me.DgvAdmin.RowTemplate.Height = 24
+        Me.DgvAdmin.Size = New System.Drawing.Size(277, 351)
+        Me.DgvAdmin.TabIndex = 0
+        '
+        'IdAdminDataGridViewTextBoxColumn
+        '
+        Me.IdAdminDataGridViewTextBoxColumn.DataPropertyName = "idAdmin"
+        Me.IdAdminDataGridViewTextBoxColumn.HeaderText = "idAdmin"
+        Me.IdAdminDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdAdminDataGridViewTextBoxColumn.Name = "IdAdminDataGridViewTextBoxColumn"
+        Me.IdAdminDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdAdminDataGridViewTextBoxColumn.Visible = False
+        Me.IdAdminDataGridViewTextBoxColumn.Width = 125
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
+        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.Width = 125
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Usuario"
+        Me.UsernameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        Me.UsernameDataGridViewTextBoxColumn.Width = 125
+        '
+        'PwDataGridViewTextBoxColumn
+        '
+        Me.PwDataGridViewTextBoxColumn.DataPropertyName = "pw"
+        Me.PwDataGridViewTextBoxColumn.HeaderText = "PIN"
+        Me.PwDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PwDataGridViewTextBoxColumn.Name = "PwDataGridViewTextBoxColumn"
+        Me.PwDataGridViewTextBoxColumn.Width = 125
+        '
+        'IdDepDataGridViewTextBoxColumn
+        '
+        Me.IdDepDataGridViewTextBoxColumn.DataPropertyName = "idDep"
+        Me.IdDepDataGridViewTextBoxColumn.HeaderText = "idDep"
+        Me.IdDepDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdDepDataGridViewTextBoxColumn.Name = "IdDepDataGridViewTextBoxColumn"
+        Me.IdDepDataGridViewTextBoxColumn.Visible = False
+        Me.IdDepDataGridViewTextBoxColumn.Width = 125
+        '
+        'EstadoDataGridViewTextBoxColumn
+        '
+        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        Me.EstadoDataGridViewTextBoxColumn.Visible = False
+        Me.EstadoDataGridViewTextBoxColumn.Width = 125
+        '
+        'AdminBindingSource
+        '
+        Me.AdminBindingSource.DataMember = "admin"
+        Me.AdminBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'BDAsistenciasEySDataSet
+        '
+        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
+        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BtnAgregar
         '
@@ -201,6 +287,10 @@ Partial Class FrmOpciones
         Me.BtnRegresar.Text = "Regresar"
         Me.BtnRegresar.UseVisualStyleBackColor = True
         '
+        'AdminTableAdapter
+        '
+        Me.AdminTableAdapter.ClearBeforeFill = True
+        '
         'FrmOpciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -225,7 +315,9 @@ Partial Class FrmOpciones
         Me.Name = "FrmOpciones"
         Me.Text = "Manejo de opciones"
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvAdmin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AdminBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -243,9 +335,19 @@ Partial Class FrmOpciones
     Friend WithEvents Label6 As Label
     Friend WithEvents TxtDep As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgvAdmin As DataGridView
     Friend WithEvents BtnAgregar As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnEliminar As Button
     Friend WithEvents BtnRegresar As Button
+    Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
+    Friend WithEvents AdminBindingSource As BindingSource
+    Friend WithEvents AdminTableAdapter As BDAsistenciasEySDataSetTableAdapters.adminTableAdapter
+    Friend WithEvents IdAdminDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PwDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdDepDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
