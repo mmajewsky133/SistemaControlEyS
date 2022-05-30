@@ -33,19 +33,13 @@
                 TxtPin.Focus()
                 Exit Sub
             End If
-            If (String.IsNullOrEmpty(TxtDep.Text)) Then
-                MsgBox("Se requiere asignar a un departamento", MsgBoxStyle.Critical, "ERROR")
-                TxtPin.Focus()
-                Exit Sub
-            End If
 
             Dim nombres As String = TxtNombre.Text
             Dim apellidos As String = TxtApellidos.Text
             Dim usuario As String = TxtUsuario.Text
             Dim pin As String = TxtPin.Text
-            Dim idDepartamento As Integer = TxtDep.Text
 
-            admin.InsertarAdmin(nombres, apellidos, usuario, pin, idDepartamento, 1)
+            admin.InsertarAdmin(nombres, apellidos, usuario, pin, 1)
             llenarGrid()
             MsgBox("Se ha registrado el administrador dentro de la base de datos", MsgBoxStyle.Information, "Opciones de administrador")
         Catch ex As Exception
@@ -81,7 +75,6 @@
             TxtApellidos.Text = DgvAdmin.Item(2, fila).Value
             TxtUsuario.Text = DgvAdmin.Item(3, fila).Value
             TxtPin.Text = DgvAdmin.Item(4, fila).Value
-            TxtDep.Text = DgvAdmin.Item(5, fila).Value
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
@@ -99,17 +92,11 @@
             TxtPin.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtDep.Text)) Then
-            MsgBox("Ingrese el id del departamento", MsgBoxStyle.Critical, "ERROR")
-            TxtDep.Focus() '
-            Exit Sub
-        End If
 
         Dim usuario As String = TxtUsuario.Text.Trim
         Dim pin As String = TxtPin.Text.Trim
-        Dim idDepartamento As Integer = CInt(TxtDep.Text.Trim)
 
-        admin.ActualizarAdmin(usuario, pin, idDepartamento, 2, idAdmin)
+        admin.ActualizarAdmin(usuario, pin, 2, idAdmin)
 
         llenarGrid()
     End Sub
