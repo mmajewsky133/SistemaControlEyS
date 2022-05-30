@@ -1,5 +1,7 @@
 ﻿Public Class FrmAdminLogin
 
+    Dim admin As New BDAsistenciasEySDataSetTableAdapters.adminTableAdapter
+
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
         FrmMarcadoEyS.Show()
         Me.Hide()
@@ -22,16 +24,20 @@
     End Sub
 
     Private Sub EvaluarUser()
-        'Dim login As BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter(TxtUsuarioAdmin.Text, TxtPwAdmin.Text)
 
         Dim user As String = TxtUsuarioAdmin.Text
         Dim pw As String = TxtPwAdmin.Text
 
-        If (user.Equals("hola") And pw.Equals("123")) Then
-            FrmMarcadoEyS.Show()
+        Dim dtcreds As DataTable = admin.ObtenerCredsAdmin(Me.TxtUsuarioAdmin.Text)
+
+        If (dtcreds IsNot Nothing AndAlso dtcreds.Rows.Count > 0) Then
+            Dim userBD As String = dtcreds.Rows(1).Item("username")
+            Dim pwBD As String = dtcreds.Rows(1).Item("pw")
+            MsgBox(userBD + " " + pwBD, MsgBoxStyle.Critical, "Error")
+        Else
+            MsgBox("Usuario o contraseña incorrecta. Verifique sus credenciales", MsgBoxStyle.Critical, "Error")
         End If
 
-        'Dim empleado As String = login.ObtenerDatosEmpleado(Me.TxtUsuarioAdmin, Me.TxtPwAdmin)
 
         If (user.Equals("admin") And pw.Equals("123")) Then
             FrmMainAdminMenu.Show()
