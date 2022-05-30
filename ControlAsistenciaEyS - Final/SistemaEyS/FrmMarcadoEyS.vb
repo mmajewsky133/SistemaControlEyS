@@ -59,6 +59,7 @@ Public Class FrmMarcadoEyS
     Sub llenarGrid()
         adaptadorRegEmp.Fill(tablaRegEmp)
         DgvAsistencia.DataSource = tablaRegEmp
+
         DgvAsistencia.Columns.Item("ID Reg").Visible = False
         DgvAsistencia.Columns.Item("ID Emp").Visible = False
 

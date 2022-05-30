@@ -72,6 +72,21 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.RptEmpDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.RptCargoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.RptDepartamentoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.adminRow">
 <summary>
 Represents strongly named DataRow class.
@@ -108,6 +123,21 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.DatosRegEmpRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.RptEmpRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.RptCargoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.RptDepartamentoRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -152,6 +182,21 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.RptEmpRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.RptCargoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet.RptDepartamentoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.adminTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -188,6 +233,21 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.DatosRegEmpTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.RptEmpTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.RptCargoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.RptDepartamentoTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

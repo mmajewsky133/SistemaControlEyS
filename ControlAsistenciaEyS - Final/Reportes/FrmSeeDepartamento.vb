@@ -1,6 +1,6 @@
 ﻿Public Class FrmSeeDepartamento
-    Dim dep As New BDAsistenciasEySDataSetTableAdapters.departamentoTableAdapter
-    Dim tblDep As New BDAsistenciasEySDataSet.departamentoDataTable
+    Dim dep As New BDAsistenciasEySDataSetTableAdapters.RptDepartamentoTableAdapter
+    Dim tblDep As New BDAsistenciasEySDataSet.RptDepartamentoDataTable
 
     Dim IdSelected
 
@@ -16,7 +16,7 @@
 
     Private Sub BtnSeeReport_Click(sender As Object, e As EventArgs) Handles BtnSeeReport.Click
         dep.Fill(tblDep)
-        VerReporte(tblDep, "DsDepartamentos", "RptDepartamento.rdlc")
+        VerReporte(tblDep, "DsDepartamento", "RptDepartamento.rdlc")
     End Sub
 
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged

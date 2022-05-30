@@ -1,6 +1,6 @@
 ﻿Public Class FrmSeeCargos
-    Dim cargo As New BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter
-    Dim tblCargo As New BDAsistenciasEySDataSet.cargoDataTable
+    Dim cargo As New BDAsistenciasEySDataSetTableAdapters.RptCargoTableAdapter
+    Dim tblCargo As New BDAsistenciasEySDataSet.RptCargoDataTable
 
     Dim IdSelected
 
@@ -16,7 +16,7 @@
 
     Private Sub BtnSeeReport_Click(sender As Object, e As EventArgs) Handles BtnSeeReport.Click
         cargo.Fill(tblCargo)
-        VerReporte(tblCargo, "DsCargos", "RptCargos.rdlc")
+        VerReporte(tblCargo, "DsCargo", "RptCargo.rdlc")
     End Sub
 
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged

@@ -1,6 +1,8 @@
 ﻿Public Class FrmSeeEmpleado
-    Dim emp As New BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter
-    Dim tblEmp As New BDAsistenciasEySDataSet.empleadoDataTable
+    Dim emp As New BDAsistenciasEySDataSetTableAdapters.RptEmpTableAdapter
+    Dim tblEmp As New BDAsistenciasEySDataSet.RptEmpDataTable
+
+
 
     Dim IdSelected
 
@@ -15,7 +17,7 @@
 
     Private Sub BtnSeeReport_Click(sender As Object, e As EventArgs) Handles BtnSeeReport.Click
         emp.Fill(tblEmp)
-        VerReporte(tblEmp, "DsEmpleados", "RptEmpleados.rdlc")
+        VerReporte(tblEmp, "DsEmpleado", "RptEmpleado.rdlc")
     End Sub
 
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
