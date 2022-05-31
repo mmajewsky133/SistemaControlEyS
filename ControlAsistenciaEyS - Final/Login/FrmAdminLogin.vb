@@ -28,16 +28,6 @@
         Dim user As String = TxtUsuarioAdmin.Text
         Dim pw As String = TxtPwAdmin.Text
 
-        Dim dtcreds As DataTable = admin.ObtenerCredsAdmin(Me.TxtUsuarioAdmin.Text)
-
-        If (dtcreds IsNot Nothing AndAlso dtcreds.Rows.Count > 0) Then
-            Dim userBD As String = dtcreds.Rows(1).Item("username")
-            Dim pwBD As String = dtcreds.Rows(1).Item("pw")
-            MsgBox(userBD + " " + pwBD, MsgBoxStyle.Critical, "Error")
-        Else
-            MsgBox("Usuario o contraseña incorrecta. Verifique sus credenciales", MsgBoxStyle.Critical, "Error")
-        End If
-
 
         If (user.Equals("admin") And pw.Equals("123")) Then
             FrmMainAdminMenu.Show()
@@ -45,11 +35,26 @@
             Me.TxtUsuarioAdmin.Clear()
             Me.TxtPwAdmin.Clear()
         Else
-            MsgBox("Usuario o contraseña incorrecta. Verifique sus credenciales", MsgBoxStyle.Critical, "Error")
-            Me.TxtUsuarioAdmin.Clear()
-            Me.TxtPwAdmin.Clear()
-            Me.TxtUsuarioAdmin.Focus()
+            Try
+                Dim dtcreds As DataTable = admin.VerAlgo(user, pw)
+
+                'If (dtcreds IsNot Nothing AndAlso dtcreds.Rows.Count > 0) Then
+                If (dtcreds.Rows.Count() <= 0) Then
+                    MsgBox("Usuario o contraseña incorrecta. Verifique sus credenciales", MsgBoxStyle.Critical, "Error")
+                Else
+                    MsgBox("Bienvenido administrador " & user, MsgBoxStyle.Information, "Bienvenido")
+                    FrmMainAdminMenu.Show()
+                    Me.Hide()
+                    Me.TxtUsuarioAdmin.Clear()
+                    Me.TxtPwAdmin.Clear()
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+            End Try
         End If
+
+
+
 
         'Dim dtadmin As New Login
 
