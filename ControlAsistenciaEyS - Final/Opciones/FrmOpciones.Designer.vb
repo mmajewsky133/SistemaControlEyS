@@ -39,7 +39,6 @@ Partial Class FrmOpciones
         Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PwDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdDepDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
@@ -58,10 +57,9 @@ Partial Class FrmOpciones
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(21, 20)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(28, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(231, 52)
+        Me.Label1.Size = New System.Drawing.Size(295, 64)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Manejo de opciones " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Administrador)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -69,10 +67,9 @@ Partial Class FrmOpciones
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(28, 91)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(37, 112)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 20)
+        Me.Label2.Size = New System.Drawing.Size(91, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Nombres"
         '
@@ -80,39 +77,37 @@ Partial Class FrmOpciones
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label3.Location = New System.Drawing.Point(28, 139)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(37, 171)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 20)
+        Me.Label3.Size = New System.Drawing.Size(92, 25)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Apellidos"
         '
         'TxtNombre
         '
         Me.TxtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.TxtNombre.Location = New System.Drawing.Point(100, 90)
-        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtNombre.Location = New System.Drawing.Point(133, 111)
+        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(132, 23)
+        Me.TxtNombre.Size = New System.Drawing.Size(175, 26)
         Me.TxtNombre.TabIndex = 1
         '
         'TxtApellidos
         '
         Me.TxtApellidos.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.TxtApellidos.Location = New System.Drawing.Point(101, 138)
-        Me.TxtApellidos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtApellidos.Location = New System.Drawing.Point(135, 170)
+        Me.TxtApellidos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtApellidos.Name = "TxtApellidos"
-        Me.TxtApellidos.Size = New System.Drawing.Size(131, 23)
+        Me.TxtApellidos.Size = New System.Drawing.Size(173, 26)
         Me.TxtApellidos.TabIndex = 2
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label4.Location = New System.Drawing.Point(28, 219)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(37, 270)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 20)
+        Me.Label4.Size = New System.Drawing.Size(79, 25)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Usuario"
         '
@@ -120,39 +115,38 @@ Partial Class FrmOpciones
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(54, 264)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(72, 325)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(35, 20)
+        Me.Label5.Size = New System.Drawing.Size(44, 25)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "PIN"
         '
         'TxtUsuario
         '
         Me.TxtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.TxtUsuario.Location = New System.Drawing.Point(101, 219)
-        Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtUsuario.Location = New System.Drawing.Point(135, 270)
+        Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(131, 23)
+        Me.TxtUsuario.Size = New System.Drawing.Size(173, 26)
         Me.TxtUsuario.TabIndex = 3
         '
         'TxtPin
         '
         Me.TxtPin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.TxtPin.Location = New System.Drawing.Point(101, 263)
-        Me.TxtPin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtPin.Location = New System.Drawing.Point(135, 324)
+        Me.TxtPin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtPin.Name = "TxtPin"
-        Me.TxtPin.Size = New System.Drawing.Size(131, 23)
+        Me.TxtPin.Size = New System.Drawing.Size(173, 26)
         Me.TxtPin.TabIndex = 4
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.DgvAdmin)
-        Me.GroupBox1.Location = New System.Drawing.Point(283, 67)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(377, 82)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(212, 302)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(283, 372)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Usuarios"
@@ -163,16 +157,16 @@ Partial Class FrmOpciones
         Me.DgvAdmin.AllowUserToDeleteRows = False
         Me.DgvAdmin.AutoGenerateColumns = False
         Me.DgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvAdmin.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAdminDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PwDataGridViewTextBoxColumn, Me.IdDepDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
+        Me.DgvAdmin.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAdminDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PwDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
         Me.DgvAdmin.DataSource = Me.AdminBindingSource
         Me.DgvAdmin.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvAdmin.Location = New System.Drawing.Point(2, 15)
-        Me.DgvAdmin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DgvAdmin.Location = New System.Drawing.Point(3, 17)
+        Me.DgvAdmin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DgvAdmin.Name = "DgvAdmin"
         Me.DgvAdmin.ReadOnly = True
         Me.DgvAdmin.RowHeadersWidth = 51
         Me.DgvAdmin.RowTemplate.Height = 24
-        Me.DgvAdmin.Size = New System.Drawing.Size(208, 285)
+        Me.DgvAdmin.Size = New System.Drawing.Size(277, 353)
         Me.DgvAdmin.TabIndex = 0
         '
         'IdAdminDataGridViewTextBoxColumn
@@ -221,16 +215,6 @@ Partial Class FrmOpciones
         Me.PwDataGridViewTextBoxColumn.ReadOnly = True
         Me.PwDataGridViewTextBoxColumn.Width = 125
         '
-        'IdDepDataGridViewTextBoxColumn
-        '
-        Me.IdDepDataGridViewTextBoxColumn.DataPropertyName = "idDep"
-        Me.IdDepDataGridViewTextBoxColumn.HeaderText = "idDep"
-        Me.IdDepDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdDepDataGridViewTextBoxColumn.Name = "IdDepDataGridViewTextBoxColumn"
-        Me.IdDepDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdDepDataGridViewTextBoxColumn.Visible = False
-        Me.IdDepDataGridViewTextBoxColumn.Width = 125
-        '
         'EstadoDataGridViewTextBoxColumn
         '
         Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "estado"
@@ -253,30 +237,30 @@ Partial Class FrmOpciones
         '
         'BtnAgregar
         '
-        Me.BtnAgregar.Location = New System.Drawing.Point(283, 374)
-        Me.BtnAgregar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnAgregar.Location = New System.Drawing.Point(377, 460)
+        Me.BtnAgregar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(56, 22)
+        Me.BtnAgregar.Size = New System.Drawing.Size(75, 27)
         Me.BtnAgregar.TabIndex = 6
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'BtnEditar
         '
-        Me.BtnEditar.Location = New System.Drawing.Point(360, 374)
-        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnEditar.Location = New System.Drawing.Point(480, 460)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(56, 22)
+        Me.BtnEditar.Size = New System.Drawing.Size(75, 27)
         Me.BtnEditar.TabIndex = 7
         Me.BtnEditar.Text = "Editar"
         Me.BtnEditar.UseVisualStyleBackColor = True
         '
         'BtnEliminar
         '
-        Me.BtnEliminar.Location = New System.Drawing.Point(436, 374)
-        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnEliminar.Location = New System.Drawing.Point(581, 460)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(56, 22)
+        Me.BtnEliminar.Size = New System.Drawing.Size(75, 27)
         Me.BtnEliminar.TabIndex = 8
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
@@ -284,10 +268,10 @@ Partial Class FrmOpciones
         'BtnRegresar
         '
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BtnRegresar.Location = New System.Drawing.Point(404, 20)
-        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnRegresar.Location = New System.Drawing.Point(539, 25)
+        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnRegresar.Name = "BtnRegresar"
-        Me.BtnRegresar.Size = New System.Drawing.Size(89, 29)
+        Me.BtnRegresar.Size = New System.Drawing.Size(119, 36)
         Me.BtnRegresar.TabIndex = 9
         Me.BtnRegresar.Text = "Regresar"
         Me.BtnRegresar.UseVisualStyleBackColor = True
@@ -298,9 +282,9 @@ Partial Class FrmOpciones
         '
         'FrmOpciones
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(518, 437)
+        Me.ClientSize = New System.Drawing.Size(691, 538)
         Me.Controls.Add(Me.BtnRegresar)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnEditar)
@@ -315,7 +299,7 @@ Partial Class FrmOpciones
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmOpciones"
         Me.Text = "Manejo de opciones"
         Me.GroupBox1.ResumeLayout(False)

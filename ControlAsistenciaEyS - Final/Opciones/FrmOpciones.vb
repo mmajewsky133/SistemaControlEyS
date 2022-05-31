@@ -100,4 +100,8 @@
 
         llenarGrid()
     End Sub
+
+    Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
+        Me.Close()
+    End Sub
 End Class
