@@ -22,6 +22,7 @@ Partial Class FrmAddCargo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
@@ -34,13 +35,18 @@ Partial Class FrmAddCargo
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CmbDepartamento = New System.Windows.Forms.ComboBox()
         Me.GBCargo = New System.Windows.Forms.GroupBox()
+        Me.DgvCargo = New System.Windows.Forms.DataGridView()
+        Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BtnAddDep = New System.Windows.Forms.Button()
-        Me.DgvCargo = New System.Windows.Forms.DataGridView()
+        Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
         Me.GBCargo.SuspendLayout()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -172,6 +178,27 @@ Partial Class FrmAddCargo
         Me.GBCargo.TabStop = False
         Me.GBCargo.Text = "Lista de Cargos"
         '
+        'DgvCargo
+        '
+        Me.DgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCargo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgvCargo.Location = New System.Drawing.Point(4, 19)
+        Me.DgvCargo.Name = "DgvCargo"
+        Me.DgvCargo.RowHeadersWidth = 51
+        Me.DgvCargo.RowTemplate.Height = 24
+        Me.DgvCargo.Size = New System.Drawing.Size(659, 254)
+        Me.DgvCargo.TabIndex = 0
+        '
+        'CargoBindingSource
+        '
+        Me.CargoBindingSource.DataMember = "cargo"
+        Me.CargoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'BDAsistenciasEySDataSet
+        '
+        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
+        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'BtnRegresar
         '
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
@@ -214,16 +241,9 @@ Partial Class FrmAddCargo
         Me.BtnAddDep.Text = "Nuevo"
         Me.BtnAddDep.UseVisualStyleBackColor = True
         '
-        'DgvCargo
+        'CargoTableAdapter
         '
-        Me.DgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCargo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvCargo.Location = New System.Drawing.Point(4, 19)
-        Me.DgvCargo.Name = "DgvCargo"
-        Me.DgvCargo.RowHeadersWidth = 51
-        Me.DgvCargo.RowTemplate.Height = 24
-        Me.DgvCargo.Size = New System.Drawing.Size(659, 254)
-        Me.DgvCargo.TabIndex = 0
+        Me.CargoTableAdapter.ClearBeforeFill = True
         '
         'FrmAddCargo
         '
@@ -251,6 +271,8 @@ Partial Class FrmAddCargo
         Me.Text = "Administrador de cargos"
         Me.GBCargo.ResumeLayout(False)
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -273,4 +295,7 @@ Partial Class FrmAddCargo
     Friend WithEvents Label5 As Label
     Friend WithEvents BtnAddDep As Button
     Friend WithEvents DgvCargo As DataGridView
+    Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet
+    Friend WithEvents CargoBindingSource As BindingSource
+    Friend WithEvents CargoTableAdapter As BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter
 End Class

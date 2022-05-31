@@ -4,8 +4,12 @@
     Dim idCargo As Integer
     Dim tablaCargoDep As New BDAsistenciasEySDataSetTableAdapters.DatosCargoDepTableAdapter
     Dim dtCargoDep As New BDAsistenciasEySDataSet.DatosCargoDepDataTable
-
+    Dim idDep As Integer
     Sub llenarGrid()
+
+        'DgvCargo.DataSource = cargo.GetData
+        'DgvCargo.Refresh()
+        'GBCargo.Text = "Registros guardados: " + DgvCargo.Rows.Count.ToString
         tablaCargoDep.Fill(dtCargoDep)
         DgvCargo.DataSource = dtCargoDep
         DgvCargo.Refresh()
@@ -52,6 +56,7 @@
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
         End Try
     End Sub
+    Dim numero As Integer
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         If (String.IsNullOrEmpty(TxtCargo.Text)) Then
@@ -72,9 +77,9 @@
 
         Dim nombreCargo As String = TxtCargo.Text.Trim
         Dim descripcion As String = TxtDescripcion.Text.Trim
-        'Dim idDepartamento As Integer = CInt(TxtIdDep.Text.Trim)
-
-        cargo.ActualizarCargo(nombreCargo, descripcion, 2, idCargo)
+        'Dim idDepartamento As Integer = numero
+        idDep = CmbDepartamento.SelectedValue
+        cargo.ActualizarCargo(nombreCargo, descripcion, idDep, 2, idCargo)
 
         llenarGrid()
     End Sub
@@ -91,8 +96,7 @@
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
         End Try
     End Sub
-
-    Private Sub DgvCargo_DoubleClick(sender As Object, e As EventArgs)
+    Private Sub DgvCargo_DoubleClick(sender As Object, e As EventArgs) Handles DgvCargo.DoubleClick
         Try
             Dim fila As Integer = DgvCargo.CurrentRow.Index
             'Arreglar este evento
@@ -101,12 +105,18 @@
             TxtDescripcion.Text = DgvCargo.Item(2, fila).Value
             CmbDepartamento.SelectedValue = DgvCargo.Item(3, fila).Value
 
+            'MsgBox(numero)
+            'Dim valor As DataRowView = CmbDepartamento.SelectedValue
+            'Dim valorDos As DataRow = valor.Row
+
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
         End Try
     End Sub
 
     Private Sub FrmAddCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.cargo' table. You can move, or remove it, as needed.
+        Me.CargoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.cargo)
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.cargo' table. You can move, or remove it, as needed.
         llenarGrid()
         llenarCmbDepartamento()
