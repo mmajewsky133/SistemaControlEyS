@@ -52,10 +52,10 @@ Partial Class FrmSeeDepartamento
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label3.Location = New System.Drawing.Point(16, 11)
+        Me.Label3.Location = New System.Drawing.Point(18, 14)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(584, 38)
+        Me.Label3.Size = New System.Drawing.Size(707, 46)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Reporte y Manejo de Departamentos"
         '
@@ -68,12 +68,13 @@ Partial Class FrmSeeDepartamento
         Me.DgvDepartamentos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.DepartamentoDataGridViewTextBoxColumn, Me.ExtensiónDataGridViewTextBoxColumn, Me.DataGridViewTextBoxColumn1})
         Me.DgvDepartamentos.DataSource = Me.RptDepartamentoBindingSource
         Me.DgvDepartamentos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvDepartamentos.Location = New System.Drawing.Point(3, 18)
-        Me.DgvDepartamentos.Margin = New System.Windows.Forms.Padding(4)
+        Me.DgvDepartamentos.Location = New System.Drawing.Point(3, 23)
+        Me.DgvDepartamentos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DgvDepartamentos.Name = "DgvDepartamentos"
         Me.DgvDepartamentos.ReadOnly = True
         Me.DgvDepartamentos.RowHeadersWidth = 51
-        Me.DgvDepartamentos.Size = New System.Drawing.Size(668, 437)
+        Me.DgvDepartamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvDepartamentos.Size = New System.Drawing.Size(752, 545)
         Me.DgvDepartamentos.TabIndex = 17
         '
         'IDDataGridViewTextBoxColumn
@@ -137,29 +138,29 @@ Partial Class FrmSeeDepartamento
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label1.Location = New System.Drawing.Point(18, 96)
+        Me.Label1.Location = New System.Drawing.Point(20, 120)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 29)
+        Me.Label1.Size = New System.Drawing.Size(114, 33)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Buscar:"
         '
         'TxtBuscar
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(107, 93)
-        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtBuscar.Location = New System.Drawing.Point(120, 116)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(342, 34)
+        Me.TxtBuscar.Size = New System.Drawing.Size(384, 40)
         Me.TxtBuscar.TabIndex = 19
         '
         'BtnSeeReport
         '
         Me.BtnSeeReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnSeeReport.Location = New System.Drawing.Point(462, 91)
-        Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSeeReport.Location = New System.Drawing.Point(520, 114)
+        Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BtnSeeReport.Name = "BtnSeeReport"
-        Me.BtnSeeReport.Size = New System.Drawing.Size(232, 38)
+        Me.BtnSeeReport.Size = New System.Drawing.Size(261, 48)
         Me.BtnSeeReport.TabIndex = 21
         Me.BtnSeeReport.Text = "Ver Reporte Completo"
         Me.BtnSeeReport.UseVisualStyleBackColor = True
@@ -175,18 +176,20 @@ Partial Class FrmSeeDepartamento
         'GBRptDepartamento
         '
         Me.GBRptDepartamento.Controls.Add(Me.DgvDepartamentos)
-        Me.GBRptDepartamento.Location = New System.Drawing.Point(23, 165)
+        Me.GBRptDepartamento.Location = New System.Drawing.Point(26, 206)
+        Me.GBRptDepartamento.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GBRptDepartamento.Name = "GBRptDepartamento"
-        Me.GBRptDepartamento.Size = New System.Drawing.Size(674, 458)
+        Me.GBRptDepartamento.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GBRptDepartamento.Size = New System.Drawing.Size(758, 572)
         Me.GBRptDepartamento.TabIndex = 22
         Me.GBRptDepartamento.TabStop = False
         Me.GBRptDepartamento.Text = "Departamentos: "
         '
         'FrmSeeDepartamento
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(719, 664)
+        Me.ClientSize = New System.Drawing.Size(809, 830)
         Me.Controls.Add(Me.GBRptDepartamento)
         Me.Controls.Add(Me.BtnSeeReport)
         Me.Controls.Add(Me.TxtBuscar)
@@ -194,7 +197,7 @@ Partial Class FrmSeeDepartamento
         Me.Controls.Add(Me.Label3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.Name = "FrmSeeDepartamento"
         Me.Text = "Control de Asistencias - Reporte de Departamentos"

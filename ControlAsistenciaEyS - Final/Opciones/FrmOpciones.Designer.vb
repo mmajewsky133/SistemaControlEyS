@@ -60,9 +60,9 @@ Partial Class FrmOpciones
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(28, 25)
+        Me.Label1.Location = New System.Drawing.Point(32, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(295, 64)
+        Me.Label1.Size = New System.Drawing.Size(336, 76)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Manejo de opciones " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Administrador)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -70,9 +70,9 @@ Partial Class FrmOpciones
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(37, 112)
+        Me.Label2.Location = New System.Drawing.Point(42, 140)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 25)
+        Me.Label2.Size = New System.Drawing.Size(113, 29)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Nombres"
         '
@@ -80,37 +80,37 @@ Partial Class FrmOpciones
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label3.Location = New System.Drawing.Point(37, 156)
+        Me.Label3.Location = New System.Drawing.Point(42, 195)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 25)
+        Me.Label3.Size = New System.Drawing.Size(114, 29)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Apellidos"
         '
         'TxtNombre
         '
         Me.TxtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TxtNombre.Location = New System.Drawing.Point(133, 111)
+        Me.TxtNombre.Location = New System.Drawing.Point(150, 139)
         Me.TxtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(175, 30)
+        Me.TxtNombre.Size = New System.Drawing.Size(196, 35)
         Me.TxtNombre.TabIndex = 1
         '
         'TxtApellidos
         '
         Me.TxtApellidos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TxtApellidos.Location = New System.Drawing.Point(135, 155)
+        Me.TxtApellidos.Location = New System.Drawing.Point(152, 194)
         Me.TxtApellidos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtApellidos.Name = "TxtApellidos"
-        Me.TxtApellidos.Size = New System.Drawing.Size(173, 30)
+        Me.TxtApellidos.Size = New System.Drawing.Size(194, 35)
         Me.TxtApellidos.TabIndex = 2
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label4.Location = New System.Drawing.Point(355, 110)
+        Me.Label4.Location = New System.Drawing.Point(399, 138)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(79, 25)
+        Me.Label4.Size = New System.Drawing.Size(96, 29)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Usuario"
         '
@@ -118,39 +118,39 @@ Partial Class FrmOpciones
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(390, 164)
+        Me.Label5.Location = New System.Drawing.Point(439, 205)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(44, 25)
+        Me.Label5.Size = New System.Drawing.Size(53, 29)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "PIN"
         '
         'TxtUsuario
         '
         Me.TxtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TxtUsuario.Location = New System.Drawing.Point(453, 105)
+        Me.TxtUsuario.Location = New System.Drawing.Point(510, 131)
         Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(173, 30)
+        Me.TxtUsuario.Size = New System.Drawing.Size(194, 35)
         Me.TxtUsuario.TabIndex = 3
         '
         'TxtPin
         '
         Me.TxtPin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TxtPin.Location = New System.Drawing.Point(453, 159)
+        Me.TxtPin.Location = New System.Drawing.Point(510, 199)
         Me.TxtPin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TxtPin.Name = "TxtPin"
         Me.TxtPin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPin.Size = New System.Drawing.Size(173, 30)
+        Me.TxtPin.Size = New System.Drawing.Size(194, 35)
         Me.TxtPin.TabIndex = 4
         '
         'GBAdmin
         '
         Me.GBAdmin.Controls.Add(Me.DgvAdmin)
-        Me.GBAdmin.Location = New System.Drawing.Point(42, 333)
+        Me.GBAdmin.Location = New System.Drawing.Point(47, 416)
         Me.GBAdmin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GBAdmin.Name = "GBAdmin"
         Me.GBAdmin.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GBAdmin.Size = New System.Drawing.Size(626, 181)
+        Me.GBAdmin.Size = New System.Drawing.Size(704, 226)
         Me.GBAdmin.TabIndex = 11
         Me.GBAdmin.TabStop = False
         Me.GBAdmin.Text = "Usuarios"
@@ -164,13 +164,14 @@ Partial Class FrmOpciones
         Me.DgvAdmin.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAdminDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PwDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
         Me.DgvAdmin.DataSource = Me.AdminBindingSource
         Me.DgvAdmin.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvAdmin.Location = New System.Drawing.Point(3, 17)
+        Me.DgvAdmin.Location = New System.Drawing.Point(3, 21)
         Me.DgvAdmin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DgvAdmin.Name = "DgvAdmin"
         Me.DgvAdmin.ReadOnly = True
         Me.DgvAdmin.RowHeadersWidth = 51
         Me.DgvAdmin.RowTemplate.Height = 24
-        Me.DgvAdmin.Size = New System.Drawing.Size(620, 162)
+        Me.DgvAdmin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvAdmin.Size = New System.Drawing.Size(698, 203)
         Me.DgvAdmin.TabIndex = 0
         '
         'IdAdminDataGridViewTextBoxColumn
@@ -243,10 +244,10 @@ Partial Class FrmOpciones
         'BtnAgregar
         '
         Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.8!)
-        Me.BtnAgregar.Location = New System.Drawing.Point(295, 277)
+        Me.BtnAgregar.Location = New System.Drawing.Point(332, 346)
         Me.BtnAgregar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(117, 34)
+        Me.BtnAgregar.Size = New System.Drawing.Size(132, 42)
         Me.BtnAgregar.TabIndex = 6
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.UseVisualStyleBackColor = True
@@ -254,10 +255,10 @@ Partial Class FrmOpciones
         'BtnEditar
         '
         Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.8!)
-        Me.BtnEditar.Location = New System.Drawing.Point(418, 276)
+        Me.BtnEditar.Location = New System.Drawing.Point(470, 345)
         Me.BtnEditar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(117, 35)
+        Me.BtnEditar.Size = New System.Drawing.Size(132, 44)
         Me.BtnEditar.TabIndex = 7
         Me.BtnEditar.Text = "Editar"
         Me.BtnEditar.UseVisualStyleBackColor = True
@@ -265,10 +266,10 @@ Partial Class FrmOpciones
         'BtnEliminar
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.8!)
-        Me.BtnEliminar.Location = New System.Drawing.Point(541, 276)
+        Me.BtnEliminar.Location = New System.Drawing.Point(609, 345)
         Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(117, 35)
+        Me.BtnEliminar.Size = New System.Drawing.Size(132, 44)
         Me.BtnEliminar.TabIndex = 8
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
@@ -276,10 +277,10 @@ Partial Class FrmOpciones
         'BtnRegresar
         '
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BtnRegresar.Location = New System.Drawing.Point(539, 25)
+        Me.BtnRegresar.Location = New System.Drawing.Point(606, 31)
         Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnRegresar.Name = "BtnRegresar"
-        Me.BtnRegresar.Size = New System.Drawing.Size(119, 36)
+        Me.BtnRegresar.Size = New System.Drawing.Size(134, 45)
         Me.BtnRegresar.TabIndex = 9
         Me.BtnRegresar.Text = "Regresar"
         Me.BtnRegresar.UseVisualStyleBackColor = True
@@ -292,26 +293,26 @@ Partial Class FrmOpciones
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label6.Location = New System.Drawing.Point(40, 248)
+        Me.Label6.Location = New System.Drawing.Point(45, 310)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(73, 25)
+        Me.Label6.Size = New System.Drawing.Size(87, 29)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Buscar"
         '
         'txtBuscar
         '
         Me.txtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.txtBuscar.Location = New System.Drawing.Point(45, 279)
+        Me.txtBuscar.Location = New System.Drawing.Point(51, 349)
         Me.txtBuscar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(218, 30)
+        Me.txtBuscar.Size = New System.Drawing.Size(245, 35)
         Me.txtBuscar.TabIndex = 13
         '
         'FrmOpciones
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(691, 538)
+        Me.ClientSize = New System.Drawing.Size(777, 672)
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.BtnRegresar)

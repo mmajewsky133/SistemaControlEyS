@@ -51,41 +51,41 @@ Partial Class FrmSeeCargos
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(16, 11)
+        Me.Label3.Location = New System.Drawing.Point(18, 14)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(483, 39)
+        Me.Label3.Size = New System.Drawing.Size(576, 48)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Reporte y Manejo de Cargos"
         '
         'TxtBuscar
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(105, 93)
-        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtBuscar.Location = New System.Drawing.Point(118, 116)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(415, 34)
+        Me.TxtBuscar.Size = New System.Drawing.Size(466, 40)
         Me.TxtBuscar.TabIndex = 21
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label1.Location = New System.Drawing.Point(16, 97)
+        Me.Label1.Location = New System.Drawing.Point(18, 121)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 29)
+        Me.Label1.Size = New System.Drawing.Size(114, 33)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Buscar:"
         '
         'GBRptCargo
         '
         Me.GBRptCargo.Controls.Add(Me.DgvCargos)
-        Me.GBRptCargo.Location = New System.Drawing.Point(21, 165)
-        Me.GBRptCargo.Margin = New System.Windows.Forms.Padding(4)
+        Me.GBRptCargo.Location = New System.Drawing.Point(24, 206)
+        Me.GBRptCargo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GBRptCargo.Name = "GBRptCargo"
-        Me.GBRptCargo.Padding = New System.Windows.Forms.Padding(4)
-        Me.GBRptCargo.Size = New System.Drawing.Size(739, 403)
+        Me.GBRptCargo.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GBRptCargo.Size = New System.Drawing.Size(831, 504)
         Me.GBRptCargo.TabIndex = 22
         Me.GBRptCargo.TabStop = False
         Me.GBRptCargo.Text = "Cargos: "
@@ -99,12 +99,13 @@ Partial Class FrmSeeCargos
         Me.DgvCargos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.CargoDataGridViewTextBoxColumn, Me.DescripciónDataGridViewTextBoxColumn})
         Me.DgvCargos.DataSource = Me.RptCargoBindingSource
         Me.DgvCargos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvCargos.Location = New System.Drawing.Point(4, 19)
-        Me.DgvCargos.Margin = New System.Windows.Forms.Padding(4)
+        Me.DgvCargos.Location = New System.Drawing.Point(4, 24)
+        Me.DgvCargos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DgvCargos.Name = "DgvCargos"
         Me.DgvCargos.ReadOnly = True
         Me.DgvCargos.RowHeadersWidth = 51
-        Me.DgvCargos.Size = New System.Drawing.Size(731, 380)
+        Me.DgvCargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvCargos.Size = New System.Drawing.Size(823, 475)
         Me.DgvCargos.TabIndex = 0
         '
         'IDDataGridViewTextBoxColumn
@@ -148,10 +149,10 @@ Partial Class FrmSeeCargos
         'BtnSeeReport
         '
         Me.BtnSeeReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnSeeReport.Location = New System.Drawing.Point(528, 93)
-        Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSeeReport.Location = New System.Drawing.Point(594, 116)
+        Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BtnSeeReport.Name = "BtnSeeReport"
-        Me.BtnSeeReport.Size = New System.Drawing.Size(232, 38)
+        Me.BtnSeeReport.Size = New System.Drawing.Size(261, 48)
         Me.BtnSeeReport.TabIndex = 15
         Me.BtnSeeReport.Text = "Ver Reporte Completo"
         Me.BtnSeeReport.UseVisualStyleBackColor = True
@@ -176,9 +177,9 @@ Partial Class FrmSeeCargos
         '
         'FrmSeeCargos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(775, 581)
+        Me.ClientSize = New System.Drawing.Size(872, 726)
         Me.Controls.Add(Me.BtnSeeReport)
         Me.Controls.Add(Me.GBRptCargo)
         Me.Controls.Add(Me.TxtBuscar)
@@ -186,7 +187,7 @@ Partial Class FrmSeeCargos
         Me.Controls.Add(Me.Label3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.Name = "FrmSeeCargos"
         Me.Text = "Control de Asistencias - Reporte de Cargos"

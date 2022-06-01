@@ -30,12 +30,12 @@
     End Sub
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
-            If (String.IsNullOrEmpty(TxtCargo.Text)) Then
+            If (String.IsNullOrEmpty(TxtCargo.Text.Trim)) Then
                 MsgBox("No puede quedar vacío el nombre del cargo", MsgBoxStyle.Critical, "ERROR")
                 TxtCargo.Focus()
                 Exit Sub
             End If
-            If (String.IsNullOrEmpty(TxtDescripcion.Text)) Then
+            If (String.IsNullOrEmpty(TxtDescripcion.Text.Trim)) Then
                 MsgBox("La descripcion debe ser ingresada", MsgBoxStyle.Critical, "ERROR")
                 TxtDescripcion.Focus()
                 Exit Sub
@@ -46,8 +46,8 @@
                 Exit Sub
             End If
 
-            Dim nombreCargo As String = TxtCargo.Text
-            Dim descripcion As String = TxtDescripcion.Text
+            Dim nombreCargo As String = TxtCargo.Text.Trim
+            Dim descripcion As String = TxtDescripcion.Text.Trim
             Dim idDepartamento As Integer = CInt(CmbDepartamento.SelectedValue)
 
             cargo.InsertarCargo(nombreCargo, descripcion, idDepartamento, 1)
@@ -59,12 +59,12 @@
     Dim numero As Integer
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-        If (String.IsNullOrEmpty(TxtCargo.Text)) Then
+        If (String.IsNullOrEmpty(TxtCargo.Text.Trim)) Then
             MsgBox("No puede quedar vacío el nombre del cargo", MsgBoxStyle.Critical, "ERROR")
             TxtCargo.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtDescripcion.Text)) Then
+        If (String.IsNullOrEmpty(TxtDescripcion.Text.Trim)) Then
             MsgBox("La descripcion debe ser ingresada", MsgBoxStyle.Critical, "ERROR")
             TxtDescripcion.Focus()
             Exit Sub

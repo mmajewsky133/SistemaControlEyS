@@ -20,25 +20,25 @@
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
-            If (String.IsNullOrEmpty(TxtDepartamento.Text)) Then
+            If (String.IsNullOrEmpty(TxtDepartamento.Text.Trim)) Then
                 MsgBox("No puede quedar vacío el nombre del departamento", MsgBoxStyle.Critical, "ERROR")
                 TxtDepartamento.Focus()
                 Exit Sub
             End If
-            If (String.IsNullOrEmpty(TxtExtension.Text)) Then
+            If (String.IsNullOrEmpty(TxtExtension.Text.Trim)) Then
                 MsgBox("Una extension requiere ser ingresada", MsgBoxStyle.Critical, "ERROR")
                 TxtExtension.Focus()
                 Exit Sub
             End If
-            If (String.IsNullOrEmpty(TxtCorreo.Text)) Then
+            If (String.IsNullOrEmpty(TxtCorreo.Text.Trim)) Then
                 MsgBox("El correo debe ser ingresado", MsgBoxStyle.Critical, "ERROR")
                 TxtCorreo.Focus()
                 Exit Sub
             End If
 
-            Dim nombreDep As String = TxtDepartamento.Text
-            Dim extTel As String = TxtExtension.Text
-            Dim correo As String = TxtCorreo.Text
+            Dim nombreDep As String = TxtDepartamento.Text.Trim
+            Dim extTel As String = TxtExtension.Text.Trim
+            Dim correo As String = TxtCorreo.Text.Trim
             departamento.InsertarDepartamento(nombreDep, extTel, correo, 1)
             llenarGrid()
         Catch ex As Exception
@@ -74,17 +74,17 @@
     End Sub
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-        If (String.IsNullOrEmpty(TxtDepartamento.Text)) Then
+        If (String.IsNullOrEmpty(TxtDepartamento.Text.Trim)) Then
             MsgBox("No puede quedar vacío el nombre del departamento", MsgBoxStyle.Critical, "ERROR")
             TxtDepartamento.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtExtension.Text)) Then
+        If (String.IsNullOrEmpty(TxtExtension.Text.Trim)) Then
             MsgBox("Una extension requiere ser ingresada", MsgBoxStyle.Critical, "ERROR")
             TxtExtension.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtCorreo.Text)) Then
+        If (String.IsNullOrEmpty(TxtCorreo.Text.Trim)) Then
             MsgBox("El correo debe ser ingresado", MsgBoxStyle.Critical, "ERROR")
             TxtCorreo.Focus()
             Exit Sub

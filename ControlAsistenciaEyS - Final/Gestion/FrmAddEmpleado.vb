@@ -22,32 +22,32 @@ Public Class FrmAddEmpleado
 
     Private Sub BtnGuardarEmp_Click(sender As Object, e As EventArgs) Handles BtnGuardarEmp.Click
         Try
-            If (String.IsNullOrEmpty(TxtNombre.Text)) Then
+            If (String.IsNullOrEmpty(TxtNombre.Text.Trim)) Then
                 MsgBox("No puede quedar vacío el nombre", MsgBoxStyle.Critical, "ERROR")
                 TxtNombre.Focus()
                 Exit Sub
             End If
-            If (String.IsNullOrEmpty(TxtApellido.Text)) Then
+            If (String.IsNullOrEmpty(TxtApellido.Text.Trim)) Then
                 MsgBox("Los apellidos requieren ser ingresados", MsgBoxStyle.Critical, "ERROR")
                 TxtApellido.Focus()
                 Exit Sub
             End If
-            If (String.IsNullOrEmpty(TxtCedula.Text)) Then
+            If (String.IsNullOrEmpty(TxtCedula.Text.Trim)) Then
                 MsgBox("La cedula requiere ser ingresada", MsgBoxStyle.Critical, "ERROR")
                 TxtCedula.Focus()
                 Exit Sub
             End If
-            If (String.IsNullOrEmpty(TxtCorreo.Text)) Then
+            If (String.IsNullOrEmpty(TxtCorreo.Text.Trim)) Then
                 MsgBox("Correo vacio", MsgBoxStyle.Critical, "ERROR")
                 TxtCorreo.Focus()
                 Exit Sub
             End If
-            If (String.IsNullOrEmpty(TxtTel.Text)) Then
+            If (String.IsNullOrEmpty(TxtTel.Text.Trim)) Then
                 MsgBox("Telefono vacio", MsgBoxStyle.Critical, "ERROR")
                 TxtTel.Focus()
                 Exit Sub
             End If
-            If (String.IsNullOrEmpty(TxtCorreoInst.Text)) Then
+            If (String.IsNullOrEmpty(TxtCorreoInst.Text.Trim)) Then
                 MsgBox("Institucional vacio", MsgBoxStyle.Critical, "ERROR")
                 TxtCorreoInst.Focus()
                 Exit Sub
@@ -58,19 +58,20 @@ Public Class FrmAddEmpleado
                 Exit Sub
             End If
 
-            Dim nombres As String = TxtNombre.Text
-            Dim apellidos As String = TxtApellido.Text
-            Dim cedula As String = TxtCedula.Text
+            Dim nombres As String = TxtNombre.Text.Trim
+            Dim apellidos As String = TxtApellido.Text.Trim
+            Dim cedula As String = TxtCedula.Text.Trim
             Dim fotoEmp As New MemoryStream
             PBEmp.Image.Save(fotoEmp, format:=PBEmp.Image.RawFormat)
             Dim fechaNac As DateTime = DTPNac.Value
-            Dim direccion As String = TxtDireccion.Text
-            Dim telefono As String = TxtTel.Text
-            Dim correo As String = TxtCorreo.Text
-            Dim correoInst As String = TxtCorreoInst.Text
-            Dim username As String = nombres.Replace(" ", "") & Math.Ceiling(Rnd() * 20)
-            Dim pwpin As String = "123"
+            Dim direccion As String = TxtDireccion.Text.Trim
+            Dim telefono As String = TxtTel.Text.Trim
+            Dim correo As String = TxtCorreo.Text.Trim
+            Dim correoInst As String = TxtCorreoInst.Text.Trim
             Dim estado As Integer = 1
+
+            'Dim username As String = nombres.Replace(" ", "") & Math.Ceiling(Rnd() * 20)
+            'Dim pwpin As String = "123"
 
             empleado.InsertarEmpleado(nombres, apellidos, cedula, fotoEmp.ToArray(), fechaNac, direccion, telefono, correo, correoInst, estado)
             llenarGrid()
@@ -95,32 +96,32 @@ Public Class FrmAddEmpleado
     End Sub
 
     Private Sub BtnEditarEmp_Click(sender As Object, e As EventArgs) Handles BtnEditarEmp.Click
-        If (String.IsNullOrEmpty(TxtNombre.Text)) Then
+        If (String.IsNullOrEmpty(TxtNombre.Text.Trim)) Then
             MsgBox("No puede quedar vacío el nombre", MsgBoxStyle.Critical, "ERROR")
             TxtNombre.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtApellido.Text)) Then
+        If (String.IsNullOrEmpty(TxtApellido.Text.Trim)) Then
             MsgBox("Los apellidos requieren ser ingresados", MsgBoxStyle.Critical, "ERROR")
             TxtApellido.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtCedula.Text)) Then
+        If (String.IsNullOrEmpty(TxtCedula.Text.Trim)) Then
             MsgBox("La cedula requiere ser ingresada", MsgBoxStyle.Critical, "ERROR")
             TxtCedula.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtCorreo.Text)) Then
+        If (String.IsNullOrEmpty(TxtCorreo.Text.Trim)) Then
             MsgBox("Correo vacio", MsgBoxStyle.Critical, "ERROR")
             TxtCorreo.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtTel.Text)) Then
+        If (String.IsNullOrEmpty(TxtTel.Text.Trim)) Then
             MsgBox("Telefono vacio", MsgBoxStyle.Critical, "ERROR")
             TxtTel.Focus()
             Exit Sub
         End If
-        If (String.IsNullOrEmpty(TxtCorreoInst.Text)) Then
+        If (String.IsNullOrEmpty(TxtCorreoInst.Text.Trim)) Then
             MsgBox("Institucional vacio", MsgBoxStyle.Critical, "ERROR")
             TxtCorreoInst.Focus()
             Exit Sub

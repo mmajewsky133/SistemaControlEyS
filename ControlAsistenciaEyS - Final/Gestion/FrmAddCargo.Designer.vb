@@ -54,20 +54,20 @@ Partial Class FrmAddCargo
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(16, 27)
+        Me.Label1.Location = New System.Drawing.Point(18, 34)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(257, 31)
+        Me.Label1.Size = New System.Drawing.Size(301, 37)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Gestion de Cargos"
         '
         'BtnEliminar
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(563, 438)
-        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEliminar.Location = New System.Drawing.Point(633, 548)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(125, 39)
+        Me.BtnEliminar.Size = New System.Drawing.Size(141, 49)
         Me.BtnEliminar.TabIndex = 9
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
@@ -75,10 +75,10 @@ Partial Class FrmAddCargo
         'BtnEditar
         '
         Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnEditar.Location = New System.Drawing.Point(440, 438)
-        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEditar.Location = New System.Drawing.Point(495, 548)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(115, 39)
+        Me.BtnEditar.Size = New System.Drawing.Size(129, 49)
         Me.BtnEditar.TabIndex = 8
         Me.BtnEditar.Text = "Editar"
         Me.BtnEditar.UseVisualStyleBackColor = True
@@ -86,10 +86,10 @@ Partial Class FrmAddCargo
         'BtnGuardar
         '
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnGuardar.Location = New System.Drawing.Point(315, 438)
-        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnGuardar.Location = New System.Drawing.Point(354, 548)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(117, 39)
+        Me.BtnGuardar.Size = New System.Drawing.Size(132, 49)
         Me.BtnGuardar.TabIndex = 7
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
@@ -97,10 +97,10 @@ Partial Class FrmAddCargo
         'BtnNuevo
         '
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnNuevo.Location = New System.Drawing.Point(383, 316)
-        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnNuevo.Location = New System.Drawing.Point(431, 395)
+        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(305, 73)
+        Me.BtnNuevo.Size = New System.Drawing.Size(343, 91)
         Me.BtnNuevo.TabIndex = 5
         Me.BtnNuevo.Text = "Limpiar Campos"
         Me.BtnNuevo.UseVisualStyleBackColor = True
@@ -108,41 +108,41 @@ Partial Class FrmAddCargo
         'TxtDescripcion
         '
         Me.TxtDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDescripcion.Location = New System.Drawing.Point(23, 197)
-        Me.TxtDescripcion.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtDescripcion.Location = New System.Drawing.Point(26, 246)
+        Me.TxtDescripcion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtDescripcion.Multiline = True
         Me.TxtDescripcion.Name = "TxtDescripcion"
-        Me.TxtDescripcion.Size = New System.Drawing.Size(664, 104)
+        Me.TxtDescripcion.Size = New System.Drawing.Size(746, 129)
         Me.TxtDescripcion.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(16, 164)
+        Me.Label3.Location = New System.Drawing.Point(18, 205)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(147, 29)
+        Me.Label3.Size = New System.Drawing.Size(177, 33)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Descripción:"
         '
         'TxtCargo
         '
         Me.TxtCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCargo.Location = New System.Drawing.Point(23, 122)
-        Me.TxtCargo.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtCargo.Location = New System.Drawing.Point(26, 152)
+        Me.TxtCargo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtCargo.Name = "TxtCargo"
-        Me.TxtCargo.Size = New System.Drawing.Size(664, 34)
+        Me.TxtCargo.Size = New System.Drawing.Size(746, 40)
         Me.TxtCargo.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(17, 89)
+        Me.Label2.Location = New System.Drawing.Point(19, 111)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 29)
+        Me.Label2.Size = New System.Drawing.Size(110, 33)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Cargo: "
         '
@@ -150,10 +150,10 @@ Partial Class FrmAddCargo
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(17, 316)
+        Me.Label4.Location = New System.Drawing.Point(19, 395)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(171, 29)
+        Me.Label4.Size = New System.Drawing.Size(207, 33)
         Me.Label4.TabIndex = 21
         Me.Label4.Text = "Departamento:"
         '
@@ -161,20 +161,20 @@ Partial Class FrmAddCargo
         '
         Me.CmbDepartamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbDepartamento.FormattingEnabled = True
-        Me.CmbDepartamento.Location = New System.Drawing.Point(23, 350)
-        Me.CmbDepartamento.Margin = New System.Windows.Forms.Padding(4)
+        Me.CmbDepartamento.Location = New System.Drawing.Point(26, 438)
+        Me.CmbDepartamento.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CmbDepartamento.Name = "CmbDepartamento"
-        Me.CmbDepartamento.Size = New System.Drawing.Size(351, 37)
+        Me.CmbDepartamento.Size = New System.Drawing.Size(394, 41)
         Me.CmbDepartamento.TabIndex = 4
         '
         'GBCargo
         '
         Me.GBCargo.Controls.Add(Me.DgvCargo)
-        Me.GBCargo.Location = New System.Drawing.Point(21, 497)
-        Me.GBCargo.Margin = New System.Windows.Forms.Padding(4)
+        Me.GBCargo.Location = New System.Drawing.Point(24, 621)
+        Me.GBCargo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GBCargo.Name = "GBCargo"
-        Me.GBCargo.Padding = New System.Windows.Forms.Padding(4)
-        Me.GBCargo.Size = New System.Drawing.Size(667, 277)
+        Me.GBCargo.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GBCargo.Size = New System.Drawing.Size(750, 346)
         Me.GBCargo.TabIndex = 23
         Me.GBCargo.TabStop = False
         Me.GBCargo.Text = "Lista de Cargos"
@@ -183,11 +183,14 @@ Partial Class FrmAddCargo
         '
         Me.DgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCargo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvCargo.Location = New System.Drawing.Point(4, 19)
+        Me.DgvCargo.Location = New System.Drawing.Point(4, 24)
+        Me.DgvCargo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DgvCargo.Name = "DgvCargo"
         Me.DgvCargo.RowHeadersWidth = 51
+        Me.DgvCargo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DgvCargo.RowTemplate.Height = 24
-        Me.DgvCargo.Size = New System.Drawing.Size(659, 254)
+        Me.DgvCargo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvCargo.Size = New System.Drawing.Size(742, 317)
         Me.DgvCargo.TabIndex = 0
         '
         'CargoBindingSource
@@ -203,10 +206,10 @@ Partial Class FrmAddCargo
         'BtnRegresar
         '
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.BtnRegresar.Location = New System.Drawing.Point(552, 23)
+        Me.BtnRegresar.Location = New System.Drawing.Point(621, 29)
         Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnRegresar.Name = "BtnRegresar"
-        Me.BtnRegresar.Size = New System.Drawing.Size(136, 41)
+        Me.BtnRegresar.Size = New System.Drawing.Size(153, 51)
         Me.BtnRegresar.TabIndex = 24
         Me.BtnRegresar.Text = "Regresar"
         Me.BtnRegresar.UseVisualStyleBackColor = True
@@ -214,30 +217,30 @@ Partial Class FrmAddCargo
         'TxtBuscar
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(113, 439)
-        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtBuscar.Location = New System.Drawing.Point(127, 549)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(192, 34)
+        Me.TxtBuscar.Size = New System.Drawing.Size(216, 40)
         Me.TxtBuscar.TabIndex = 6
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(16, 443)
+        Me.Label5.Location = New System.Drawing.Point(18, 554)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(99, 29)
+        Me.Label5.Size = New System.Drawing.Size(122, 33)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "Buscar: "
         '
         'BtnAddDep
         '
         Me.BtnAddDep.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnAddDep.Location = New System.Drawing.Point(203, 316)
-        Me.BtnAddDep.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnAddDep.Location = New System.Drawing.Point(228, 395)
+        Me.BtnAddDep.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.BtnAddDep.Name = "BtnAddDep"
-        Me.BtnAddDep.Size = New System.Drawing.Size(172, 30)
+        Me.BtnAddDep.Size = New System.Drawing.Size(194, 38)
         Me.BtnAddDep.TabIndex = 3
         Me.BtnAddDep.Text = "Nuevo"
         Me.BtnAddDep.UseVisualStyleBackColor = True
@@ -248,9 +251,9 @@ Partial Class FrmAddCargo
         '
         'FrmAddCargo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(712, 794)
+        Me.ClientSize = New System.Drawing.Size(801, 992)
         Me.Controls.Add(Me.BtnAddDep)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label5)
@@ -269,7 +272,7 @@ Partial Class FrmAddCargo
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.Name = "FrmAddCargo"
         Me.Text = "Administrador de cargos"
