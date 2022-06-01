@@ -23,6 +23,7 @@ Partial Class FrmSeeDepartamento
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSeeDepartamento))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DgvDepartamentos = New System.Windows.Forms.DataGridView()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,7 +55,7 @@ Partial Class FrmSeeDepartamento
         Me.Label3.Location = New System.Drawing.Point(16, 11)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(606, 39)
+        Me.Label3.Size = New System.Drawing.Size(584, 38)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Reporte y Manejo de Departamentos"
         '
@@ -191,7 +192,10 @@ Partial Class FrmSeeDepartamento
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "FrmSeeDepartamento"
         Me.Text = "Control de Asistencias - Reporte de Departamentos"
         CType(Me.DgvDepartamentos, System.ComponentModel.ISupportInitialize).EndInit()

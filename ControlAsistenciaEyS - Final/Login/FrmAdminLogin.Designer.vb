@@ -22,6 +22,7 @@ Partial Class FrmAdminLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAdminLogin))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtUsuarioAdmin = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -29,15 +30,15 @@ Partial Class FrmAdminLogin
         Me.TxtPwAdmin = New System.Windows.Forms.TextBox()
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.PBIngresar = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         CType(Me.PBIngresar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -123,37 +124,15 @@ Partial Class FrmAdminLogin
         Me.Panel1.Size = New System.Drawing.Size(777, 375)
         Me.Panel1.TabIndex = 8
         '
-        'Panel2
+        'PictureBox2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.PBIngresar)
-        Me.Panel2.Location = New System.Drawing.Point(292, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(485, 375)
-        Me.Panel2.TabIndex = 10
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.AliceBlue
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(18, 375)
-        Me.Panel3.TabIndex = 10
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(176, 279)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(109, 29)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Ingresar"
+        Me.PictureBox2.Image = Global.ControlAsistenciaEyS___Final.My.Resources.Resources.ddgl67z_16d4da3e_619f_47f5_be12_cad9bf79fbf2
+        Me.PictureBox2.Location = New System.Drawing.Point(25, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(103, 63)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 12
+        Me.PictureBox2.TabStop = False
         '
         'Label5
         '
@@ -167,15 +146,37 @@ Partial Class FrmAdminLogin
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Triplefox"
         '
-        'PictureBox2
+        'Panel2
         '
-        Me.PictureBox2.Image = Global.ControlAsistenciaEyS___Final.My.Resources.Resources.ddgl67z_16d4da3e_619f_47f5_be12_cad9bf79fbf2
-        Me.PictureBox2.Location = New System.Drawing.Point(25, 12)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(103, 63)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 12
-        Me.PictureBox2.TabStop = False
+        Me.Panel2.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.PBIngresar)
+        Me.Panel2.Location = New System.Drawing.Point(292, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(485, 375)
+        Me.Panel2.TabIndex = 10
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(176, 279)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(109, 29)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Ingresar"
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.AliceBlue
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(18, 375)
+        Me.Panel3.TabIndex = 10
         '
         'PBIngresar
         '
@@ -193,7 +194,8 @@ Partial Class FrmAdminLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(729, 373)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "FrmAdminLogin"
@@ -201,9 +203,9 @@ Partial Class FrmAdminLogin
         Me.Text = "Control de Asistencia"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PBIngresar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

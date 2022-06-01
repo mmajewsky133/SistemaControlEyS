@@ -8,7 +8,7 @@
         Me.EmpleadoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.empleado)
         'TODO: This line of code loads data into the 'ControlAsistenciaDataSet.Empleados' table. You can move, or remove it, as needed.
         'Me.EmpleadosTableAdapter.Fill(Me.ControlAsistenciaDataSet.Empleados)
-        GBControl.Text = "Empleados similares: " & DgvAsistencia.Rows.Count.ToString - 1
+        GBControl.Text = "Empleados: " & DgvAsistencia.Rows.Count.ToString - 1
 
 
     End Sub

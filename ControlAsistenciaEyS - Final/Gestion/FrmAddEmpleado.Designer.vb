@@ -23,6 +23,7 @@ Partial Class FrmAddEmpleado
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAddEmpleado))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PBEmp = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -549,7 +550,10 @@ Partial Class FrmAddEmpleado
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PBEmp)
         Me.Controls.Add(Me.Label3)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "FrmAddEmpleado"
         Me.Text = "Gestor de empleados"
         CType(Me.PBEmp, System.ComponentModel.ISupportInitialize).EndInit()

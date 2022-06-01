@@ -23,6 +23,7 @@ Partial Class FrmSeeEmpleado
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSeeEmpleado))
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -224,7 +225,10 @@ Partial Class FrmSeeEmpleado
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "FrmSeeEmpleado"
         Me.Text = "Control de Asistencias - Reporte de Empleados"
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

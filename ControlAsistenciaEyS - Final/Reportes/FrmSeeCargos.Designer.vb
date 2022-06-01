@@ -23,17 +23,18 @@ Partial Class FrmSeeCargos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSeeCargos))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GBRptCargo = New System.Windows.Forms.GroupBox()
-        Me.BtnSeeReport = New System.Windows.Forms.Button()
         Me.DgvCargos = New System.Windows.Forms.DataGridView()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripciónDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RptCargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
+        Me.BtnSeeReport = New System.Windows.Forms.Button()
         Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
         Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -88,17 +89,6 @@ Partial Class FrmSeeCargos
         Me.GBRptCargo.TabIndex = 22
         Me.GBRptCargo.TabStop = False
         Me.GBRptCargo.Text = "Cargos: "
-        '
-        'BtnSeeReport
-        '
-        Me.BtnSeeReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnSeeReport.Location = New System.Drawing.Point(528, 93)
-        Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnSeeReport.Name = "BtnSeeReport"
-        Me.BtnSeeReport.Size = New System.Drawing.Size(232, 38)
-        Me.BtnSeeReport.TabIndex = 15
-        Me.BtnSeeReport.Text = "Ver Reporte Completo"
-        Me.BtnSeeReport.UseVisualStyleBackColor = True
         '
         'DgvCargos
         '
@@ -155,6 +145,17 @@ Partial Class FrmSeeCargos
         Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
         Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'BtnSeeReport
+        '
+        Me.BtnSeeReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.BtnSeeReport.Location = New System.Drawing.Point(528, 93)
+        Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSeeReport.Name = "BtnSeeReport"
+        Me.BtnSeeReport.Size = New System.Drawing.Size(232, 38)
+        Me.BtnSeeReport.TabIndex = 15
+        Me.BtnSeeReport.Text = "Ver Reporte Completo"
+        Me.BtnSeeReport.UseVisualStyleBackColor = True
+        '
         'CargoBindingSource
         '
         Me.CargoBindingSource.DataMember = "cargo"
@@ -183,7 +184,10 @@ Partial Class FrmSeeCargos
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "FrmSeeCargos"
         Me.Text = "Control de Asistencias - Reporte de Cargos"
         Me.GBRptCargo.ResumeLayout(False)

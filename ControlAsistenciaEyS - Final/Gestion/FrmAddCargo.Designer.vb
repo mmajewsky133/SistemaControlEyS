@@ -23,6 +23,7 @@ Partial Class FrmAddCargo
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAddCargo))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
@@ -266,7 +267,10 @@ Partial Class FrmAddCargo
         Me.Controls.Add(Me.TxtCargo)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "FrmAddCargo"
         Me.Text = "Administrador de cargos"
         Me.GBCargo.ResumeLayout(False)

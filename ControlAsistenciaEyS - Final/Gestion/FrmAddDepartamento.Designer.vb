@@ -23,6 +23,7 @@ Partial Class FrmAddDepartamento
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAddDepartamento))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtDepartamento = New System.Windows.Forms.TextBox()
@@ -312,7 +313,10 @@ Partial Class FrmAddDepartamento
         Me.Controls.Add(Me.TxtDepartamento)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "FrmAddDepartamento"
         Me.Text = "Administración de departamentos"
         Me.GBDepartamento.ResumeLayout(False)

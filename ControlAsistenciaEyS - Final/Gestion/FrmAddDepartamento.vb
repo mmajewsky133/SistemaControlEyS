@@ -112,7 +112,7 @@
                     Dim dato As String = TxtBuscar.Text & "%"
                     DgvDepartamento.DataSource = departamento.buscarDepartamento(dato)
                     DgvDepartamento.Refresh()
-                    GBDepartamento.Text = "Empleados similares: " & DgvDepartamento.Rows.Count.ToString
+                    GBDepartamento.Text = "Departamentos similares: " & DgvDepartamento.Rows.Count.ToString
                 Catch ex As Exception
                     MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
                 End Try
@@ -124,5 +124,20 @@
         TxtDepartamento.Text = ""
         TxtCorreo.Text = ""
         TxtExtension.Text = ""
+    End Sub
+
+    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+        If (TxtBuscar.Text.Equals("")) Then
+            llenarGrid()
+        Else
+            Try
+                Dim dato As String = TxtBuscar.Text & "%"
+                DgvDepartamento.DataSource = departamento.buscarDepartamento(dato)
+                DgvDepartamento.Refresh()
+                GBDepartamento.Text = "Departamentos similares: " & DgvDepartamento.Rows.Count.ToString
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+            End Try
+        End If
     End Sub
 End Class

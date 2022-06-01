@@ -140,7 +140,7 @@
                     Dim dato As String = TxtBuscar.Text & "%"
                     'DgvCargo.DataSource = cargo.BuscarNombre(dato)
                     DgvCargo.Refresh()
-                    GBCargo.Text = "Empleados similares: " & DgvCargo.Rows.Count.ToString
+                    GBCargo.Text = "Cargos similares: " & DgvCargo.Rows.Count.ToString
                 Catch ex As Exception
                     MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
                 End Try
@@ -150,5 +150,20 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnAddDep.Click
         FrmAddDepartamento.Show()
+    End Sub
+
+    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+        If (TxtBuscar.Text.Equals("")) Then
+            llenarGrid()
+        Else
+            Try
+                Dim dato As String = TxtBuscar.Text & "%"
+                'DgvCargo.DataSource = cargo.BuscarNombre(dato)
+                DgvCargo.Refresh()
+                GBCargo.Text = "Cargos similares: " & DgvCargo.Rows.Count.ToString - 1
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+            End Try
+        End If
     End Sub
 End Class

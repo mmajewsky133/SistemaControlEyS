@@ -23,6 +23,7 @@ Partial Class FrmAsignarCargo
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAsignarCargo))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GBCargoEmpleado = New System.Windows.Forms.GroupBox()
@@ -238,7 +239,10 @@ Partial Class FrmAsignarCargo
         Me.Controls.Add(Me.GBCargoEmpleado)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
         Me.Name = "FrmAsignarCargo"
         Me.Text = "Asignar cargo"
         Me.GBCargoEmpleado.ResumeLayout(False)

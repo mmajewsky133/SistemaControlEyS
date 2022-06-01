@@ -23,6 +23,7 @@ Partial Class FrmMainAdminMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainAdminMenu))
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
@@ -44,11 +45,8 @@ Partial Class FrmMainAdminMenu
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
-        Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         Me.GBControl = New System.Windows.Forms.GroupBox()
         Me.DgvAsistencia = New System.Windows.Forms.DataGridView()
-        Me.EmpleadoBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmpleadoBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -60,6 +58,9 @@ Partial Class FrmMainAdminMenu
         Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FotoEmpDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.FechaNacDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadoBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
+        Me.EmpleadoBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -216,10 +217,6 @@ Partial Class FrmMainAdminMenu
         Me.TxtBuscar.Size = New System.Drawing.Size(704, 34)
         Me.TxtBuscar.TabIndex = 6
         '
-        'EmpleadoTableAdapter
-        '
-        Me.EmpleadoTableAdapter.ClearBeforeFill = True
-        '
         'GBControl
         '
         Me.GBControl.Controls.Add(Me.DgvAsistencia)
@@ -243,16 +240,6 @@ Partial Class FrmMainAdminMenu
         Me.DgvAsistencia.RowTemplate.Height = 24
         Me.DgvAsistencia.Size = New System.Drawing.Size(798, 386)
         Me.DgvAsistencia.TabIndex = 0
-        '
-        'EmpleadoBindingSource2
-        '
-        Me.EmpleadoBindingSource2.DataMember = "empleado"
-        Me.EmpleadoBindingSource2.DataSource = Me.BDAsistenciasEySDataSet
-        '
-        'EmpleadoBindingSource1
-        '
-        Me.EmpleadoBindingSource1.DataMember = "empleado"
-        Me.EmpleadoBindingSource1.DataSource = Me.BDAsistenciasEySDataSet
         '
         'IdEmpDataGridViewTextBoxColumn
         '
@@ -347,6 +334,20 @@ Partial Class FrmMainAdminMenu
         Me.FechaNacDataGridViewTextBoxColumn.Visible = False
         Me.FechaNacDataGridViewTextBoxColumn.Width = 125
         '
+        'EmpleadoBindingSource2
+        '
+        Me.EmpleadoBindingSource2.DataMember = "empleado"
+        Me.EmpleadoBindingSource2.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'EmpleadoTableAdapter
+        '
+        Me.EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'EmpleadoBindingSource1
+        '
+        Me.EmpleadoBindingSource1.DataMember = "empleado"
+        Me.EmpleadoBindingSource1.DataSource = Me.BDAsistenciasEySDataSet
+        '
         'FrmMainAdminMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -357,7 +358,8 @@ Partial Class FrmMainAdminMenu
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False

@@ -9,6 +9,8 @@
     Sub llenarGrid()
         DgvAdmin.DataSource = admin.GetData
         DgvAdmin.Refresh()
+        GBAdmin.Text = "Administradores registrados: " + DgvAdmin.Rows.Count.ToString
+
     End Sub
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
@@ -103,5 +105,20 @@
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
         Me.Close()
+    End Sub
+
+    Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+        If (txtBuscar.Text.Equals("")) Then
+            llenarGrid()
+        Else
+            Try
+                Dim dato As String = txtBuscar.Text & "%"
+                DgvAdmin.DataSource = admin.BuscarAdmin(dato)
+                DgvAdmin.Refresh()
+                GBAdmin.Text = "Administradores similares: " & DgvAdmin.Rows.Count.ToString
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+            End Try
+        End If
     End Sub
 End Class
