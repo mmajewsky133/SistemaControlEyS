@@ -46,13 +46,13 @@ Partial Class FrmMainAdminMenu
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         Me.GBControl = New System.Windows.Forms.GroupBox()
-        Me.EmpleadoBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DgvAsistencia = New System.Windows.Forms.DataGridView()
         Me.EmpleadoBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadoBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdEmpDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -65,9 +65,9 @@ Partial Class FrmMainAdminMenu
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.GBControl.SuspendLayout()
-        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'EmpleadoBindingSource
@@ -230,16 +230,11 @@ Partial Class FrmMainAdminMenu
         Me.GBControl.TabStop = False
         Me.GBControl.Text = "Empleados: "
         '
-        'EmpleadoBindingSource1
-        '
-        Me.EmpleadoBindingSource1.DataMember = "empleado"
-        Me.EmpleadoBindingSource1.DataSource = Me.BDAsistenciasEySDataSet
-        '
         'DgvAsistencia
         '
         Me.DgvAsistencia.AutoGenerateColumns = False
         Me.DgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvAsistencia.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.FotoEmpDataGridViewImageColumn, Me.FechaNacDataGridViewTextBoxColumn})
+        Me.DgvAsistencia.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.FotoEmpDataGridViewImageColumn, Me.FechaNacDataGridViewTextBoxColumn})
         Me.DgvAsistencia.DataSource = Me.EmpleadoBindingSource2
         Me.DgvAsistencia.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvAsistencia.Location = New System.Drawing.Point(3, 18)
@@ -254,6 +249,11 @@ Partial Class FrmMainAdminMenu
         Me.EmpleadoBindingSource2.DataMember = "empleado"
         Me.EmpleadoBindingSource2.DataSource = Me.BDAsistenciasEySDataSet
         '
+        'EmpleadoBindingSource1
+        '
+        Me.EmpleadoBindingSource1.DataMember = "empleado"
+        Me.EmpleadoBindingSource1.DataSource = Me.BDAsistenciasEySDataSet
+        '
         'IdEmpDataGridViewTextBoxColumn
         '
         Me.IdEmpDataGridViewTextBoxColumn.DataPropertyName = "idEmp"
@@ -263,6 +263,14 @@ Partial Class FrmMainAdminMenu
         Me.IdEmpDataGridViewTextBoxColumn.ReadOnly = True
         Me.IdEmpDataGridViewTextBoxColumn.Visible = False
         Me.IdEmpDataGridViewTextBoxColumn.Width = 125
+        '
+        'CedulaDataGridViewTextBoxColumn
+        '
+        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cédula"
+        Me.CedulaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
+        Me.CedulaDataGridViewTextBoxColumn.Width = 125
         '
         'NombresDataGridViewTextBoxColumn
         '
@@ -279,14 +287,6 @@ Partial Class FrmMainAdminMenu
         Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
         Me.ApellidosDataGridViewTextBoxColumn.Width = 125
-        '
-        'CedulaDataGridViewTextBoxColumn
-        '
-        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
-        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "Cédula"
-        Me.CedulaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
-        Me.CedulaDataGridViewTextBoxColumn.Width = 125
         '
         'DireccionDataGridViewTextBoxColumn
         '
@@ -370,9 +370,9 @@ Partial Class FrmMainAdminMenu
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GBControl.ResumeLayout(False)
-        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -402,10 +402,12 @@ Partial Class FrmMainAdminMenu
     Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents GBControl As GroupBox
     Friend WithEvents DgvAsistencia As DataGridView
+    Friend WithEvents EmpleadoBindingSource2 As BindingSource
+    Friend WithEvents EmpleadoBindingSource1 As BindingSource
     Friend WithEvents IdEmpDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CorreoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -413,6 +415,4 @@ Partial Class FrmMainAdminMenu
     Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FotoEmpDataGridViewImageColumn As DataGridViewImageColumn
     Friend WithEvents FechaNacDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmpleadoBindingSource2 As BindingSource
-    Friend WithEvents EmpleadoBindingSource1 As BindingSource
 End Class

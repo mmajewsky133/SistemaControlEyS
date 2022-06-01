@@ -22,7 +22,32 @@ ControlAsistenciaEyS - Final
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:ControlAsistenciaEyS___Final.My.Resources.Resources._2620267">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ControlAsistenciaEyS___Final.My.Resources.Resources._891399">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ControlAsistenciaEyS___Final.My.Resources.Resources.Blank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ControlAsistenciaEyS___Final.My.Resources.Resources.ddgl67z_16d4da3e_619f_47f5_be12_cad9bf79fbf2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ControlAsistenciaEyS___Final.My.Resources.Resources.exit_door">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ControlAsistenciaEyS___Final.My.Resources.Resources.sign_out">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -7,7 +7,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
+    Private Sub BtnLogin_Click(sender As Object, e As EventArgs)
         EvaluarUser()
     End Sub
 
@@ -77,5 +77,9 @@
         Else
             FrmMarcadoEyS.Mostrar()
         End If
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PBIngresar.Click
+        EvaluarUser()
     End Sub
 End Class

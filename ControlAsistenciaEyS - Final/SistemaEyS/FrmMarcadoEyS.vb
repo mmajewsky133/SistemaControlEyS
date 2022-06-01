@@ -155,4 +155,24 @@ Public Class FrmMarcadoEyS
             End Try
         End If
     End Sub
+
+    Private Sub lblHora_Click(sender As Object, e As EventArgs) Handles lblHora.Click
+
+    End Sub
+
+    Private Sub lblCed_Click(sender As Object, e As EventArgs) Handles lblCed.Click
+
+    End Sub
+
+    Private Sub LblWarningMarcar_Click(sender As Object, e As EventArgs) Handles LblWarningMarcar.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
+
+    End Sub
 End Class
