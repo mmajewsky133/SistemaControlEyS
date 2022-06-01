@@ -9,7 +9,7 @@
         Me.RptTremendoEmpTableAdapter.Fill(Me.BDAsistenciasEySDataSet.RptTremendoEmp)
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.empleado' table. You can move, or remove it, as needed.
         Me.EmpleadoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.empleado)
-        Me.TxtEmpSelct.Text = ""
+        'Me.TxtEmpSelct.Text = ""
         GBRptEmpleado.Text = "Empleados: " & DgvEmpleados.Rows.Count.ToString - 1
 
     End Sub
@@ -41,12 +41,12 @@
         'TxtEmpSelct.Text = DgvEmpleados.Rows(rowindex).Cells(1).Value.ToString()
     End Sub
 
-    Private Sub BtnAddCargos_Click(sender As Object, e As EventArgs) Handles BtnAddCargos.Click
+    Private Sub BtnAddCargos_Click(sender As Object, e As EventArgs)
 
-        If Me.TxtEmpSelct Is "" Then
-            MsgBox("No se ha seleccionado ningun empleado", MsgBoxStyle.Critical, "ERROR")
-            'ElseIf
-            'Mandar IdSelected a frmAddEmpCargo
-        End If
+        'If Me.TxtEmpSelct Is "" Then
+        '    MsgBox("No se ha seleccionado ningun empleado", MsgBoxStyle.Critical, "ERROR")
+        '    'ElseIf
+        '    'Mandar IdSelected a frmAddEmpCargo
+        'End If
     End Sub
 End Class

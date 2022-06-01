@@ -10,6 +10,8 @@
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.departamento' table. You can move, or remove it, as needed.
         Me.DepartamentoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.departamento)
         'TODO: This line of code loads data into the 'ControlAsistenciaDataSet.Departamento' table. You can move, or remove it, as needed.
+        GBRptDepartamento.Text = "Departamentos: " & DgvDepartamentos.Rows.Count.ToString
+
     End Sub
 
     Sub Mostrar()
@@ -23,24 +25,27 @@
 
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
         Try
-
+            Dim dato As String = TxtBuscar.Text & "%"
+            DgvDepartamentos.DataSource = dep.BuscarDep(dato)
+            DgvDepartamentos.Refresh()
+            GBRptDepartamento.Text = "Departamentos similares: " & DgvDepartamentos.Rows.Count.ToString
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
         End Try
     End Sub
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDepartamentos.CellClick
-        Dim rowindex = DgvDepartamentos.CurrentCell.RowIndex
+    'Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDepartamentos.CellClick
+    '    Dim rowindex = DgvDepartamentos.CurrentCell.RowIndex
 
-        IdSelected = CInt(DgvDepartamentos.Rows(rowindex).Cells(0).Value.ToString())
-        Me.TxtDepSelct.Text = IdSelected
-    End Sub
+    '    IdSelected = CInt(DgvDepartamentos.Rows(rowindex).Cells(0).Value.ToString())
+    '    Me.TxtDepSelct.Text = IdSelected
+    'End Sub
 
-    Private Sub BtnAddDep_Click(sender As Object, e As EventArgs) Handles BtnAddDep.Click
-        If Me.TxtDepSelct Is "" Then
-            MsgBox("No se ha seleccionado ningun cargo", MsgBoxStyle.Critical, "ERROR")
-            'ElseIf
-            'Mandar IdSelected a frmAddDepCargo
-        End If
-    End Sub
+    'Private Sub BtnAddDep_Click(sender As Object, e As EventArgs)
+    '    If Me.TxtDepSelct Is "" Then
+    '        MsgBox("No se ha seleccionado ningun cargo", MsgBoxStyle.Critical, "ERROR")
+    '        'ElseIf
+    '        'Mandar IdSelected a frmAddDepCargo
+    '    End If
+    'End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmSeeEmpleado
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,16 +20,13 @@ Partial Class FrmSeeEmpleado
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtEmpSelct = New System.Windows.Forms.TextBox()
-        Me.BtnAddCargos = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnSeeReport = New System.Windows.Forms.Button()
         Me.RefEmpleados5BindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -37,8 +34,6 @@ Partial Class FrmSeeEmpleado
         Me.EmpleadoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter()
         Me.GBRptEmpleado = New System.Windows.Forms.GroupBox()
         Me.DgvEmpleados = New System.Windows.Forms.DataGridView()
-        Me.RptTremendoEmpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RptTremendoEmpTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.RptTremendoEmpTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,6 +42,8 @@ Partial Class FrmSeeEmpleado
         Me.TeléfonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.InstitucionalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RptTremendoEmpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RptTremendoEmpTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.RptTremendoEmpTableAdapter()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RefEmpleados5BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,7 +67,7 @@ Partial Class FrmSeeEmpleado
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label1.Location = New System.Drawing.Point(16, 202)
+        Me.Label1.Location = New System.Drawing.Point(18, 83)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(93, 29)
@@ -80,60 +77,28 @@ Partial Class FrmSeeEmpleado
         'TxtBuscar
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(105, 198)
-        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtBuscar.Location = New System.Drawing.Point(107, 79)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(748, 34)
+        Me.TxtBuscar.Size = New System.Drawing.Size(603, 34)
         Me.TxtBuscar.TabIndex = 7
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label2.Location = New System.Drawing.Point(16, 101)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(284, 29)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Empleado Seleccionado:"
-        '
-        'TxtEmpSelct
-        '
-        Me.TxtEmpSelct.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtEmpSelct.Location = New System.Drawing.Point(21, 130)
-        Me.TxtEmpSelct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TxtEmpSelct.Name = "TxtEmpSelct"
-        Me.TxtEmpSelct.ReadOnly = True
-        Me.TxtEmpSelct.Size = New System.Drawing.Size(231, 34)
-        Me.TxtEmpSelct.TabIndex = 9
-        '
-        'BtnAddCargos
-        '
-        Me.BtnAddCargos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnAddCargos.Location = New System.Drawing.Point(281, 130)
-        Me.BtnAddCargos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnAddCargos.Name = "BtnAddCargos"
-        Me.BtnAddCargos.Size = New System.Drawing.Size(232, 38)
-        Me.BtnAddCargos.TabIndex = 11
-        Me.BtnAddCargos.Text = "Asignar Cargos"
-        Me.BtnAddCargos.UseVisualStyleBackColor = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.Label3.Location = New System.Drawing.Point(16, 11)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(435, 31)
+        Me.Label3.Size = New System.Drawing.Size(455, 32)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Reporte y Manejo de Empleados"
         '
         'BtnSeeReport
         '
         Me.BtnSeeReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnSeeReport.Location = New System.Drawing.Point(793, 514)
-        Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnSeeReport.Location = New System.Drawing.Point(736, 74)
+        Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSeeReport.Name = "BtnSeeReport"
         Me.BtnSeeReport.Size = New System.Drawing.Size(232, 38)
         Me.BtnSeeReport.TabIndex = 14
@@ -152,12 +117,11 @@ Partial Class FrmSeeEmpleado
         'GBRptEmpleado
         '
         Me.GBRptEmpleado.Controls.Add(Me.DgvEmpleados)
-        Me.GBRptEmpleado.Controls.Add(Me.BtnSeeReport)
-        Me.GBRptEmpleado.Location = New System.Drawing.Point(21, 242)
-        Me.GBRptEmpleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GBRptEmpleado.Location = New System.Drawing.Point(22, 144)
+        Me.GBRptEmpleado.Margin = New System.Windows.Forms.Padding(4)
         Me.GBRptEmpleado.Name = "GBRptEmpleado"
-        Me.GBRptEmpleado.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GBRptEmpleado.Size = New System.Drawing.Size(1033, 562)
+        Me.GBRptEmpleado.Padding = New System.Windows.Forms.Padding(4)
+        Me.GBRptEmpleado.Size = New System.Drawing.Size(946, 562)
         Me.GBRptEmpleado.TabIndex = 15
         Me.GBRptEmpleado.TabStop = False
         '
@@ -172,17 +136,8 @@ Partial Class FrmSeeEmpleado
         Me.DgvEmpleados.Name = "DgvEmpleados"
         Me.DgvEmpleados.RowHeadersWidth = 51
         Me.DgvEmpleados.RowTemplate.Height = 24
-        Me.DgvEmpleados.Size = New System.Drawing.Size(1025, 539)
+        Me.DgvEmpleados.Size = New System.Drawing.Size(938, 539)
         Me.DgvEmpleados.TabIndex = 15
-        '
-        'RptTremendoEmpBindingSource
-        '
-        Me.RptTremendoEmpBindingSource.DataMember = "RptTremendoEmp"
-        Me.RptTremendoEmpBindingSource.DataSource = Me.BDAsistenciasEySDataSet
-        '
-        'RptTremendoEmpTableAdapter
-        '
-        Me.RptTremendoEmpTableAdapter.ClearBeforeFill = True
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -250,19 +205,26 @@ Partial Class FrmSeeEmpleado
         Me.InstitucionalDataGridViewTextBoxColumn.Name = "InstitucionalDataGridViewTextBoxColumn"
         Me.InstitucionalDataGridViewTextBoxColumn.Width = 125
         '
+        'RptTremendoEmpBindingSource
+        '
+        Me.RptTremendoEmpBindingSource.DataMember = "RptTremendoEmp"
+        Me.RptTremendoEmpBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'RptTremendoEmpTableAdapter
+        '
+        Me.RptTremendoEmpTableAdapter.ClearBeforeFill = True
+        '
         'FrmSeeEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1075, 822)
+        Me.ClientSize = New System.Drawing.Size(990, 728)
         Me.Controls.Add(Me.GBRptEmpleado)
+        Me.Controls.Add(Me.BtnSeeReport)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.BtnAddCargos)
-        Me.Controls.Add(Me.TxtEmpSelct)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmSeeEmpleado"
         Me.Text = "Control de Asistencias - Reporte de Empleados"
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -278,9 +240,6 @@ Partial Class FrmSeeEmpleado
     End Sub
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtBuscar As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TxtEmpSelct As TextBox
-    Friend WithEvents BtnAddCargos As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnSeeReport As Button
     Friend WithEvents RefEmpleados5BindingSource As BindingSource

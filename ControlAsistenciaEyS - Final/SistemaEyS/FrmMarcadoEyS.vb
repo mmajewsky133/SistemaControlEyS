@@ -133,4 +133,26 @@ Public Class FrmMarcadoEyS
         FrmAdminLogin.Show()
         Me.Hide()
     End Sub
+
+    Private Sub TxtCedula_TextChanged(sender As Object, e As EventArgs) Handles TxtCedula.TextChanged
+        If (TxtCedula.Text.Equals("")) Then
+            llenarGrid()
+            GPEmpleado.Text = "Empleado"
+        Else
+            llenarGrid()
+            DgvEmpleado.Columns.Item(0).Visible = False
+            DgvEmpleado.Columns.Item(1).Visible = True
+            DgvEmpleado.Columns.Item(2).Visible = True
+            DgvEmpleado.Columns.Item(3).Visible = True
+            Try
+                Dim dato As String = TxtCedula.Text & "%"
+                DgvEmpleado.DataSource = empleado.BuscarCedula(dato)
+                'DgvRegistro aqui tambien copiando este mismo metodo ^.
+                DgvEmpleado.Refresh()
+                GPEmpleado.Text = "Referencias similares: " & DgvEmpleado.Rows.Count.ToString - 1
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+            End Try
+        End If
+    End Sub
 End Class

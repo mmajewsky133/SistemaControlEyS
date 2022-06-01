@@ -215,4 +215,19 @@ Public Class FrmAddEmpleado
             End If
         End If
     End Sub
+
+    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+        If (TxtBuscar.Text.Equals("")) Then
+            llenarGrid()
+        Else
+            Try
+                Dim dato As String = TxtBuscar.Text & "%"
+                DgvEmpleado.DataSource = empleado.BuscarNombre(dato)
+                DgvEmpleado.Refresh()
+                GBEmpleado.Text = "Empleados similares: " & DgvEmpleado.Rows.Count.ToString
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+            End Try
+        End If
+    End Sub
 End Class

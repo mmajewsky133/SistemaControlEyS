@@ -91,7 +91,7 @@ Partial Class FrmAddEmpleado
         Me.PBEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PBEmp.InitialImage = Nothing
         Me.PBEmp.Location = New System.Drawing.Point(21, 121)
-        Me.PBEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PBEmp.Margin = New System.Windows.Forms.Padding(4)
         Me.PBEmp.Name = "PBEmp"
         Me.PBEmp.Size = New System.Drawing.Size(253, 225)
         Me.PBEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -179,7 +179,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtNombre.Location = New System.Drawing.Point(288, 121)
-        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(265, 34)
         Me.TxtNombre.TabIndex = 1
@@ -188,7 +188,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtApellido.Location = New System.Drawing.Point(563, 121)
-        Me.TxtApellido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtApellido.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtApellido.Name = "TxtApellido"
         Me.TxtApellido.Size = New System.Drawing.Size(265, 34)
         Me.TxtApellido.TabIndex = 2
@@ -219,7 +219,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtCedula.Location = New System.Drawing.Point(288, 224)
-        Me.TxtCedula.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCedula.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCedula.Name = "TxtCedula"
         Me.TxtCedula.Size = New System.Drawing.Size(195, 34)
         Me.TxtCedula.TabIndex = 3
@@ -228,7 +228,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtCorreo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtCorreo.Location = New System.Drawing.Point(492, 224)
-        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCorreo.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCorreo.Name = "TxtCorreo"
         Me.TxtCorreo.Size = New System.Drawing.Size(336, 34)
         Me.TxtCorreo.TabIndex = 4
@@ -237,7 +237,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtTel.Location = New System.Drawing.Point(288, 309)
-        Me.TxtTel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtTel.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtTel.Name = "TxtTel"
         Me.TxtTel.Size = New System.Drawing.Size(195, 34)
         Me.TxtTel.TabIndex = 5
@@ -246,7 +246,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtDireccion.Location = New System.Drawing.Point(21, 390)
-        Me.TxtDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtDireccion.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtDireccion.Name = "TxtDireccion"
         Me.TxtDireccion.Size = New System.Drawing.Size(807, 34)
         Me.TxtDireccion.TabIndex = 7
@@ -255,7 +255,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtCorreoInst.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtCorreoInst.Location = New System.Drawing.Point(492, 309)
-        Me.TxtCorreoInst.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCorreoInst.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCorreoInst.Name = "TxtCorreoInst"
         Me.TxtCorreoInst.Size = New System.Drawing.Size(336, 34)
         Me.TxtCorreoInst.TabIndex = 6
@@ -269,7 +269,7 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idEmp, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.fotoEmp, Me.fechaNac, Me.DireccionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.CorreoInstDataGridViewTextBoxColumn})
         Me.DgvEmpleado.DataSource = Me.EmpleadoBindingSource
         Me.DgvEmpleado.Location = New System.Drawing.Point(20, 22)
-        Me.DgvEmpleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DgvEmpleado.Margin = New System.Windows.Forms.Padding(4)
         Me.DgvEmpleado.Name = "DgvEmpleado"
         Me.DgvEmpleado.ReadOnly = True
         Me.DgvEmpleado.RowHeadersWidth = 51
@@ -406,7 +406,7 @@ Partial Class FrmAddEmpleado
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.TxtBuscar.Location = New System.Drawing.Point(117, 590)
-        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtBuscar.Name = "TxtBuscar"
         Me.TxtBuscar.Size = New System.Drawing.Size(284, 34)
         Me.TxtBuscar.TabIndex = 11
@@ -415,7 +415,7 @@ Partial Class FrmAddEmpleado
         '
         Me.BtnNewEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnNewEmp.Location = New System.Drawing.Point(599, 448)
-        Me.BtnNewEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnNewEmp.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnNewEmp.Name = "BtnNewEmp"
         Me.BtnNewEmp.Size = New System.Drawing.Size(231, 70)
         Me.BtnNewEmp.TabIndex = 10
@@ -426,7 +426,7 @@ Partial Class FrmAddEmpleado
         '
         Me.BtnGuardarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnGuardarEmp.Location = New System.Drawing.Point(411, 590)
-        Me.BtnGuardarEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnGuardarEmp.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardarEmp.Name = "BtnGuardarEmp"
         Me.BtnGuardarEmp.Size = New System.Drawing.Size(144, 37)
         Me.BtnGuardarEmp.TabIndex = 12
@@ -437,7 +437,7 @@ Partial Class FrmAddEmpleado
         '
         Me.BtnEditarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnEditarEmp.Location = New System.Drawing.Point(563, 590)
-        Me.BtnEditarEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEditarEmp.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEditarEmp.Name = "BtnEditarEmp"
         Me.BtnEditarEmp.Size = New System.Drawing.Size(127, 37)
         Me.BtnEditarEmp.TabIndex = 13
@@ -448,7 +448,7 @@ Partial Class FrmAddEmpleado
         '
         Me.BtnEliminarEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnEliminarEmp.Location = New System.Drawing.Point(697, 588)
-        Me.BtnEliminarEmp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEliminarEmp.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEliminarEmp.Name = "BtnEliminarEmp"
         Me.BtnEliminarEmp.Size = New System.Drawing.Size(132, 37)
         Me.BtnEliminarEmp.TabIndex = 14
@@ -508,7 +508,7 @@ Partial Class FrmAddEmpleado
         '
         Me.BtnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
         Me.BtnRegresar.Location = New System.Drawing.Point(644, 26)
-        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnRegresar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnRegresar.Name = "BtnRegresar"
         Me.BtnRegresar.Size = New System.Drawing.Size(185, 41)
         Me.BtnRegresar.TabIndex = 46
@@ -549,7 +549,7 @@ Partial Class FrmAddEmpleado
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PBEmp)
         Me.Controls.Add(Me.Label3)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmAddEmpleado"
         Me.Text = "Gestor de empleados"
         CType(Me.PBEmp, System.ComponentModel.ISupportInitialize).EndInit()

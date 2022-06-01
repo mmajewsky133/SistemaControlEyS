@@ -24,122 +24,75 @@ Partial Class FrmSeeCargos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.BtnAddDep = New System.Windows.Forms.Button()
-        Me.TxtCargSelct = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.BtnAddRol = New System.Windows.Forms.Button()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GBRptCargo = New System.Windows.Forms.GroupBox()
         Me.BtnSeeReport = New System.Windows.Forms.Button()
         Me.DgvCargos = New System.Windows.Forms.DataGridView()
-        Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
-        Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
-        Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RptCargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RptCargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.RptCargoTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripciónDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupBox1.SuspendLayout()
+        Me.RptCargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDAsistenciasEySDataSet = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSet()
+        Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.cargoTableAdapter()
+        Me.BDAsistenciasEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RptCargoTableAdapter = New ControlAsistenciaEyS___Final.BDAsistenciasEySDataSetTableAdapters.RptCargoTableAdapter()
+        Me.GBRptCargo.SuspendLayout()
         CType(Me.DgvCargos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RptCargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(16, 11)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(385, 31)
+        Me.Label3.Size = New System.Drawing.Size(483, 39)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Reporte y Manejo de Cargos"
-        '
-        'BtnAddDep
-        '
-        Me.BtnAddDep.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnAddDep.Location = New System.Drawing.Point(239, 97)
-        Me.BtnAddDep.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnAddDep.Name = "BtnAddDep"
-        Me.BtnAddDep.Size = New System.Drawing.Size(235, 38)
-        Me.BtnAddDep.TabIndex = 16
-        Me.BtnAddDep.Text = "Asignar Departamento"
-        Me.BtnAddDep.UseVisualStyleBackColor = True
-        '
-        'TxtCargSelct
-        '
-        Me.TxtCargSelct.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtCargSelct.Location = New System.Drawing.Point(21, 98)
-        Me.TxtCargSelct.Margin = New System.Windows.Forms.Padding(4)
-        Me.TxtCargSelct.Name = "TxtCargSelct"
-        Me.TxtCargSelct.ReadOnly = True
-        Me.TxtCargSelct.Size = New System.Drawing.Size(208, 34)
-        Me.TxtCargSelct.TabIndex = 15
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label2.Location = New System.Drawing.Point(16, 69)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(239, 29)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Cargo Seleccionado:"
-        '
-        'BtnAddRol
-        '
-        Me.BtnAddRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnAddRol.Location = New System.Drawing.Point(481, 98)
-        Me.BtnAddRol.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnAddRol.Name = "BtnAddRol"
-        Me.BtnAddRol.Size = New System.Drawing.Size(205, 38)
-        Me.BtnAddRol.TabIndex = 18
-        Me.BtnAddRol.Text = "Asignar Empleado"
-        Me.BtnAddRol.UseVisualStyleBackColor = True
         '
         'TxtBuscar
         '
         Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(105, 156)
+        Me.TxtBuscar.Location = New System.Drawing.Point(105, 93)
         Me.TxtBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(653, 34)
+        Me.TxtBuscar.Size = New System.Drawing.Size(415, 34)
         Me.TxtBuscar.TabIndex = 21
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.Label1.Location = New System.Drawing.Point(16, 160)
+        Me.Label1.Location = New System.Drawing.Point(16, 97)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(93, 29)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Buscar:"
         '
-        'GroupBox1
+        'GBRptCargo
         '
-        Me.GroupBox1.Controls.Add(Me.BtnSeeReport)
-        Me.GroupBox1.Controls.Add(Me.DgvCargos)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 223)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(744, 475)
-        Me.GroupBox1.TabIndex = 22
-        Me.GroupBox1.TabStop = False
+        Me.GBRptCargo.Controls.Add(Me.DgvCargos)
+        Me.GBRptCargo.Location = New System.Drawing.Point(21, 165)
+        Me.GBRptCargo.Margin = New System.Windows.Forms.Padding(4)
+        Me.GBRptCargo.Name = "GBRptCargo"
+        Me.GBRptCargo.Padding = New System.Windows.Forms.Padding(4)
+        Me.GBRptCargo.Size = New System.Drawing.Size(739, 403)
+        Me.GBRptCargo.TabIndex = 22
+        Me.GBRptCargo.TabStop = False
+        Me.GBRptCargo.Text = "Cargos: "
         '
         'BtnSeeReport
         '
         Me.BtnSeeReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
-        Me.BtnSeeReport.Location = New System.Drawing.Point(501, 430)
+        Me.BtnSeeReport.Location = New System.Drawing.Point(528, 93)
         Me.BtnSeeReport.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnSeeReport.Name = "BtnSeeReport"
         Me.BtnSeeReport.Size = New System.Drawing.Size(232, 38)
@@ -155,41 +108,14 @@ Partial Class FrmSeeCargos
         Me.DgvCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCargos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.CargoDataGridViewTextBoxColumn, Me.DescripciónDataGridViewTextBoxColumn})
         Me.DgvCargos.DataSource = Me.RptCargoBindingSource
-        Me.DgvCargos.Location = New System.Drawing.Point(8, 23)
+        Me.DgvCargos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgvCargos.Location = New System.Drawing.Point(4, 19)
         Me.DgvCargos.Margin = New System.Windows.Forms.Padding(4)
         Me.DgvCargos.Name = "DgvCargos"
         Me.DgvCargos.ReadOnly = True
         Me.DgvCargos.RowHeadersWidth = 51
-        Me.DgvCargos.Size = New System.Drawing.Size(725, 399)
+        Me.DgvCargos.Size = New System.Drawing.Size(731, 380)
         Me.DgvCargos.TabIndex = 0
-        '
-        'CargoBindingSource
-        '
-        Me.CargoBindingSource.DataMember = "cargo"
-        Me.CargoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
-        '
-        'BDAsistenciasEySDataSet
-        '
-        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
-        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CargoTableAdapter
-        '
-        Me.CargoTableAdapter.ClearBeforeFill = True
-        '
-        'BDAsistenciasEySDataSetBindingSource
-        '
-        Me.BDAsistenciasEySDataSetBindingSource.DataSource = Me.BDAsistenciasEySDataSet
-        Me.BDAsistenciasEySDataSetBindingSource.Position = 0
-        '
-        'RptCargoBindingSource
-        '
-        Me.RptCargoBindingSource.DataMember = "RptCargo"
-        Me.RptCargoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
-        '
-        'RptCargoTableAdapter
-        '
-        Me.RptCargoTableAdapter.ClearBeforeFill = True
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -219,41 +145,62 @@ Partial Class FrmSeeCargos
         Me.DescripciónDataGridViewTextBoxColumn.ReadOnly = True
         Me.DescripciónDataGridViewTextBoxColumn.Width = 125
         '
+        'RptCargoBindingSource
+        '
+        Me.RptCargoBindingSource.DataMember = "RptCargo"
+        Me.RptCargoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'BDAsistenciasEySDataSet
+        '
+        Me.BDAsistenciasEySDataSet.DataSetName = "BDAsistenciasEySDataSet"
+        Me.BDAsistenciasEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CargoBindingSource
+        '
+        Me.CargoBindingSource.DataMember = "cargo"
+        Me.CargoBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        '
+        'CargoTableAdapter
+        '
+        Me.CargoTableAdapter.ClearBeforeFill = True
+        '
+        'BDAsistenciasEySDataSetBindingSource
+        '
+        Me.BDAsistenciasEySDataSetBindingSource.DataSource = Me.BDAsistenciasEySDataSet
+        Me.BDAsistenciasEySDataSetBindingSource.Position = 0
+        '
+        'RptCargoTableAdapter
+        '
+        Me.RptCargoTableAdapter.ClearBeforeFill = True
+        '
         'FrmSeeCargos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(775, 713)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(775, 581)
+        Me.Controls.Add(Me.BtnSeeReport)
+        Me.Controls.Add(Me.GBRptCargo)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.BtnAddRol)
-        Me.Controls.Add(Me.BtnAddDep)
-        Me.Controls.Add(Me.TxtCargSelct)
-        Me.Controls.Add(Me.Label2)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmSeeCargos"
         Me.Text = "Control de Asistencias - Reporte de Cargos"
-        Me.GroupBox1.ResumeLayout(False)
+        Me.GBRptCargo.ResumeLayout(False)
         CType(Me.DgvCargos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RptCargoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDAsistenciasEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents BtnAddDep As Button
-    Friend WithEvents TxtCargSelct As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents BtnAddRol As Button
     Friend WithEvents TxtBuscar As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GBRptCargo As GroupBox
     Friend WithEvents DgvCargos As DataGridView
     Friend WithEvents BtnSeeReport As Button
     Friend WithEvents BDAsistenciasEySDataSet As BDAsistenciasEySDataSet

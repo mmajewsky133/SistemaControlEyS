@@ -1,9 +1,15 @@
 ﻿Public Class FrmMainAdminMenu
+
+    Dim empleado As New BDAsistenciasEySDataSetTableAdapters.empleadoTableAdapter
+
+
     Private Sub FrmMainAdminMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.empleado' table. You can move, or remove it, as needed.
         Me.EmpleadoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.empleado)
         'TODO: This line of code loads data into the 'ControlAsistenciaDataSet.Empleados' table. You can move, or remove it, as needed.
         'Me.EmpleadosTableAdapter.Fill(Me.ControlAsistenciaDataSet.Empleados)
+        GBControl.Text = "Empleados similares: " & DgvAsistencia.Rows.Count.ToString - 1
+
 
     End Sub
 
@@ -13,8 +19,15 @@
         Close()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+        Try
+            Dim dato As String = TxtBuscar.Text & "%"
+            DgvAsistencia.DataSource = empleado.BuscarNombre(dato)
+            DgvAsistencia.Refresh()
+            GBControl.Text = "Empleados similares: " & DgvAsistencia.Rows.Count.ToString - 1
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+        End Try
     End Sub
 
     Private Sub ReporteDeEmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeEmpleadosToolStripMenuItem.Click

@@ -32,6 +32,7 @@ Partial Class FrmMarcadoEyS
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtCedula = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DgvAsistencia = New System.Windows.Forms.DataGridView()
         Me.lblHora = New System.Windows.Forms.Label()
         Me.Contador = New System.Windows.Forms.Timer(Me.components)
         Me.GPEmpleado = New System.Windows.Forms.GroupBox()
@@ -45,13 +46,12 @@ Partial Class FrmMarcadoEyS
         Me.PAdmin = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DgvAsistencia = New System.Windows.Forms.DataGridView()
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GPEmpleado.SuspendLayout()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnEntrada
@@ -139,6 +139,17 @@ Partial Class FrmMarcadoEyS
         Me.GroupBox1.TabIndex = 26
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Asistencias: "
+        '
+        'DgvAsistencia
+        '
+        Me.DgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvAsistencia.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DgvAsistencia.Location = New System.Drawing.Point(3, 18)
+        Me.DgvAsistencia.Name = "DgvAsistencia"
+        Me.DgvAsistencia.RowHeadersWidth = 51
+        Me.DgvAsistencia.RowTemplate.Height = 24
+        Me.DgvAsistencia.Size = New System.Drawing.Size(394, 239)
+        Me.DgvAsistencia.TabIndex = 0
         '
         'lblHora
         '
@@ -245,17 +256,6 @@ Partial Class FrmMarcadoEyS
         Me.Label2.TabIndex = 31
         Me.Label2.Text = "cuadrito"
         '
-        'DgvAsistencia
-        '
-        Me.DgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvAsistencia.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgvAsistencia.Location = New System.Drawing.Point(3, 18)
-        Me.DgvAsistencia.Name = "DgvAsistencia"
-        Me.DgvAsistencia.RowHeadersWidth = 51
-        Me.DgvAsistencia.RowTemplate.Height = 24
-        Me.DgvAsistencia.Size = New System.Drawing.Size(394, 239)
-        Me.DgvAsistencia.TabIndex = 0
-        '
         'FrmMarcadoEyS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -276,13 +276,14 @@ Partial Class FrmMarcadoEyS
         Me.Controls.Add(Me.BtnEntrada)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmMarcadoEyS"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Marcado de Entrada y Salida"
         CType(Me.BDAsistenciasEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GPEmpleado.ResumeLayout(False)
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DgvAsistencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
