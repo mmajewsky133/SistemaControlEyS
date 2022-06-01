@@ -5,6 +5,8 @@
     Dim IdSelected
 
     Private Sub FrmSeeDepartamento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.RptDepartamento' table. You can move, or remove it, as needed.
+        Me.RptDepartamentoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.RptDepartamento)
         'TODO: This line of code loads data into the 'BDAsistenciasEySDataSet.departamento' table. You can move, or remove it, as needed.
         Me.DepartamentoTableAdapter.Fill(Me.BDAsistenciasEySDataSet.departamento)
         'TODO: This line of code loads data into the 'ControlAsistenciaDataSet.Departamento' table. You can move, or remove it, as needed.
